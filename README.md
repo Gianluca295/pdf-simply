@@ -1,14 +1,17 @@
-<p align="center">
-  <a href="https://getartcraft.com/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/brand/artcraft-logo-white.svg">
-      <img alt="ArtCraft" src="docs/brand/artcraft-logo.svg" width="200">
-    </picture>
-  </a>
-</p>
+<h1 align="center">PDF Simply</h1>
 
+> **PDF Simply** è una versione di [PdfCraft](https://github.com/storytold/pdfcraft) con le funzioni
+> che servono in Italia: firma digitale `.p7m` (CAdES) con la chiavetta (Aruba, InfoCamere e altre),
+> apertura e verifica dei file `.p7m`, conversione in PDF/A per l'Agenzia delle Entrate.
+> PdfCraft è stato creato dal team ArtCraft e dai suoi contributori: tutto il resto del programma è
+> loro, con la stessa licenza (MIT OR Apache-2.0). PDF Simply non è un prodotto ArtCraft e non ne
+> usa nome e logo.
+>
+> *PDF Simply is a build of PdfCraft with Italian e-signature (`.p7m`, CAdES with smart-card
+> tokens) and PDF/A additions. It is not an ArtCraft product. The text below is PdfCraft's own
+> README.*
 
-<h1 align="center">PdfCraft</h1>
+<h2 align="center">PdfCraft</h2>
 
 <p align="center">
   <b>The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust.</b><br>
@@ -72,7 +75,7 @@ PdfCraft is part of [ArtCraft](https://getartcraft.com). Come say hello, get hel
 - **Web page:** [getartcraft.com/apps/pdfcraft](https://getartcraft.com/apps/pdfcraft)
 - **Source:** [github.com/storytold/pdfcraft](https://github.com/storytold/pdfcraft)
 
-The ArtCraft name and logos in `docs/brand/` are trademarks of the ArtCraft Team and are not open source. They may be used only unmodified, and only as part of PdfCraft (see `docs/brand/LICENSE-brand.txt`). Forks and modified versions must remove them.
+The ArtCraft name and logos are trademarks of the ArtCraft Team and are not open source. PDF Simply, as a modified version, does not include them.
 
 ## Highlights
 
@@ -552,16 +555,13 @@ with its author, source and license in [ATTRIBUTION.md](ATTRIBUTION.md). Release
 the Japanese fonts of [craft-fonts](https://github.com/storytold/craft-fonts/blob/main/ATTRIBUTION.md)
 (SIL Open Font License 1.1).
 
-The ArtCraft name, wordmark and logos in [`docs/brand/`](docs/brand/) are trademarks of the
-ArtCraft Team and are not covered by this license. They may be used only unmodified, and only as
-part of this repository and PdfCraft, under [`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt).
-Forks and modified versions must remove them.
+The ArtCraft name, wordmark and logos are trademarks of the ArtCraft Team and are not covered by
+this license. As a modified version, PDF Simply has removed them.
 
 <sub>Adobe, Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects and InDesign are trademarks or registered trademarks of Adobe Inc. in the United States and/or other countries. PdfCraft is an independent, open-source project and is not affiliated with, sponsored by or endorsed by Adobe Inc.; these names are used only to describe the workflows it is compatible with.</sub>
 
 <p align="center">
-  <a href="https://getartcraft.com/"><img alt="ArtCraft" src="docs/brand/artcraft-mark.svg" width="28"></a><br>
-  <sub>Made by the <a href="https://getartcraft.com/">ArtCraft</a> team and community.</sub>
+  <sub>PdfCraft is made by the <a href="https://getartcraft.com/">ArtCraft</a> team and community.</sub>
 </p>
 
 Tools and Inspector panels can be dragged into tab groups, split beside the PDF, or floated within the app window. Read and full-screen modes keep their existing focused document view. Drag a panel header to a target edge or another header. Its context menu offers Float panel, Move to group, and Close panel. Existing panel toggles reopen panels at their saved location; Reset Panel Layout restores the app layout. Floating panels remain inside the current app window.

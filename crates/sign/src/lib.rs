@@ -15,7 +15,10 @@ pub mod graphic;
 #[cfg(target_os = "macos")]
 pub mod keychain;
 pub mod keys;
+pub mod p7m;
 pub mod pdf;
+#[cfg(not(target_arch = "wasm32"))]
+pub mod pkcs11;
 pub mod pkcs12;
 pub mod revocation;
 mod rsa_pad;

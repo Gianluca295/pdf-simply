@@ -221,6 +221,7 @@ impl LangInfo {
             for error in errors {
                 log::warn!("{} interface catalog: {error}; that entry shows in English", self.code);
             }
+            catalog.map_translations(renamed);
             if self.rtl {
                 catalog.map_translations(crate::bidi::display_rtl);
             }
@@ -431,9 +432,91 @@ pub fn key_name(s: &str) -> &str {
     current().catalog().contextual("key", s).unwrap_or(s)
 }
 
-/// Translate an English UI string; unknown strings come back unchanged.
+/// Translate an English UI string; unknown strings come back unchanged (apart from the app name).
 pub fn tr(lang: Lang, s: &str) -> &str {
-    lang.catalog().plain(s).unwrap_or(s)
+    lang.catalog().plain(s).unwrap_or_else(|| renamed_english(s))
+}
+
+/// The name the app shows. PDF Simply is a renamed build of PdfCraft (see NOTICE): the strings
+/// and catalogues keep the upstream name, and it is swapped here, in one place, so upstream
+/// changes to them merge cleanly.
+pub const APP_NAME: &str = "PDF Simply";
+const UPSTREAM_NAME: &str = "PdfCraft";
+
+/// Strings that name the upstream project on purpose (the credit to its authors), in English and
+/// in the shipped translations: these keep "PdfCraft".
+const CREDITS: &[&str] = &[
+    "Based on PdfCraft",
+    "Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.",
+    "Basato su PdfCraft",
+    "Realizzato a partire da PdfCraft, del team ArtCraft e dei contributori di PdfCraft.",
+    "مبني على PdfCraft",
+    "مبني على PdfCraft من فريق ArtCraft والمساهمين في PdfCraft.",
+    "Базирано на PdfCraft",
+    "Създадено на основата на PdfCraft от екипа на ArtCraft и сътрудниците на PdfCraft.",
+    "Založeno na PdfCraft",
+    "Postaveno na PdfCraft od týmu ArtCraft a přispěvatelů PdfCraft.",
+    "Basiert auf PdfCraft",
+    "Basiert auf PdfCraft vom ArtCraft-Team und den PdfCraft-Mitwirkenden.",
+    "Βασισμένο στο PdfCraft",
+    "Βασισμένο στο PdfCraft της ομάδας ArtCraft και των συνεισφερόντων του PdfCraft.",
+    "Basado en PdfCraft",
+    "Basado en PdfCraft, del equipo de ArtCraft y los colaboradores de PdfCraft.",
+    "Basé sur PdfCraft",
+    "Basé sur PdfCraft, de l’équipe ArtCraft et des contributeurs de PdfCraft.",
+    "A PdfCraft alapján",
+    "Az ArtCraft csapat és a PdfCraft közreműködőinek PdfCraft programjára épül.",
+    "PdfCraft がベース",
+    "ArtCraft チームと PdfCraft の貢献者による PdfCraft をもとに作られています。",
+    "PdfCraft негізінде",
+    "ArtCraft командасы мен PdfCraft қатысушыларының PdfCraft бағдарламасы негізінде жасалған.",
+    "Sukurta pagal PdfCraft",
+    "Sukurta pagal ArtCraft komandos ir PdfCraft bendradarbių PdfCraft.",
+    "Na bazie PdfCraft",
+    "Zbudowane na bazie PdfCraft zespołu ArtCraft i współtwórców PdfCraft.",
+    "Baseado no PdfCraft",
+    "Baseado no PdfCraft, da equipe ArtCraft e dos colaboradores do PdfCraft.",
+    "На основе PdfCraft",
+    "Создано на основе PdfCraft от команды ArtCraft и участников PdfCraft.",
+    "Temelji na PdfCraft",
+    "Temelji na PdfCraft ekipe ArtCraft in sodelavcev PdfCraft.",
+    "PdfCraft ఆధారంగా",
+    "ArtCraft బృందం మరియు PdfCraft సహకారుల PdfCraft ఆధారంగా రూపొందించబడింది.",
+    "PdfCraft tabanlı",
+    "ArtCraft ekibi ve PdfCraft katkıda bulunanlarının PdfCraft'ı üzerine kurulmuştur.",
+    "На основі PdfCraft",
+    "Створено на основі PdfCraft від команди ArtCraft і учасників PdfCraft.",
+    "基于 PdfCraft",
+    "基于 ArtCraft 团队和 PdfCraft 贡献者开发的 PdfCraft。",
+    "基於 PdfCraft",
+    "基於 ArtCraft 團隊與 PdfCraft 貢獻者開發的 PdfCraft。",
+];
+
+fn renamed(s: &str) -> String {
+    if CREDITS.contains(&s) { s.to_owned() } else { s.replace(UPSTREAM_NAME, APP_NAME) }
+}
+
+/// [`renamed`] for an English source string, which the code holds as a `&'static str` literal.
+/// The renamed copies are kept for the life of the process; there is one per distinct literal
+/// that names the app (a few dozen), and the table is capped in case a caller passes built strings.
+fn renamed_english(s: &str) -> &str {
+    use std::collections::HashMap;
+    use std::sync::{Mutex, OnceLock, PoisonError};
+    const CAP: usize = 1024;
+    static TABLE: OnceLock<Mutex<HashMap<String, &'static str>>> = OnceLock::new();
+    if !s.contains(UPSTREAM_NAME) || CREDITS.contains(&s) {
+        return s;
+    }
+    let mut table = TABLE.get_or_init(|| Mutex::new(HashMap::new())).lock().unwrap_or_else(PoisonError::into_inner);
+    if let Some(found) = table.get(s) {
+        return found;
+    }
+    if table.len() >= CAP {
+        return s;
+    }
+    let leaked: &'static str = Box::leak(renamed(s).into_boxed_str());
+    table.insert(s.to_owned(), leaked);
+    leaked
 }
 
 /// How the layers below say their own sentences in the current language.
@@ -2955,7 +3038,7 @@ mod tests {
         // "حفظ باسم…" as typed; the ellipsis ends the phrase on the left.
         assert_eq!(tr(ar, "Save as…"), "…باسم حفظ");
         // Latin names keep their own direction inside the phrase.
-        assert_eq!(tr(ar, "About PdfCraft"), "PdfCraft حول");
+        assert_eq!(tr(ar, "About PdfCraft"), "PDF Simply حول");
         // A caption's colon stays beside the widget on its right.
         assert_eq!(tr(ar, "Name:"), "الاسم:");
         assert_eq!(tr(ar, "Issued by: "), "عن صادرة: ");

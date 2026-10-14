@@ -78,10 +78,15 @@ pub fn parse_reference(reference: &str) -> Option<(PathBuf, u64, Vec<u8>)> {
     Some((library, slot, key_id))
 }
 
-/// Vendor libraries present on this computer: the system folders, then removable drives
+/// Vendor libraries present on this computer: `PDFSIMPLY_PKCS11_LIB` when set, the system
+/// folders, then removable drives
 /// (some Aruba keys carry their software on the key itself).
 pub fn libraries() -> Vec<PathBuf> {
     let mut found = Vec::new();
+    // A library named by hand (an unusual token, or a test token) comes first.
+    if let Some(chosen) = std::env::var_os("PDFSIMPLY_PKCS11_LIB").map(PathBuf::from).filter(|p| p.is_file()) {
+        found.push(chosen);
+    }
     for dir in system_dirs() {
         for name in KNOWN {
             let path = dir.join(library_file(name));

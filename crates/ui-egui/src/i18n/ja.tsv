@@ -2357,3 +2357,49 @@ animation effects	Off	オフ
 	PDF Simply on GitHub	GitHub の PDF Simply
 	Based on PdfCraft	PdfCraft がベース
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft チームと PdfCraft の貢献者による PdfCraft をもとに作られています。
+	Careful: the key says only a few attempts are left before the PIN locks.	注意：PIN がロックされるまでの残り試行回数が少ないとキーが知らせています。
+	Certificate issued by: {issuer}	証明書の発行者：{issuer}
+	Certificate valid on the signing date: {v}	署名日に有効な証明書：{v}
+	Choose a certificate.	証明書を選んでください。
+	Digital ID file · {issuer}	デジタル ID ファイル · {issuer}
+	Document unchanged since signing: {v}	署名後に文書は変更されていない：{v}
+	Hide details	詳細を隠す
+	Keychain · {issuer}	キーチェーン · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	証明書が見つかりません。キーを差し込み、数秒待ってから「もう一度検索」を押してください。
+	PDF and signed files (.p7m)	PDF と署名済みファイル (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	適格証明書（法的に有効な電子署名）：{v}
+	Search again	もう一度検索
+	Sign as a .p7m file (Italian digital signature)	.p7m ファイルとして署名（イタリアの電子署名）
+	Signature NOT valid: the document was changed after it was signed.	署名は無効です：署名後に文書が変更されています。
+	Signature PIN	署名用 PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} が適格証明書で署名：署名は改ざんされていません。
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} が署名：署名は改ざんされていませんが、証明書を確認できませんでした。
+	Signed by {who}: the signature is valid.	{who} が署名：署名は有効です。
+	Signed file (.p7m)	署名済みファイル (.p7m)
+	Signed file: {file}	署名済みファイル：{file}
+	Signed on: {time} (the signer's computer clock)	署名日時：{time}（署名者のコンピューターの時計）
+	Signing a .p7m is not available in the browser.	.p7m の署名はブラウザーでは使えません。
+	Sign…	署名…
+	Smart card or key "{token}" · {kind} · {issuer}	スマートカードまたはキー「{token}」 · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN がロックされています：キーに同梱の封筒にある PUK でロックを解除してください。
+	The certificate store will ask for the PIN, if needed.	必要な場合は証明書ストアが PIN を求めます。
+	This is not a signed file that can be read: {e}	読み取れる署名済みファイルではありません：{e}
+	Type the PIN.	PIN を入力してください。
+	Type the digital ID's password.	デジタル ID のパスワードを入力してください。
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	注意：これが最後の試行です。PIN をまた間違えるとロックされ、PUK が必要になります。
+	Windows certificates · {issuer}	Windows の証明書 · {issuer}
+	Wrong PIN	PIN が違います
+	authentication (not for signing)	認証用（署名には使えません）
+	no	いいえ
+	yes	はい
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what}（このセッションで {n} 回間違い）。何度か PIN を間違えるとキーがロックされます。
+	Sign as a .p7m file (CAdES)…	.p7m ファイルとして署名 (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	文書は CAdES 形式で署名され、イタリアの行政機関と Agenzia delle Entrate が受け付ける新しい .p7m ファイルに保存されます。開いている文書は変わりません。
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	キーのソフトウェアも見つかりません：キーに付属のソフトウェア（Aruba と InfoCamere のキーは Bit4id ドライバー）をインストールするか、キー本体の中を探してください。
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply は署名と証明書を確認しますが、証明書が失効しているかは確認しません。正式な確認には AgID 準拠の検証ツール（ArubaSign、Firma4NG、オンライン検証サービス）を使ってください。
+	The document was changed after it was signed.	署名後に文書が変更されています。
+	The signer's certificate is not in the file.	署名者の証明書がファイルにありません。
+	The signature value does not match the signer's key.	署名値が署名者の鍵と一致しません。
+	The certificate was not valid at the signing time.	署名日に証明書が有効ではありませんでした。
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	署名に signing-certificate 属性がありません：CAdES ではなく PKCS #7 です。
+	The signer's certificate does not chain to a trusted certificate.	署名者の証明書が信頼済みの証明書につながりません。

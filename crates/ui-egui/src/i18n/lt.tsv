@@ -2601,3 +2601,49 @@ key	Space	Tarpas
 	PDF Simply on GitHub	PDF Simply sistemoje GitHub
 	Based on PdfCraft	Sukurta pagal PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Sukurta pagal ArtCraft komandos ir PdfCraft bendradarbių PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Dėmesio: raktas praneša, kad iki PIN užrakinimo liko nedaug bandymų.
+	Certificate issued by: {issuer}	Sertifikatą išdavė: {issuer}
+	Certificate valid on the signing date: {v}	Sertifikatas galiojo pasirašymo dieną: {v}
+	Choose a certificate.	Pasirinkite sertifikatą.
+	Digital ID file · {issuer}	Skaitmeninio ID failas · {issuer}
+	Document unchanged since signing: {v}	Dokumentas nepakeistas nuo pasirašymo: {v}
+	Hide details	Slėpti išsamią informaciją
+	Keychain · {issuer}	Raktinė · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Sertifikatų nerasta. Įjunkite raktą, palaukite kelias sekundes ir spustelėkite „Ieškoti dar kartą“.
+	PDF and signed files (.p7m)	PDF ir pasirašyti failai (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Kvalifikuotas sertifikatas (teisinę galią turintis parašas): {v}
+	Search again	Ieškoti dar kartą
+	Sign as a .p7m file (Italian digital signature)	Pasirašyti į .p7m failą (Italijos skaitmeninis parašas)
+	Signature NOT valid: the document was changed after it was signed.	Parašas NEGALIOJA: dokumentas pakeistas po pasirašymo.
+	Signature PIN	Parašo PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	Pasirašė {who} kvalifikuotu sertifikatu: parašas nepažeistas.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Pasirašė {who}: parašas nepažeistas, bet sertifikato patvirtinti nepavyko.
+	Signed by {who}: the signature is valid.	Pasirašė {who}: parašas galioja.
+	Signed file (.p7m)	Pasirašytas failas (.p7m)
+	Signed file: {file}	Pasirašytas failas: {file}
+	Signed on: {time} (the signer's computer clock)	Pasirašyta: {time} (pasirašiusiojo kompiuterio laikrodis)
+	Signing a .p7m is not available in the browser.	Pasirašymas .p7m naršyklėje negalimas.
+	Sign…	Pasirašyti…
+	Smart card or key "{token}" · {kind} · {issuer}	Lustinė kortelė ar raktas „{token}“ · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN užrakintas: atrakinkite jį PUK kodu (voke, gautame kartu su raktu).
+	The certificate store will ask for the PIN, if needed.	Jei reikės, sertifikatų saugykla paprašys PIN.
+	This is not a signed file that can be read: {e}	Tai nėra skaitomas pasirašytas failas: {e}
+	Type the PIN.	Įveskite PIN.
+	Type the digital ID's password.	Įveskite skaitmeninio ID slaptažodį.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	DĖMESIO: tai paskutinis bandymas. Jei PIN vėl bus neteisingas, jis užsirakins ir prireiks PUK.
+	Windows certificates · {issuer}	„Windows“ sertifikatai · {issuer}
+	Wrong PIN	Neteisingas PIN
+	authentication (not for signing)	autentifikavimas (ne pasirašymui)
+	no	ne
+	yes	taip
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (šioje sesijoje neteisingų: {n}). Po kelių neteisingų PIN raktas užsirakina.
+	Sign as a .p7m file (CAdES)…	Pasirašyti į .p7m failą (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokumentas pasirašomas CAdES formatu ir išsaugomas naujame .p7m faile – šį formatą priima Italijos institucijos ir Agenzia delle Entrate. Atidarytas dokumentas nesikeičia.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nerasta ir rakto programinė įranga: įdiekite kartu su raktu gautą programinę įrangą (Aruba ir InfoCamere raktams – Bit4id tvarkyklę) arba jos ieškokite pačiame rakte.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply tikrina parašą ir sertifikatą, bet ne jo atšaukimą. Oficialiam patikrinimui naudokite AgID reikalavimus atitinkantį tikrintuvą (ArubaSign, Firma4NG arba internetinius tikrintuvus).
+	The document was changed after it was signed.	Dokumentas pakeistas po pasirašymo.
+	The signer's certificate is not in the file.	Pasirašiusiojo sertifikato faile nėra.
+	The signature value does not match the signer's key.	Parašo reikšmė neatitinka pasirašiusiojo rakto.
+	The certificate was not valid at the signing time.	Sertifikatas negaliojo pasirašymo dieną.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Parašas neturi signing-certificate atributo: tai PKCS #7, o ne CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Pasirašiusiojo sertifikatas neveda į patikimą sertifikatą.

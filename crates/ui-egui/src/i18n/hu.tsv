@@ -2356,3 +2356,49 @@ animation effects	Off	Ki
 	PDF Simply on GitHub	A PDF Simply a GitHubon
 	Based on PdfCraft	A PdfCraft alapján
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Az ArtCraft csapat és a PdfCraft közreműködőinek PdfCraft programjára épül.
+	Careful: the key says only a few attempts are left before the PIN locks.	Figyelem: a kulcs szerint csak néhány próbálkozás maradt a PIN zárolásáig.
+	Certificate issued by: {issuer}	A tanúsítvány kiadója: {issuer}
+	Certificate valid on the signing date: {v}	A tanúsítvány érvényes volt az aláírás napján: {v}
+	Choose a certificate.	Válasszon tanúsítványt.
+	Digital ID file · {issuer}	Digitális azonosító fájl · {issuer}
+	Document unchanged since signing: {v}	A dokumentum az aláírás óta változatlan: {v}
+	Hide details	Részletek elrejtése
+	Keychain · {issuer}	Kulcskarika · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nem található tanúsítvány. Csatlakoztassa a kulcsot, várjon néhány másodpercet, majd nyomja meg az Újrakeresés gombot.
+	PDF and signed files (.p7m)	PDF és aláírt fájlok (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Minősített tanúsítvány (jogilag érvényes aláírás): {v}
+	Search again	Újrakeresés
+	Sign as a .p7m file (Italian digital signature)	Aláírás .p7m fájlba (olasz digitális aláírás)
+	Signature NOT valid: the document was changed after it was signed.	Az aláírás NEM érvényes: a dokumentumot az aláírás után módosították.
+	Signature PIN	Aláíró PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	Aláírta: {who}, minősített tanúsítvánnyal: az aláírás sértetlen.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Aláírta: {who}: az aláírás sértetlen, de a tanúsítványt nem sikerült megerősíteni.
+	Signed by {who}: the signature is valid.	Aláírta: {who}: az aláírás érvényes.
+	Signed file (.p7m)	Aláírt fájl (.p7m)
+	Signed file: {file}	Aláírt fájl: {file}
+	Signed on: {time} (the signer's computer clock)	Aláírás ideje: {time} (az aláíró számítógépének órája)
+	Signing a .p7m is not available in the browser.	A .p7m aláírás a böngészőben nem érhető el.
+	Sign…	Aláírás…
+	Smart card or key "{token}" · {kind} · {issuer}	Intelligens kártya vagy kulcs: „{token}” · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	A PIN zárolva van: oldja fel a PUK-kal (a kulccsal kapott borítékban).
+	The certificate store will ask for the PIN, if needed.	Szükség esetén a tanúsítványtár kéri a PIN-t.
+	This is not a signed file that can be read: {e}	Ez nem olvasható aláírt fájl: {e}
+	Type the PIN.	Írja be a PIN-t.
+	Type the digital ID's password.	Írja be a digitális azonosító jelszavát.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	FIGYELEM: ez az utolsó próbálkozás. Ha a PIN ismét hibás, zárolódik, és szüksége lesz a PUK-ra.
+	Windows certificates · {issuer}	Windows-tanúsítványok · {issuer}
+	Wrong PIN	Hibás PIN
+	authentication (not for signing)	hitelesítés (nem aláíráshoz)
+	no	nem
+	yes	igen
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} hibás ebben a munkamenetben). Néhány hibás PIN után a kulcs zárolódik.
+	Sign as a .p7m file (CAdES)…	Aláírás .p7m fájlba (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	A dokumentum CAdES formátumban kerül aláírásra, és új .p7m fájlba mentődik, amelyet az olasz hatóságok és az Agenzia delle Entrate elfogad. A megnyitott dokumentum nem változik.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	A kulcs szoftvere sem található: telepítse a kulccsal kapott szoftvert (Aruba és InfoCamere kulcsokhoz a Bit4id illesztőprogramot), vagy keresse magán a kulcson.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	A PDF Simply ellenőrzi az aláírást és a tanúsítványt, de azt nem, hogy a tanúsítványt visszavonták-e. Hivatalos ellenőrzéshez használjon AgID-megfelelő ellenőrzőt (ArubaSign, Firma4NG vagy online ellenőrzők).
+	The document was changed after it was signed.	A dokumentumot az aláírás után módosították.
+	The signer's certificate is not in the file.	Az aláíró tanúsítványa nincs a fájlban.
+	The signature value does not match the signer's key.	Az aláírás értéke nem egyezik az aláíró kulcsával.
+	The certificate was not valid at the signing time.	A tanúsítvány nem volt érvényes az aláírás napján.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Az aláírásnak nincs signing-certificate attribútuma: PKCS #7, nem CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Az aláíró tanúsítványa nem vezet megbízható tanúsítványhoz.

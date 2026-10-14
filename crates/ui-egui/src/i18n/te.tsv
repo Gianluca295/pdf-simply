@@ -2270,3 +2270,49 @@ animation effects	Off	ఆఫ్
 	PDF Simply on GitHub	GitHub లో PDF Simply
 	Based on PdfCraft	PdfCraft ఆధారంగా
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft బృందం మరియు PdfCraft సహకారుల PdfCraft ఆధారంగా రూపొందించబడింది.
+	Careful: the key says only a few attempts are left before the PIN locks.	జాగ్రత్త: PIN లాక్ అయ్యేలోపు కొన్ని ప్రయత్నాలే మిగిలాయని కీ చెబుతోంది.
+	Certificate issued by: {issuer}	సర్టిఫికెట్ జారీచేసినవారు: {issuer}
+	Certificate valid on the signing date: {v}	సంతకం తేదీన సర్టిఫికెట్ చెల్లుబాటు: {v}
+	Choose a certificate.	ఒక సర్టిఫికెట్‌ను ఎంచుకోండి.
+	Digital ID file · {issuer}	డిజిటల్ ID ఫైల్ · {issuer}
+	Document unchanged since signing: {v}	సంతకం తర్వాత పత్రం మారలేదు: {v}
+	Hide details	వివరాలను దాచు
+	Keychain · {issuer}	కీచెయిన్ · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	సర్టిఫికెట్ కనబడలేదు. కీని పెట్టి, కొన్ని సెకన్లు ఆగి, మళ్ళీ వెతుకు నొక్కండి.
+	PDF and signed files (.p7m)	PDF మరియు సంతకం చేసిన ఫైళ్లు (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	అర్హత సర్టిఫికెట్ (చట్టబద్ధమైన డిజిటల్ సంతకం): {v}
+	Search again	మళ్ళీ వెతుకు
+	Sign as a .p7m file (Italian digital signature)	.p7m ఫైల్‌గా సంతకం చేయి (ఇటాలియన్ డిజిటల్ సంతకం)
+	Signature NOT valid: the document was changed after it was signed.	సంతకం చెల్లదు: సంతకం తర్వాత పత్రం మార్చబడింది.
+	Signature PIN	సంతకం PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} అర్హత సర్టిఫికెట్‌తో సంతకం చేశారు: సంతకం చెక్కుచెదరలేదు.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} సంతకం చేశారు: సంతకం చెక్కుచెదరలేదు, కానీ సర్టిఫికెట్‌ను నిర్ధారించలేకపోయాం.
+	Signed by {who}: the signature is valid.	{who} సంతకం చేశారు: సంతకం చెల్లుతుంది.
+	Signed file (.p7m)	సంతకం చేసిన ఫైల్ (.p7m)
+	Signed file: {file}	సంతకం చేసిన ఫైల్: {file}
+	Signed on: {time} (the signer's computer clock)	సంతకం సమయం: {time} (సంతకం చేసినవారి కంప్యూటర్ గడియారం)
+	Signing a .p7m is not available in the browser.	.p7m సంతకం బ్రౌజర్‌లో అందుబాటులో లేదు.
+	Sign…	సంతకం చేయి…
+	Smart card or key "{token}" · {kind} · {issuer}	స్మార్ట్ కార్డ్ లేదా కీ "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN లాక్ అయింది: కీతో వచ్చిన కవర్‌లోని PUKతో దాన్ని అన్‌లాక్ చేయండి.
+	The certificate store will ask for the PIN, if needed.	అవసరమైతే సర్టిఫికెట్ స్టోర్ PIN అడుగుతుంది.
+	This is not a signed file that can be read: {e}	ఇది చదవగలిగే సంతకం చేసిన ఫైల్ కాదు: {e}
+	Type the PIN.	PIN టైప్ చేయండి.
+	Type the digital ID's password.	డిజిటల్ ID పాస్‌వర్డ్ టైప్ చేయండి.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	హెచ్చరిక: ఇదే చివరి ప్రయత్నం. PIN మళ్ళీ తప్పయితే అది లాక్ అవుతుంది, PUK అవసరం అవుతుంది.
+	Windows certificates · {issuer}	Windows సర్టిఫికెట్లు · {issuer}
+	Wrong PIN	తప్పు PIN
+	authentication (not for signing)	ప్రామాణీకరణ (సంతకానికి కాదు)
+	no	కాదు
+	yes	అవును
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (ఈ సెషన్‌లో {n} తప్పులు). కొన్ని తప్పు PINల తర్వాత కీ లాక్ అవుతుంది.
+	Sign as a .p7m file (CAdES)…	.p7m ఫైల్‌గా సంతకం చేయి (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	పత్రం CAdES ఫార్మాట్‌లో సంతకం చేయబడి, ఇటాలియన్ ప్రభుత్వ సంస్థలు మరియు Agenzia delle Entrate అంగీకరించే కొత్త .p7m ఫైల్‌గా సేవ్ అవుతుంది. తెరిచిన పత్రం మారదు.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	కీ సాఫ్ట్‌వేర్ కూడా కనబడలేదు: కీతో వచ్చిన సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయండి (Aruba, InfoCamere కీలకు Bit4id డ్రైవర్), లేదా కీలోనే వెతకండి.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply సంతకాన్ని, సర్టిఫికెట్‌ను తనిఖీ చేస్తుంది, కానీ సర్టిఫికెట్ రద్దయిందో లేదో తనిఖీ చేయదు. అధికారిక తనిఖీ కోసం AgID కి అనుగుణమైన వెరిఫైయర్‌ను వాడండి (ArubaSign, Firma4NG లేదా ఆన్‌లైన్ వెరిఫైయర్లు).
+	The document was changed after it was signed.	సంతకం తర్వాత పత్రం మార్చబడింది.
+	The signer's certificate is not in the file.	సంతకం చేసినవారి సర్టిఫికెట్ ఫైల్‌లో లేదు.
+	The signature value does not match the signer's key.	సంతకం విలువ సంతకం చేసినవారి కీతో సరిపోలడం లేదు.
+	The certificate was not valid at the signing time.	సంతకం తేదీన సర్టిఫికెట్ చెల్లుబాటులో లేదు.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	సంతకంలో signing-certificate లక్షణం లేదు: ఇది PKCS #7, CAdES కాదు.
+	The signer's certificate does not chain to a trusted certificate.	సంతకం చేసినవారి సర్టిఫికెట్ విశ్వసనీయ సర్టిఫికెట్‌కు చేరదు.

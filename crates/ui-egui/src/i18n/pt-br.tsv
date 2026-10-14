@@ -2371,3 +2371,49 @@ animation effects	Off	Desativados
 	PDF Simply on GitHub	PDF Simply no GitHub
 	Based on PdfCraft	Baseado no PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Baseado no PdfCraft, da equipe ArtCraft e dos colaboradores do PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Atenção: o token indica que restam poucas tentativas antes de o PIN ser bloqueado.
+	Certificate issued by: {issuer}	Certificado emitido por: {issuer}
+	Certificate valid on the signing date: {v}	Certificado válido na data da assinatura: {v}
+	Choose a certificate.	Escolha um certificado.
+	Digital ID file · {issuer}	Arquivo de ID digital · {issuer}
+	Document unchanged since signing: {v}	Documento inalterado desde a assinatura: {v}
+	Hide details	Ocultar detalhes
+	Keychain · {issuer}	Chaves · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nenhum certificado encontrado. Conecte o token, aguarde alguns segundos e clique em Procurar novamente.
+	PDF and signed files (.p7m)	PDF e arquivos assinados (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Certificado qualificado (assinatura digital com valor legal): {v}
+	Search again	Procurar novamente
+	Sign as a .p7m file (Italian digital signature)	Assinar como arquivo .p7m (assinatura digital italiana)
+	Signature NOT valid: the document was changed after it was signed.	Assinatura NÃO válida: o documento foi alterado depois de assinado.
+	Signature PIN	PIN de assinatura
+	Signed by {who} with a qualified certificate: the signature is intact.	Assinado por {who} com certificado qualificado: a assinatura está íntegra.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Assinado por {who}: a assinatura está íntegra, mas não foi possível confirmar o certificado.
+	Signed by {who}: the signature is valid.	Assinado por {who}: a assinatura é válida.
+	Signed file (.p7m)	Arquivo assinado (.p7m)
+	Signed file: {file}	Arquivo assinado: {file}
+	Signed on: {time} (the signer's computer clock)	Assinado em: {time} (relógio do computador de quem assinou)
+	Signing a .p7m is not available in the browser.	A assinatura .p7m não está disponível no navegador.
+	Sign…	Assinar…
+	Smart card or key "{token}" · {kind} · {issuer}	Cartão inteligente ou token "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	O PIN está bloqueado: desbloqueie com o PUK (no envelope que veio com o token).
+	The certificate store will ask for the PIN, if needed.	O repositório de certificados pedirá o PIN, se necessário.
+	This is not a signed file that can be read: {e}	Este não é um arquivo assinado legível: {e}
+	Type the PIN.	Digite o PIN.
+	Type the digital ID's password.	Digite a senha do ID digital.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	ATENÇÃO: esta é a última tentativa. Se o PIN estiver errado de novo, ele é bloqueado e você precisará do PUK.
+	Windows certificates · {issuer}	Certificados do Windows · {issuer}
+	Wrong PIN	PIN incorreto
+	authentication (not for signing)	autenticação (não para assinar)
+	no	não
+	yes	sim
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} incorretos nesta sessão). Depois de alguns PINs incorretos o token é bloqueado.
+	Sign as a .p7m file (CAdES)…	Assinar como arquivo .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	O documento é assinado no formato CAdES e salvo como um novo arquivo .p7m, o formato aceito pela administração pública italiana e pela Agenzia delle Entrate. O documento aberto não muda.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	O software do token também não foi encontrado: instale o que veio com o token (para tokens Aruba e InfoCamere, o driver Bit4id) ou procure-o no próprio token.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	O PDF Simply verifica a assinatura e o certificado, mas não se o certificado foi revogado. Para uma verificação oficial, use um verificador conforme a AgID (ArubaSign, Firma4NG ou os verificadores online).
+	The document was changed after it was signed.	O documento foi alterado depois de assinado.
+	The signer's certificate is not in the file.	O certificado de quem assinou não está no arquivo.
+	The signature value does not match the signer's key.	O valor da assinatura não corresponde à chave de quem assinou.
+	The certificate was not valid at the signing time.	O certificado não era válido na data da assinatura.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	A assinatura não tem o atributo signing-certificate: é PKCS #7, não CAdES.
+	The signer's certificate does not chain to a trusted certificate.	O certificado de quem assinou não leva a um certificado confiável.

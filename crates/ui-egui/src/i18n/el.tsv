@@ -2367,3 +2367,49 @@ animation effects	Off	Ανενεργά
 	PDF Simply on GitHub	Το PDF Simply στο GitHub
 	Based on PdfCraft	Βασισμένο στο PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Βασισμένο στο PdfCraft της ομάδας ArtCraft και των συνεισφερόντων του PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Προσοχή: το κλειδί αναφέρει ότι απομένουν λίγες προσπάθειες πριν κλειδώσει το PIN.
+	Certificate issued by: {issuer}	Το πιστοποιητικό εκδόθηκε από: {issuer}
+	Certificate valid on the signing date: {v}	Πιστοποιητικό έγκυρο την ημερομηνία υπογραφής: {v}
+	Choose a certificate.	Επιλέξτε πιστοποιητικό.
+	Digital ID file · {issuer}	Αρχείο ψηφιακής ταυτότητας · {issuer}
+	Document unchanged since signing: {v}	Το έγγραφο δεν άλλαξε μετά την υπογραφή: {v}
+	Hide details	Απόκρυψη λεπτομερειών
+	Keychain · {issuer}	Μπρελόκ κλειδιών · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Δεν βρέθηκε πιστοποιητικό. Συνδέστε το κλειδί, περιμένετε λίγα δευτερόλεπτα και πατήστε Νέα αναζήτηση.
+	PDF and signed files (.p7m)	PDF και υπογεγραμμένα αρχεία (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Εγκεκριμένο πιστοποιητικό (υπογραφή με νομική ισχύ): {v}
+	Search again	Νέα αναζήτηση
+	Sign as a .p7m file (Italian digital signature)	Υπογραφή σε αρχείο .p7m (ιταλική ψηφιακή υπογραφή)
+	Signature NOT valid: the document was changed after it was signed.	Η υπογραφή ΔΕΝ είναι έγκυρη: το έγγραφο άλλαξε μετά την υπογραφή.
+	Signature PIN	PIN υπογραφής
+	Signed by {who} with a qualified certificate: the signature is intact.	Υπογράφηκε από {who} με εγκεκριμένο πιστοποιητικό: η υπογραφή είναι ακέραιη.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Υπογράφηκε από {who}: η υπογραφή είναι ακέραιη, αλλά το πιστοποιητικό δεν επιβεβαιώθηκε.
+	Signed by {who}: the signature is valid.	Υπογράφηκε από {who}: η υπογραφή είναι έγκυρη.
+	Signed file (.p7m)	Υπογεγραμμένο αρχείο (.p7m)
+	Signed file: {file}	Υπογεγραμμένο αρχείο: {file}
+	Signed on: {time} (the signer's computer clock)	Υπογράφηκε: {time} (ρολόι του υπολογιστή του υπογράφοντος)
+	Signing a .p7m is not available in the browser.	Η υπογραφή .p7m δεν είναι διαθέσιμη στο πρόγραμμα περιήγησης.
+	Sign…	Υπογραφή…
+	Smart card or key "{token}" · {kind} · {issuer}	Έξυπνη κάρτα ή κλειδί «{token}» · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	Το PIN είναι κλειδωμένο: ξεκλειδώστε το με το PUK (στον φάκελο που ήρθε με το κλειδί).
+	The certificate store will ask for the PIN, if needed.	Ο χώρος αποθήκευσης πιστοποιητικών θα ζητήσει το PIN, αν χρειαστεί.
+	This is not a signed file that can be read: {e}	Αυτό δεν είναι αναγνώσιμο υπογεγραμμένο αρχείο: {e}
+	Type the PIN.	Πληκτρολογήστε το PIN.
+	Type the digital ID's password.	Πληκτρολογήστε τον κωδικό της ψηφιακής ταυτότητας.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	ΠΡΟΣΟΧΗ: αυτή είναι η τελευταία προσπάθεια. Αν το PIN είναι πάλι λάθος, κλειδώνει και θα χρειαστείτε το PUK.
+	Windows certificates · {issuer}	Πιστοποιητικά Windows · {issuer}
+	Wrong PIN	Λάθος PIN
+	authentication (not for signing)	ταυτοποίηση (όχι για υπογραφή)
+	no	όχι
+	yes	ναι
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} λάθος σε αυτή τη συνεδρία). Μετά από μερικά λάθος PIN το κλειδί κλειδώνει.
+	Sign as a .p7m file (CAdES)…	Υπογραφή σε αρχείο .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Το έγγραφο υπογράφεται σε μορφή CAdES και αποθηκεύεται σε νέο αρχείο .p7m, τη μορφή που δέχονται οι ιταλικές δημόσιες υπηρεσίες και η Agenzia delle Entrate. Το ανοιχτό έγγραφο δεν αλλάζει.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Δεν βρέθηκε ούτε το λογισμικό του κλειδιού: εγκαταστήστε αυτό που ήρθε με το κλειδί (για κλειδιά Aruba και InfoCamere, το πρόγραμμα οδήγησης Bit4id) ή αναζητήστε το στο ίδιο το κλειδί.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	Το PDF Simply ελέγχει την υπογραφή και το πιστοποιητικό, όχι όμως αν ανακλήθηκε. Για επίσημο έλεγχο χρησιμοποιήστε επαληθευτή συμβατό με AgID (ArubaSign, Firma4NG ή τους διαδικτυακούς επαληθευτές).
+	The document was changed after it was signed.	Το έγγραφο άλλαξε μετά την υπογραφή.
+	The signer's certificate is not in the file.	Το πιστοποιητικό του υπογράφοντος δεν υπάρχει στο αρχείο.
+	The signature value does not match the signer's key.	Η τιμή της υπογραφής δεν ταιριάζει με το κλειδί του υπογράφοντος.
+	The certificate was not valid at the signing time.	Το πιστοποιητικό δεν ήταν έγκυρο την ημερομηνία υπογραφής.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Η υπογραφή δεν έχει χαρακτηριστικό signing-certificate: είναι PKCS #7, όχι CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Το πιστοποιητικό του υπογράφοντος δεν οδηγεί σε αξιόπιστο πιστοποιητικό.

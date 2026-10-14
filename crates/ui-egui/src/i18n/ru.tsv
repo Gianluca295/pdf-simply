@@ -2270,3 +2270,49 @@ animation effects	Off	Выкл
 	PDF Simply on GitHub	PDF Simply на GitHub
 	Based on PdfCraft	На основе PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Создано на основе PdfCraft от команды ArtCraft и участников PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Внимание: ключ сообщает, что до блокировки PIN-кода осталось мало попыток.
+	Certificate issued by: {issuer}	Сертификат выдан: {issuer}
+	Certificate valid on the signing date: {v}	Сертификат действителен на дату подписи: {v}
+	Choose a certificate.	Выберите сертификат.
+	Digital ID file · {issuer}	Файл цифрового удостоверения · {issuer}
+	Document unchanged since signing: {v}	Документ не изменялся после подписи: {v}
+	Hide details	Скрыть подробности
+	Keychain · {issuer}	Связка ключей · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Сертификаты не найдены. Вставьте ключ, подождите несколько секунд и нажмите «Искать снова».
+	PDF and signed files (.p7m)	PDF и подписанные файлы (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Квалифицированный сертификат (юридически значимая подпись): {v}
+	Search again	Искать снова
+	Sign as a .p7m file (Italian digital signature)	Подписать в файл .p7m (итальянская цифровая подпись)
+	Signature NOT valid: the document was changed after it was signed.	Подпись НЕДЕЙСТВИТЕЛЬНА: документ изменён после подписания.
+	Signature PIN	PIN-код подписи
+	Signed by {who} with a qualified certificate: the signature is intact.	Подписано: {who}, квалифицированный сертификат: подпись не нарушена.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Подписано: {who}: подпись не нарушена, но сертификат подтвердить не удалось.
+	Signed by {who}: the signature is valid.	Подписано: {who}: подпись действительна.
+	Signed file (.p7m)	Подписанный файл (.p7m)
+	Signed file: {file}	Подписанный файл: {file}
+	Signed on: {time} (the signer's computer clock)	Дата подписи: {time} (часы компьютера подписавшего)
+	Signing a .p7m is not available in the browser.	Подпись .p7m недоступна в браузере.
+	Sign…	Подписать…
+	Smart card or key "{token}" · {kind} · {issuer}	Смарт-карта или ключ «{token}» · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN-код заблокирован: разблокируйте его кодом PUK (в конверте, полученном вместе с ключом).
+	The certificate store will ask for the PIN, if needed.	Хранилище сертификатов при необходимости запросит PIN-код.
+	This is not a signed file that can be read: {e}	Это не читаемый подписанный файл: {e}
+	Type the PIN.	Введите PIN-код.
+	Type the digital ID's password.	Введите пароль цифрового удостоверения.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	ВНИМАНИЕ: это последняя попытка. Если PIN-код снова неверен, он заблокируется и понадобится PUK.
+	Windows certificates · {issuer}	Сертификаты Windows · {issuer}
+	Wrong PIN	Неверный PIN-код
+	authentication (not for signing)	аутентификация (не для подписи)
+	no	нет
+	yes	да
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (неверных в этом сеансе: {n}). После нескольких неверных PIN-кодов ключ блокируется.
+	Sign as a .p7m file (CAdES)…	Подписать в файл .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Документ подписывается в формате CAdES и сохраняется в новый файл .p7m — формат, который принимают итальянские госорганы и Agenzia delle Entrate. Открытый документ не меняется.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Не найдено и программное обеспечение ключа: установите ПО, поставляемое с ключом (для ключей Aruba и InfoCamere — драйвер Bit4id), или найдите его на самом ключе.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply проверяет подпись и сертификат, но не его отзыв. Для официальной проверки используйте проверку, соответствующую требованиям AgID (ArubaSign, Firma4NG или онлайн-сервисы).
+	The document was changed after it was signed.	Документ изменён после подписания.
+	The signer's certificate is not in the file.	Сертификата подписавшего нет в файле.
+	The signature value does not match the signer's key.	Значение подписи не соответствует ключу подписавшего.
+	The certificate was not valid at the signing time.	Сертификат был недействителен на дату подписи.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	У подписи нет атрибута signing-certificate: это PKCS #7, а не CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Сертификат подписавшего не ведёт к доверенному сертификату.

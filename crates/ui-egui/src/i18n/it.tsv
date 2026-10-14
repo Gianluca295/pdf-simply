@@ -2366,3 +2366,49 @@ animation effects	Off	Disattivati
 	PDF Simply on GitHub	PDF Simply su GitHub
 	Based on PdfCraft	Basato su PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Realizzato a partire da PdfCraft, del team ArtCraft e dei contributori di PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Attenzione: la chiavetta segnala che restano pochi tentativi prima del blocco del PIN.
+	Certificate issued by: {issuer}	Certificato emesso da: {issuer}
+	Certificate valid on the signing date: {v}	Certificato valido alla data della firma: {v}
+	Choose a certificate.	Scegli un certificato.
+	Digital ID file · {issuer}	File di identità digitale · {issuer}
+	Document unchanged since signing: {v}	Documento non modificato dopo la firma: {v}
+	Hide details	Nascondi dettagli
+	Keychain · {issuer}	Portachiavi · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nessun certificato trovato. Inserisci la chiavetta, aspetta qualche secondo e premi Cerca di nuovo.
+	PDF and signed files (.p7m)	PDF e file firmati (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Certificato qualificato (firma digitale con valore legale): {v}
+	Search again	Cerca di nuovo
+	Sign as a .p7m file (Italian digital signature)	Firma in un file .p7m (firma digitale italiana)
+	Signature NOT valid: the document was changed after it was signed.	Firma NON valida: il documento è stato modificato dopo la firma.
+	Signature PIN	PIN di firma
+	Signed by {who} with a qualified certificate: the signature is intact.	Firmato da {who} con certificato qualificato: la firma è integra.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Firmato da {who}: la firma è integra, ma non è stato possibile confermare il certificato.
+	Signed by {who}: the signature is valid.	Firmato da {who}: la firma è valida.
+	Signed file (.p7m)	File firmato (.p7m)
+	Signed file: {file}	File firmato: {file}
+	Signed on: {time} (the signer's computer clock)	Firmato il: {time} (orologio del computer di chi ha firmato)
+	Signing a .p7m is not available in the browser.	La firma .p7m non è disponibile nel browser.
+	Sign…	Firma…
+	Smart card or key "{token}" · {kind} · {issuer}	Smart card o chiavetta "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	Il PIN è bloccato: sbloccalo con il PUK (nella busta ricevuta con la chiavetta).
+	The certificate store will ask for the PIN, if needed.	Se serve, il PIN lo chiederà l'archivio dei certificati.
+	This is not a signed file that can be read: {e}	Questo non è un file firmato leggibile: {e}
+	Type the PIN.	Scrivi il PIN.
+	Type the digital ID's password.	Scrivi la password dell'identità digitale.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	ATTENZIONE: questo è l'ultimo tentativo. Se sbagli ancora il PIN si blocca e servirà il PUK.
+	Windows certificates · {issuer}	Certificati di Windows · {issuer}
+	Wrong PIN	PIN errato
+	authentication (not for signing)	autenticazione (non per firmare)
+	no	no
+	yes	sì
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} sbagliati in questa sessione). Dopo alcuni PIN sbagliati la chiavetta si blocca.
+	Sign as a .p7m file (CAdES)…	Firma in un file .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Il documento viene firmato in formato CAdES e salvato in un nuovo file .p7m, il formato accettato dalle pubbliche amministrazioni e dall'Agenzia delle Entrate. Il documento aperto non cambia.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Non è stato trovato nemmeno il software della chiavetta: installa quello fornito con la chiavetta (per le chiavette Aruba e InfoCamere, il driver Bit4id) oppure cercalo sulla chiavetta stessa.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply controlla la firma e il certificato, non se il certificato è stato revocato. Per una verifica ufficiale usa un verificatore conforme AgID (ArubaSign, Firma4NG o i verificatori online).
+	The document was changed after it was signed.	Il documento è stato modificato dopo la firma.
+	The signer's certificate is not in the file.	Il certificato di chi ha firmato non è nel file.
+	The signature value does not match the signer's key.	Il valore della firma non corrisponde alla chiave di chi ha firmato.
+	The certificate was not valid at the signing time.	Il certificato non era valido alla data della firma.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	La firma non ha l'attributo signing-certificate: è PKCS #7, non CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Il certificato di chi ha firmato non risale a un certificato attendibile.

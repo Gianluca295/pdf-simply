@@ -2353,3 +2353,49 @@ animation effects	Off	Kapalı
 	PDF Simply on GitHub	GitHub'da PDF Simply
 	Based on PdfCraft	PdfCraft tabanlı
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft ekibi ve PdfCraft katkıda bulunanlarının PdfCraft'ı üzerine kurulmuştur.
+	Careful: the key says only a few attempts are left before the PIN locks.	Dikkat: anahtar, PIN kilitlenmeden önce yalnızca birkaç deneme kaldığını bildiriyor.
+	Certificate issued by: {issuer}	Sertifikayı veren: {issuer}
+	Certificate valid on the signing date: {v}	İmza tarihinde geçerli sertifika: {v}
+	Choose a certificate.	Bir sertifika seçin.
+	Digital ID file · {issuer}	Dijital kimlik dosyası · {issuer}
+	Document unchanged since signing: {v}	İmzadan sonra değişmemiş belge: {v}
+	Hide details	Ayrıntıları gizle
+	Keychain · {issuer}	Anahtar Zinciri · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Sertifika bulunamadı. Anahtarı takın, birkaç saniye bekleyin ve Yeniden ara'ya basın.
+	PDF and signed files (.p7m)	PDF ve imzalı dosyalar (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Nitelikli sertifika (yasal geçerli dijital imza): {v}
+	Search again	Yeniden ara
+	Sign as a .p7m file (Italian digital signature)	.p7m dosyası olarak imzala (İtalyan dijital imzası)
+	Signature NOT valid: the document was changed after it was signed.	İmza GEÇERSİZ: belge imzalandıktan sonra değiştirilmiş.
+	Signature PIN	İmza PIN'i
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} nitelikli sertifikayla imzaladı: imza bozulmamış.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} imzaladı: imza bozulmamış, ancak sertifika doğrulanamadı.
+	Signed by {who}: the signature is valid.	{who} imzaladı: imza geçerli.
+	Signed file (.p7m)	İmzalı dosya (.p7m)
+	Signed file: {file}	İmzalı dosya: {file}
+	Signed on: {time} (the signer's computer clock)	İmza zamanı: {time} (imzalayanın bilgisayar saati)
+	Signing a .p7m is not available in the browser.	.p7m imzası tarayıcıda kullanılamaz.
+	Sign…	İmzala…
+	Smart card or key "{token}" · {kind} · {issuer}	Akıllı kart veya anahtar "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN kilitli: anahtarla gelen zarftaki PUK ile kilidi açın.
+	The certificate store will ask for the PIN, if needed.	Gerekirse sertifika deposu PIN'i soracaktır.
+	This is not a signed file that can be read: {e}	Bu okunabilir bir imzalı dosya değil: {e}
+	Type the PIN.	PIN'i yazın.
+	Type the digital ID's password.	Dijital kimliğin parolasını yazın.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	DİKKAT: bu son deneme. PIN yine yanlışsa kilitlenir ve PUK gerekir.
+	Windows certificates · {issuer}	Windows sertifikaları · {issuer}
+	Wrong PIN	Yanlış PIN
+	authentication (not for signing)	kimlik doğrulama (imza için değil)
+	no	hayır
+	yes	evet
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (bu oturumda {n} yanlış). Birkaç yanlış PIN'den sonra anahtar kilitlenir.
+	Sign as a .p7m file (CAdES)…	.p7m dosyası olarak imzala (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Belge CAdES biçiminde imzalanır ve İtalyan kamu kurumlarının ve Agenzia delle Entrate'nin kabul ettiği biçimde yeni bir .p7m dosyasına kaydedilir. Açık belge değişmez.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Anahtarın yazılımı da bulunamadı: anahtarla gelen yazılımı kurun (Aruba ve InfoCamere anahtarları için Bit4id sürücüsü) veya anahtarın kendisinde arayın.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply imzayı ve sertifikayı denetler, ancak sertifikanın iptal edilip edilmediğini denetlemez. Resmî denetim için AgID uyumlu bir doğrulayıcı kullanın (ArubaSign, Firma4NG veya çevrimiçi doğrulayıcılar).
+	The document was changed after it was signed.	Belge imzalandıktan sonra değiştirilmiş.
+	The signer's certificate is not in the file.	İmzalayanın sertifikası dosyada yok.
+	The signature value does not match the signer's key.	İmza değeri imzalayanın anahtarıyla eşleşmiyor.
+	The certificate was not valid at the signing time.	Sertifika imza tarihinde geçerli değildi.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	İmzanın signing-certificate özniteliği yok: bu PKCS #7, CAdES değil.
+	The signer's certificate does not chain to a trusted certificate.	İmzalayanın sertifikası güvenilir bir sertifikaya ulaşmıyor.

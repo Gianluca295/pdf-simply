@@ -2431,3 +2431,49 @@ animation effects	Off	Vypnuto
 	PDF Simply on GitHub	PDF Simply na GitHubu
 	Based on PdfCraft	Založeno na PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Postaveno na PdfCraft od týmu ArtCraft a přispěvatelů PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Pozor: klíč hlásí, že do zablokování PINu zbývá jen několik pokusů.
+	Certificate issued by: {issuer}	Certifikát vydal: {issuer}
+	Certificate valid on the signing date: {v}	Certifikát platný k datu podpisu: {v}
+	Choose a certificate.	Vyberte certifikát.
+	Digital ID file · {issuer}	Soubor digitálního ID · {issuer}
+	Document unchanged since signing: {v}	Dokument od podpisu nezměněn: {v}
+	Hide details	Skrýt podrobnosti
+	Keychain · {issuer}	Klíčenka · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nebyl nalezen žádný certifikát. Připojte klíč, počkejte několik sekund a stiskněte Hledat znovu.
+	PDF and signed files (.p7m)	PDF a podepsané soubory (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Kvalifikovaný certifikát (právně platný elektronický podpis): {v}
+	Search again	Hledat znovu
+	Sign as a .p7m file (Italian digital signature)	Podepsat do souboru .p7m (italský elektronický podpis)
+	Signature NOT valid: the document was changed after it was signed.	Podpis NENÍ platný: dokument byl po podpisu změněn.
+	Signature PIN	PIN pro podpis
+	Signed by {who} with a qualified certificate: the signature is intact.	Podepsal(a) {who} kvalifikovaným certifikátem: podpis je neporušený.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Podepsal(a) {who}: podpis je neporušený, ale certifikát nelze potvrdit.
+	Signed by {who}: the signature is valid.	Podepsal(a) {who}: podpis je platný.
+	Signed file (.p7m)	Podepsaný soubor (.p7m)
+	Signed file: {file}	Podepsaný soubor: {file}
+	Signed on: {time} (the signer's computer clock)	Podepsáno: {time} (hodiny počítače podepisujícího)
+	Signing a .p7m is not available in the browser.	Podpis .p7m není v prohlížeči k dispozici.
+	Sign…	Podepsat…
+	Smart card or key "{token}" · {kind} · {issuer}	Čipová karta nebo klíč „{token}“ · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN je zablokovaný: odblokujte ho kódem PUK (v obálce dodané s klíčem).
+	The certificate store will ask for the PIN, if needed.	Úložiště certifikátů si v případě potřeby vyžádá PIN.
+	This is not a signed file that can be read: {e}	Toto není čitelný podepsaný soubor: {e}
+	Type the PIN.	Zadejte PIN.
+	Type the digital ID's password.	Zadejte heslo digitálního ID.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	POZOR: toto je poslední pokus. Pokud bude PIN opět chybný, zablokuje se a budete potřebovat PUK.
+	Windows certificates · {issuer}	Certifikáty Windows · {issuer}
+	Wrong PIN	Chybný PIN
+	authentication (not for signing)	ověření (ne pro podpis)
+	no	ne
+	yes	ano
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} chybných v této relaci). Po několika chybných PINech se klíč zablokuje.
+	Sign as a .p7m file (CAdES)…	Podepsat do souboru .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokument se podepíše ve formátu CAdES a uloží do nového souboru .p7m, který přijímají italské úřady a Agenzia delle Entrate. Otevřený dokument se nezmění.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nebyl nalezen ani software klíče: nainstalujte software dodaný s klíčem (pro klíče Aruba a InfoCamere ovladač Bit4id) nebo ho hledejte přímo na klíči.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply kontroluje podpis a certifikát, ne však jeho zneplatnění. Pro úřední ověření použijte ověřovač vyhovující AgID (ArubaSign, Firma4NG nebo online ověřovače).
+	The document was changed after it was signed.	Dokument byl po podpisu změněn.
+	The signer's certificate is not in the file.	Certifikát podepisujícího není v souboru.
+	The signature value does not match the signer's key.	Hodnota podpisu neodpovídá klíči podepisujícího.
+	The certificate was not valid at the signing time.	Certifikát nebyl k datu podpisu platný.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nemá atribut signing-certificate: jde o PKCS #7, ne CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Certifikát podepisujícího nevede k důvěryhodnému certifikátu.

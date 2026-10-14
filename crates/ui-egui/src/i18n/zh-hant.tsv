@@ -2231,3 +2231,49 @@ animation effects	Off	關
 	PDF Simply on GitHub	GitHub 上的 PDF Simply
 	Based on PdfCraft	基於 PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	基於 ArtCraft 團隊與 PdfCraft 貢獻者開發的 PdfCraft。
+	Careful: the key says only a few attempts are left before the PIN locks.	注意：金鑰提示 PIN 被鎖定前只剩幾次嘗試機會。
+	Certificate issued by: {issuer}	憑證簽發者：{issuer}
+	Certificate valid on the signing date: {v}	簽署日期時憑證有效：{v}
+	Choose a certificate.	請選擇憑證。
+	Digital ID file · {issuer}	數位身分證檔案 · {issuer}
+	Document unchanged since signing: {v}	簽署後文件未被修改：{v}
+	Hide details	隱藏詳細資訊
+	Keychain · {issuer}	鑰匙圈 · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	找不到憑證。請插入金鑰，等待幾秒，然後按「重新搜尋」。
+	PDF and signed files (.p7m)	PDF 與已簽署檔案 (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	合格憑證（具法律效力的數位簽章）：{v}
+	Search again	重新搜尋
+	Sign as a .p7m file (Italian digital signature)	簽署為 .p7m 檔案（義大利數位簽章）
+	Signature NOT valid: the document was changed after it was signed.	簽章無效：文件在簽署後被修改過。
+	Signature PIN	簽章 PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	由 {who} 以合格憑證簽署：簽章完整。
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	由 {who} 簽署：簽章完整，但無法確認憑證。
+	Signed by {who}: the signature is valid.	由 {who} 簽署：簽章有效。
+	Signed file (.p7m)	已簽署檔案 (.p7m)
+	Signed file: {file}	已簽署檔案：{file}
+	Signed on: {time} (the signer's computer clock)	簽署時間：{time}（簽署人電腦的時鐘）
+	Signing a .p7m is not available in the browser.	瀏覽器中無法簽署 .p7m。
+	Sign…	簽署…
+	Smart card or key "{token}" · {kind} · {issuer}	智慧卡或金鑰「{token}」 · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN 已鎖定：請用 PUK 解鎖（在隨金鑰附上的信封中）。
+	The certificate store will ask for the PIN, if needed.	如有需要，憑證存放區會要求輸入 PIN。
+	This is not a signed file that can be read: {e}	這不是可讀取的已簽署檔案：{e}
+	Type the PIN.	請輸入 PIN。
+	Type the digital ID's password.	請輸入數位身分證的密碼。
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	注意：這是最後一次嘗試。如果 PIN 再次錯誤，它將被鎖定，需要 PUK 才能解鎖。
+	Windows certificates · {issuer}	Windows 憑證 · {issuer}
+	Wrong PIN	PIN 錯誤
+	authentication (not for signing)	身分驗證（不用於簽署）
+	no	否
+	yes	是
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what}（本次工作階段錯誤 {n} 次）。多次輸入錯誤的 PIN 後金鑰會被鎖定。
+	Sign as a .p7m file (CAdES)…	簽署為 .p7m 檔案 (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	文件會以 CAdES 格式簽署，並儲存為新的 .p7m 檔案，這是義大利公部門與 Agenzia delle Entrate 接受的格式。已開啟的文件不會改變。
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	也找不到金鑰的軟體：請安裝金鑰隨附的軟體（Aruba 與 InfoCamere 金鑰使用 Bit4id 驅動程式），或在金鑰本身中尋找。
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply 會檢查簽章與憑證，但不會檢查憑證是否已被撤銷。如需正式驗證，請使用符合 AgID 規範的驗證工具（ArubaSign、Firma4NG 或線上驗證服務）。
+	The document was changed after it was signed.	文件在簽署後被修改過。
+	The signer's certificate is not in the file.	檔案中沒有簽署人的憑證。
+	The signature value does not match the signer's key.	簽章值與簽署人的金鑰不符。
+	The certificate was not valid at the signing time.	簽署日期時憑證無效。
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	簽章沒有 signing-certificate 屬性：它是 PKCS #7，而不是 CAdES。
+	The signer's certificate does not chain to a trusted certificate.	簽署人的憑證無法追溯到受信任的憑證。

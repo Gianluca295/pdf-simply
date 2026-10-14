@@ -372,6 +372,7 @@ pub static TOOL_GROUPS: &[ToolGroup] = &[
         sections: &[ToolSection {
             title: "Certificates",
             items: &[
+                item("Sign as a .p7m file (Italian digital signature)", "signature", "sign.p7m", Ready),
                 item("Digitally sign", "signature", "sign.digital", Ready),
                 item("Timestamp", "clock-3", "sign.timestamp", Planned("M9")),
                 item("Validate all signatures", "badge-check", "sign.validate", Ready),

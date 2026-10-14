@@ -2321,3 +2321,49 @@ animation effects	Off	关
 	PDF Simply on GitHub	GitHub 上的 PDF Simply
 	Based on PdfCraft	基于 PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	基于 ArtCraft 团队和 PdfCraft 贡献者开发的 PdfCraft。
+	Careful: the key says only a few attempts are left before the PIN locks.	注意：密钥提示 PIN 被锁定前只剩几次尝试机会。
+	Certificate issued by: {issuer}	证书颁发者：{issuer}
+	Certificate valid on the signing date: {v}	签名日期时证书有效：{v}
+	Choose a certificate.	请选择证书。
+	Digital ID file · {issuer}	数字身份证文件 · {issuer}
+	Document unchanged since signing: {v}	签名后文档未被修改：{v}
+	Hide details	隐藏详细信息
+	Keychain · {issuer}	钥匙串 · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	未找到证书。请插入密钥，等待几秒钟，然后点按“重新搜索”。
+	PDF and signed files (.p7m)	PDF 和已签名文件 (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	合格证书（具有法律效力的数字签名）：{v}
+	Search again	重新搜索
+	Sign as a .p7m file (Italian digital signature)	签名为 .p7m 文件（意大利数字签名）
+	Signature NOT valid: the document was changed after it was signed.	签名无效：文档在签名后被修改过。
+	Signature PIN	签名 PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	由 {who} 使用合格证书签名：签名完好。
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	由 {who} 签名：签名完好，但无法确认证书。
+	Signed by {who}: the signature is valid.	由 {who} 签名：签名有效。
+	Signed file (.p7m)	已签名文件 (.p7m)
+	Signed file: {file}	已签名文件：{file}
+	Signed on: {time} (the signer's computer clock)	签名时间：{time}（签名人电脑的时钟）
+	Signing a .p7m is not available in the browser.	浏览器中无法签名 .p7m。
+	Sign…	签名…
+	Smart card or key "{token}" · {kind} · {issuer}	智能卡或密钥“{token}” · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN 已锁定：请用 PUK 解锁（在随密钥附带的信封中）。
+	The certificate store will ask for the PIN, if needed.	如有需要，证书存储会要求输入 PIN。
+	This is not a signed file that can be read: {e}	这不是可读取的已签名文件：{e}
+	Type the PIN.	请输入 PIN。
+	Type the digital ID's password.	请输入数字身份证的密码。
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	注意：这是最后一次尝试。如果 PIN 再次错误，它将被锁定，需要 PUK 才能解锁。
+	Windows certificates · {issuer}	Windows 证书 · {issuer}
+	Wrong PIN	PIN 错误
+	authentication (not for signing)	身份验证（不用于签名）
+	no	否
+	yes	是
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what}（本次会话错误 {n} 次）。多次输入错误的 PIN 后密钥会被锁定。
+	Sign as a .p7m file (CAdES)…	签名为 .p7m 文件 (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	文档将以 CAdES 格式签名，并保存为新的 .p7m 文件，这是意大利公共机构和 Agenzia delle Entrate 接受的格式。已打开的文档不会改变。
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	也未找到密钥的软件：请安装密钥附带的软件（Aruba 和 InfoCamere 密钥使用 Bit4id 驱动程序），或在密钥本身中查找。
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply 检查签名和证书，但不检查证书是否已被吊销。如需正式验证，请使用符合 AgID 规范的验证工具（ArubaSign、Firma4NG 或在线验证服务）。
+	The document was changed after it was signed.	文档在签名后被修改过。
+	The signer's certificate is not in the file.	文件中没有签名人的证书。
+	The signature value does not match the signer's key.	签名值与签名人的密钥不匹配。
+	The certificate was not valid at the signing time.	签名日期时证书无效。
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	签名没有 signing-certificate 属性：它是 PKCS #7，而不是 CAdES。
+	The signer's certificate does not chain to a trusted certificate.	签名人的证书无法追溯到受信任的证书。

@@ -2337,3 +2337,49 @@ animation effects	Off	Wyłączone
 	PDF Simply on GitHub	PDF Simply w serwisie GitHub
 	Based on PdfCraft	Na bazie PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Zbudowane na bazie PdfCraft zespołu ArtCraft i współtwórców PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Uwaga: klucz informuje, że do zablokowania PIN-u zostało niewiele prób.
+	Certificate issued by: {issuer}	Certyfikat wystawiony przez: {issuer}
+	Certificate valid on the signing date: {v}	Certyfikat ważny w dniu podpisu: {v}
+	Choose a certificate.	Wybierz certyfikat.
+	Digital ID file · {issuer}	Plik identyfikatora cyfrowego · {issuer}
+	Document unchanged since signing: {v}	Dokument bez zmian od podpisania: {v}
+	Hide details	Ukryj szczegóły
+	Keychain · {issuer}	Pęk kluczy · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nie znaleziono certyfikatu. Podłącz klucz, odczekaj kilka sekund i naciśnij Szukaj ponownie.
+	PDF and signed files (.p7m)	PDF i pliki podpisane (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Certyfikat kwalifikowany (podpis z mocą prawną): {v}
+	Search again	Szukaj ponownie
+	Sign as a .p7m file (Italian digital signature)	Podpisz jako plik .p7m (włoski podpis cyfrowy)
+	Signature NOT valid: the document was changed after it was signed.	Podpis NIEWAŻNY: dokument zmieniono po podpisaniu.
+	Signature PIN	PIN do podpisu
+	Signed by {who} with a qualified certificate: the signature is intact.	Podpisał(a) {who} certyfikatem kwalifikowanym: podpis jest nienaruszony.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Podpisał(a) {who}: podpis jest nienaruszony, ale nie udało się potwierdzić certyfikatu.
+	Signed by {who}: the signature is valid.	Podpisał(a) {who}: podpis jest ważny.
+	Signed file (.p7m)	Plik podpisany (.p7m)
+	Signed file: {file}	Plik podpisany: {file}
+	Signed on: {time} (the signer's computer clock)	Podpisano: {time} (zegar komputera podpisującego)
+	Signing a .p7m is not available in the browser.	Podpis .p7m nie jest dostępny w przeglądarce.
+	Sign…	Podpisz…
+	Smart card or key "{token}" · {kind} · {issuer}	Karta inteligentna lub klucz „{token}” · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN jest zablokowany: odblokuj go kodem PUK (w kopercie dołączonej do klucza).
+	The certificate store will ask for the PIN, if needed.	Magazyn certyfikatów w razie potrzeby poprosi o PIN.
+	This is not a signed file that can be read: {e}	To nie jest czytelny plik podpisany: {e}
+	Type the PIN.	Wpisz PIN.
+	Type the digital ID's password.	Wpisz hasło identyfikatora cyfrowego.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	UWAGA: to ostatnia próba. Jeśli PIN znów będzie błędny, zostanie zablokowany i potrzebny będzie PUK.
+	Windows certificates · {issuer}	Certyfikaty Windows · {issuer}
+	Wrong PIN	Błędny PIN
+	authentication (not for signing)	uwierzytelnianie (nie do podpisu)
+	no	nie
+	yes	tak
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} błędnych w tej sesji). Po kilku błędnych PIN-ach klucz się blokuje.
+	Sign as a .p7m file (CAdES)…	Podpisz jako plik .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokument zostanie podpisany w formacie CAdES i zapisany jako nowy plik .p7m, akceptowany przez włoską administrację i Agenzia delle Entrate. Otwarty dokument się nie zmieni.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nie znaleziono też oprogramowania klucza: zainstaluj oprogramowanie dołączone do klucza (dla kluczy Aruba i InfoCamere sterownik Bit4id) albo poszukaj go na samym kluczu.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply sprawdza podpis i certyfikat, ale nie jego unieważnienie. Do oficjalnej weryfikacji użyj weryfikatora zgodnego z AgID (ArubaSign, Firma4NG lub weryfikatory online).
+	The document was changed after it was signed.	Dokument zmieniono po podpisaniu.
+	The signer's certificate is not in the file.	W pliku nie ma certyfikatu podpisującego.
+	The signature value does not match the signer's key.	Wartość podpisu nie pasuje do klucza podpisującego.
+	The certificate was not valid at the signing time.	Certyfikat nie był ważny w dniu podpisu.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nie ma atrybutu signing-certificate: to PKCS #7, nie CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Certyfikat podpisującego nie prowadzi do zaufanego certyfikatu.

@@ -294,6 +294,7 @@ pub const COMMANDS: &[CommandSpec] = &[
     c("form.add.image", "Add an image field", None, None, Modification, "image"),
     c("form.add.date", "Add a date field", None, None, Modification, "clock-3"),
     c("form.add.signature", "Add a digital signature field", None, None, Modification, "signature"),
+    c("sign.p7m", "Sign as a .p7m file (CAdES)…", FILE, None, Document, "signature"),
     c("sign.digital", "Digitally sign", None, None, Document, "signature"),
     c("sign.certify", "Certify (visible signature)", None, None, Document, "badge-check"),
     c("sign.certify_invisible", "Certify (invisible signature)", None, None, Document, "badge-check"),

@@ -52,6 +52,7 @@ mod marks_ui;
 mod measure_ui;
 mod ocr_ui;
 mod optimize_ui;
+mod p7m_ui;
 mod search_ui;
 mod sign_ui;
 mod stamps_ui;
@@ -630,6 +631,12 @@ pub struct PdfCraftApp {
     pub sign_draft: Option<SignDraft>,
     /// Digital ID files the user has created or added.
     pub digital_ids: Vec<DigitalIdEntry>,
+    /// File ▸ Sign as .p7m: the dialog's state (PDF Simply).
+    pub p7m_sign: Option<p7m_ui::P7mSignDraft>,
+    /// Documents opened from a `.p7m`, with what checking its signatures found.
+    pub p7m_opened: std::collections::HashMap<DocId, p7m_ui::P7mOpened>,
+    /// `.p7m` results waiting for their document (opened after a password prompt), by name.
+    pub p7m_pending: Vec<(String, p7m_ui::P7mOpened)>,
     /// Signatures panel: expanded entries (field names).
     pub sig_expanded: Vec<String>,
     /// Accessibility Checker: options, the last check, and rules skipped by hand.
@@ -951,6 +958,9 @@ impl PdfCraftApp {
             summary_sort: Default::default(),
             sign_draft: None,
             digital_ids: Vec::new(),
+            p7m_sign: None,
+            p7m_opened: std::collections::HashMap::new(),
+            p7m_pending: Vec::new(),
             sig_expanded: Vec::new(),
             a11y_options: a11y_ui::A11yOptions::default(),
             ocr_draft: ocr_ui::OcrDraft::default(),
@@ -1099,6 +1109,10 @@ impl PdfCraftApp {
     }
 
     fn open_bytes_with_focus(&mut self, name: &str, path: Option<String>, bytes: Vec<u8>, activate: bool) -> Result<(), String> {
+        // A signed .p7m: the document inside opens, with its signatures checked (PDF Simply).
+        if p7m_ui::is_p7m(name, &bytes) {
+            return self.open_p7m(name, &bytes, activate);
+        }
         // Images and text files become new, unsaved PDFs (Create a PDF).
         let active = self.active;
         if let Some(r) = self.open_converted(name, &bytes) {
@@ -1697,6 +1711,19 @@ impl PdfCraftApp {
     #[cfg(not(target_arch = "wasm32"))]
     fn open_path_then(&mut self, path: &str, then: Option<&'static str>) {
         let name = std::path::Path::new(path).file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_else(|| path.to_string());
+        // A signed .p7m is read here and its document opened without a path, so Save never
+        // overwrites the signed file (PDF Simply).
+        if name.to_ascii_lowercase().ends_with(".p7m") {
+            match std::fs::read(path) {
+                Ok(bytes) => {
+                    if let Err(error) = self.open_bytes(&name, None, bytes) {
+                        self.notify_fmt("Couldn't open {name}: {e}", &[("name", &name), ("e", &error)]);
+                    }
+                }
+                Err(error) => self.notify_fmt("Couldn't read {name}: {e}", &[("name", &name), ("e", &error.to_string())]),
+            }
+            return;
+        }
         // Taken before reading: a build that rewrites the file meanwhile still counts as a change.
         let stamp = file_watch::Stamp::at(path);
         // Before the first frame there is no interaction to keep responsive; this also preserves
@@ -1742,7 +1769,10 @@ impl PdfCraftApp {
     /// The File ▸ Open picker: PDFs, and images and text that become PDFs.
     #[cfg(not(target_arch = "wasm32"))]
     fn open_picker() -> rfd::AsyncFileDialog {
-        rfd::AsyncFileDialog::new().add_filter("PDF", &["pdf"]).add_filter(tl!("Images and text (converted to PDF)"), &create_ui::CONVERTIBLE)
+        rfd::AsyncFileDialog::new()
+            .add_filter(tl!("PDF and signed files (.p7m)"), &["pdf", "p7m"])
+            .add_filter("PDF", &["pdf"])
+            .add_filter(tl!("Images and text (converted to PDF)"), &create_ui::CONVERTIBLE)
     }
 
     pub fn open_dialog(&mut self) {
@@ -1750,7 +1780,10 @@ impl PdfCraftApp {
         #[cfg(not(target_arch = "wasm32"))]
         self.pick(
             pickers::PickFor::Open,
-            rfd::AsyncFileDialog::new().add_filter("PDF", &["pdf"]).add_filter(tl!("Images and text (converted to PDF)"), &create_ui::CONVERTIBLE),
+            rfd::AsyncFileDialog::new()
+                .add_filter(tl!("PDF and signed files (.p7m)"), &["pdf", "p7m"])
+                .add_filter("PDF", &["pdf"])
+                .add_filter(tl!("Images and text (converted to PDF)"), &create_ui::CONVERTIBLE),
             true,
         );
         // Browsers pick files asynchronously; the bytes arrive through `inbox`.
@@ -2950,6 +2983,8 @@ impl eframe::App for PdfCraftApp {
                 },
             );
             dialogs::show(self, &ctx);
+            p7m_ui::dialog(self, &ctx);
+            p7m_ui::dialog(self, &ctx);
             // Notices too: a refused field value or a failed save must be seen in full screen.
             self.show_progress(&ctx);
             widgets::toast(self, &ctx);
@@ -2991,6 +3026,7 @@ impl eframe::App for PdfCraftApp {
         self.process_pending_edits();
         palette::show(self, &ctx);
         dialogs::show(self, &ctx);
+        p7m_ui::dialog(self, &ctx);
         self.show_progress(&ctx);
         widgets::toast(self, &ctx);
         self.finish_render_frame(&ctx);

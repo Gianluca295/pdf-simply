@@ -2362,3 +2362,49 @@ animation effects	Off	Izklopljeni
 	PDF Simply on GitHub	PDF Simply na GitHubu
 	Based on PdfCraft	Temelji na PdfCraft
 	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Temelji na PdfCraft ekipe ArtCraft in sodelavcev PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Pozor: ključ sporoča, da je do zaklepa kode PIN ostalo le nekaj poskusov.
+	Certificate issued by: {issuer}	Potrdilo je izdal: {issuer}
+	Certificate valid on the signing date: {v}	Potrdilo veljavno na dan podpisa: {v}
+	Choose a certificate.	Izberite potrdilo.
+	Digital ID file · {issuer}	Datoteka digitalne identitete · {issuer}
+	Document unchanged since signing: {v}	Dokument po podpisu nespremenjen: {v}
+	Hide details	Skrij podrobnosti
+	Keychain · {issuer}	Obesek za ključe · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Ni najdenega potrdila. Vstavite ključ, počakajte nekaj sekund in pritisnite Ponovno išči.
+	PDF and signed files (.p7m)	PDF in podpisane datoteke (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Kvalificirano potrdilo (pravno veljaven podpis): {v}
+	Search again	Ponovno išči
+	Sign as a .p7m file (Italian digital signature)	Podpiši v datoteko .p7m (italijanski digitalni podpis)
+	Signature NOT valid: the document was changed after it was signed.	Podpis NI veljaven: dokument je bil po podpisu spremenjen.
+	Signature PIN	PIN za podpis
+	Signed by {who} with a qualified certificate: the signature is intact.	Podpisal(a) {who} s kvalificiranim potrdilom: podpis je nedotaknjen.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Podpisal(a) {who}: podpis je nedotaknjen, potrdila pa ni bilo mogoče potrditi.
+	Signed by {who}: the signature is valid.	Podpisal(a) {who}: podpis je veljaven.
+	Signed file (.p7m)	Podpisana datoteka (.p7m)
+	Signed file: {file}	Podpisana datoteka: {file}
+	Signed on: {time} (the signer's computer clock)	Podpisano: {time} (ura računalnika podpisnika)
+	Signing a .p7m is not available in the browser.	Podpis .p7m v brskalniku ni na voljo.
+	Sign…	Podpiši…
+	Smart card or key "{token}" · {kind} · {issuer}	Pametna kartica ali ključ »{token}« · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	Koda PIN je zaklenjena: odklenite jo s kodo PUK (v ovojnici, ki ste jo prejeli s ključem).
+	The certificate store will ask for the PIN, if needed.	Shramba potrdil bo po potrebi zahtevala PIN.
+	This is not a signed file that can be read: {e}	To ni berljiva podpisana datoteka: {e}
+	Type the PIN.	Vnesite PIN.
+	Type the digital ID's password.	Vnesite geslo digitalne identitete.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	POZOR: to je zadnji poskus. Če bo PIN spet napačen, se zaklene in potrebovali boste PUK.
+	Windows certificates · {issuer}	Potrdila sistema Windows · {issuer}
+	Wrong PIN	Napačen PIN
+	authentication (not for signing)	preverjanje pristnosti (ne za podpis)
+	no	ne
+	yes	da
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} napačnih v tej seji). Po nekaj napačnih kodah PIN se ključ zaklene.
+	Sign as a .p7m file (CAdES)…	Podpiši v datoteko .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokument se podpiše v formatu CAdES in shrani v novo datoteko .p7m, ki jo sprejemajo italijanski organi in Agenzia delle Entrate. Odprti dokument se ne spremeni.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Ni bilo najdene niti programske opreme ključa: namestite tisto, ki ste jo prejeli s ključem (za ključe Aruba in InfoCamere gonilnik Bit4id), ali jo poiščite na samem ključu.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply preveri podpis in potrdilo, ne pa tudi preklica potrdila. Za uradno preverjanje uporabite preverjevalnik, skladen z AgID (ArubaSign, Firma4NG ali spletni preverjevalniki).
+	The document was changed after it was signed.	Dokument je bil po podpisu spremenjen.
+	The signer's certificate is not in the file.	Potrdila podpisnika ni v datoteki.
+	The signature value does not match the signer's key.	Vrednost podpisa se ne ujema s ključem podpisnika.
+	The certificate was not valid at the signing time.	Potrdilo na dan podpisa ni bilo veljavno.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nima atributa signing-certificate: je PKCS #7, ne CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Potrdilo podpisnika ne vodi do zaupanja vrednega potrdila.

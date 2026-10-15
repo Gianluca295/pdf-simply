@@ -306,6 +306,7 @@ impl PdfCraftApp {
                 Ok(ids) => {
                     for id in ids {
                         let mut entry = entry_for(&sign::keychain::reference(&id.certificate), &id.certificate);
+                        entry.unusable = id.certificate.signing_problem().map(|p| p.said(&crate::i18n::words));
                         // Smart card identities say so ("… (smart card)").
                         if let Some(name) = id.friendly_name {
                             entry.name = name;
@@ -321,7 +322,11 @@ impl PdfCraftApp {
             match sign::windows::list() {
                 Ok(listing) => {
                     for id in &listing.ids {
-                        self.digital_ids.push(entry_for(&sign::windows::reference(&id.certificate), &id.certificate));
+                        let mut entry = entry_for(&sign::windows::reference(&id.certificate), &id.certificate);
+                        // PDF Simply: a certificate not issued for signing documents (a web
+                        // server's "localhost", for one) is shown greyed, never used.
+                        entry.unusable = id.certificate.signing_problem().map(|p| p.said(&crate::i18n::words));
+                        self.digital_ids.push(entry);
                     }
                     // Certificates without a private key aren't identities; the rest are shown
                     // greyed with why they can't sign (issue #179).

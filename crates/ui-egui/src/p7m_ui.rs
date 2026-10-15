@@ -173,8 +173,8 @@ impl PdfCraftApp {
         }
         self.refresh_signing_ids();
         choices.extend(self.digital_ids.iter().filter(|e| e.unusable.is_none()).cloned().map(SignerChoice::Id));
-        // A signing certificate first (the first token one, which sorts signing keys first).
-        let selected = (!choices.is_empty()).then_some(0);
+        // Only a key's certificate is chosen in advance; anything else the user picks.
+        let selected = choices.iter().position(SignerChoice::is_token);
         let wrong = vec![0; choices.len()];
         self.p7m_sign = Some(P7mSignDraft { doc, choices, selected, secret: String::new(), error: None, wrong, libraries });
     }

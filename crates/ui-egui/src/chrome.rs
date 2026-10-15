@@ -451,14 +451,14 @@ fn tab(
         ui.painter().text(rect.min + vec2(28.0, rect.height() / 2.0), Align2::LEFT_CENTER, label, font, if active { t.text } else { t.text_muted });
     });
     let x_rect = Rect::from_center_size(rect.right_center() - vec2(16.0, 0.0), vec2(20.0, 20.0));
-    let x = ui.interact(x_rect, id.with("close"), Sense::click());
+    let x = ui.interact(x_rect, id.with("close"), Sense::click()).on_hover_text(tl!("Close file"));
     let x_press = theme::Press::track(ui, &x);
     x_press.wash(ui, x_rect, 4, false);
     // Unsaved changes: a dot where the close button sits, until the tab is hovered.
     if dirty && !resp.hovered() && !x.hovered() {
         ui.painter().circle_filled(x_rect.center(), 4.0, if active { t.text } else { t.text_muted });
     } else if active || resp.hovered() || x.hovered() {
-        icons::paint(ui, x_rect.translate(x_press.offset()), "x", 13.0, t.text_muted);
+        icons::paint(ui, x_rect.translate(x_press.offset()), "x", 15.0, if active { t.text } else { t.text_muted });
     }
     if theme::hand(x).clicked() {
         *close = Some(index);
@@ -497,6 +497,10 @@ pub fn mode_bar(app: &mut PdfCraftApp, ui: &mut egui::Ui) {
                     ui.spacing_mut().item_spacing.x = 4.0;
                     let has_doc = app.active.is_some();
                     ui.add_enabled_ui(has_doc, |ui| {
+                        // PDF Simply: closing the document is a visible button, not only the tab's ×.
+                        if icons::button(ui, "x", 32.0, false, tl!("Close file")).clicked() {
+                            app.run_command("file.close");
+                        }
                         let tip = crate::commands::command_tip(ui.ctx(), tl!("Print ({key})"), "print.dialog");
                         if icons::button(ui, "printer", 32.0, false, &tip).clicked() {
                             app.run_command("print.dialog");

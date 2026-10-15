@@ -2437,3 +2437,4 @@ animation effects	Off	Ανενεργά
 	Choose the key's file…	Επιλογή αρχείου κλειδιού…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Το αρχείο λογισμικού του κλειδιού (.dll), για παράδειγμα bit4xpki.dll στο C:\\Windows\\System32 ή στον φάκελο εγκατάστασης του λογισμικού.
 	Key software (.dll)	Λογισμικό κλειδιού (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	Το {file} είναι η έκδοση 32 bit του λογισμικού του κλειδιού (το Firma4ng, για παράδειγμα, κρατά μία στον φάκελό του), που το PDF Simply δεν μπορεί να χρησιμοποιήσει. Εγκαταστήστε το πρόγραμμα οδήγησης του κλειδιού για Windows, που προσθέτει και την έκδοση 64 bit, και πατήστε Αναζήτηση ξανά.

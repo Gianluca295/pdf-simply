@@ -2426,3 +2426,4 @@ animation effects	Off	Ki
 	Choose the key's file…	A kulcs fájljának kiválasztása…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	A kulcs szoftverének fájlja (.dll), például bit4xpki.dll a C:\\Windows\\System32 mappában vagy a szoftver telepítési mappájában.
 	Key software (.dll)	Kulcsszoftver (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} a kulcs szoftverének 32 bites változata (például a Firma4ng tart egyet a mappájában), amelyet a PDF Simply nem tud használni. Telepítse a kulcs Windows-illesztőprogramját, amely a 64 bites változatot is hozzáadja, majd nyomja meg az Újrakeresés gombot.

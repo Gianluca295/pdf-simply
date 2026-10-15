@@ -2428,3 +2428,4 @@ animation effects	Off	Aus
 	Choose the key's file…	Datei des Schlüssels wählen…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Die Softwaredatei des Schlüssels (.dll), zum Beispiel bit4xpki.dll in C:\\Windows\\System32 oder im Installationsordner der Software.
 	Key software (.dll)	Schlüsselsoftware (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} ist die 32-Bit-Version der Schlüsselsoftware (Firma4ng hat zum Beispiel eine in seinem Ordner), die PDF Simply nicht verwenden kann. Installieren Sie den Windows-Treiber des Schlüssels, der auch die 64-Bit-Version hinzufügt, und drücken Sie dann Erneut suchen.

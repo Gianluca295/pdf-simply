@@ -2501,3 +2501,4 @@ animation effects	Off	Vypnuto
 	Choose the key's file…	Vybrat soubor klíče…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Soubor softwaru klíče (.dll), například bit4xpki.dll v C:\\Windows\\System32 nebo ve složce, kam byl software nainstalován.
 	Key software (.dll)	Software klíče (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} je 32bitová verze softwaru klíče (například Firma4ng ji má ve své složce), kterou PDF Simply nemůže použít. Nainstalujte ovladač klíče pro Windows, který přidá i 64bitovou verzi, a stiskněte Hledat znovu.

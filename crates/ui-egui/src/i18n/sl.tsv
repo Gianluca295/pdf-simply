@@ -2432,3 +2432,4 @@ animation effects	Off	Izklopljeni
 	Choose the key's file…	Izberi datoteko ključa…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Datoteka programske opreme ključa (.dll), na primer bit4xpki.dll v C:\\Windows\\System32 ali v mapi, kamor je bila nameščena.
 	Key software (.dll)	Programska oprema ključa (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} je 32-bitna različica programske opreme ključa (Firma4ng jo na primer hrani v svoji mapi), ki je PDF Simply ne more uporabiti. Namestite gonilnik ključa za Windows, ki doda tudi 64-bitno različico, nato pritisnite Išči znova.

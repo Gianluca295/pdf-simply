@@ -2427,3 +2427,4 @@ animation effects	Off	オフ
 	Choose the key's file…	キーのファイルを選択…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	キーのソフトウェアのファイル (.dll)。例: C:\\Windows\\System32 の bit4xpki.dll、またはソフトウェアのインストール先フォルダー。
 	Key software (.dll)	キーのソフトウェア (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} はキーのソフトウェアの 32 ビット版です (たとえば Firma4ng は自分のフォルダーに置いています)。PDF Simply では使えません。64 ビット版も追加されるキーの Windows 用ドライバーをインストールしてから、「再検索」を押してください。

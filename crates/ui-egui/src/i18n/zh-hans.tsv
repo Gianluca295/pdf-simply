@@ -2391,3 +2391,4 @@ animation effects	Off	关
 	Choose the key's file…	选择密钥文件…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	密钥软件文件 (.dll)，例如 C:\\Windows\\System32 中的 bit4xpki.dll，或软件安装文件夹中的文件。
 	Key software (.dll)	密钥软件 (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} 是密钥软件的 32 位版本（例如 Firma4ng 在其文件夹中放有一份），PDF Simply 无法使用。请安装密钥的 Windows 驱动程序（它也会添加 64 位版本），然后点击“重新搜索”。

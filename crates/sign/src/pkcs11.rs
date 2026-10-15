@@ -84,6 +84,24 @@ pub fn parse_reference(reference: &str) -> Option<(PathBuf, u64, Vec<u8>)> {
     Some((library, slot, key_id))
 }
 
+/// A Windows library built for 32-bit programs (PE machine i386), which a 64-bit program such
+/// as PDF Simply can't load: Firma4ng, for one, keeps a 32-bit copy of the Bit4id library in its
+/// own folder.
+pub fn is_32_bit_library(path: &Path) -> bool {
+    use std::io::{Read, Seek, SeekFrom};
+    let Ok(mut f) = std::fs::File::open(path) else { return false };
+    let mut head = [0u8; 64];
+    if f.read_exact(&mut head).is_err() || &head[..2] != b"MZ" {
+        return false;
+    }
+    let pe = u32::from_le_bytes([head[60], head[61], head[62], head[63]]);
+    let mut sig = [0u8; 6];
+    if f.seek(SeekFrom::Start(u64::from(pe))).is_err() || f.read_exact(&mut sig).is_err() || &sig[..4] != b"PE\0\0" {
+        return false;
+    }
+    u16::from_le_bytes([sig[4], sig[5]]) == 0x014c && cfg!(target_pointer_width = "64")
+}
+
 /// Vendor libraries present on this computer: `PDFSIMPLY_PKCS11_LIB` when set, the system
 /// folders, then removable drives
 /// (some Aruba keys carry their software on the key itself).
@@ -344,6 +362,29 @@ fn search_depth(dir: &Path, names: &[String], depth: usize, max_depth: usize, fo
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn spots_32_bit_windows_libraries() {
+        let dir = std::env::temp_dir().join(format!("pdfsimply-pe-{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let pe = |machine: u16| {
+            let mut b = vec![0u8; 0x48];
+            b[..2].copy_from_slice(b"MZ");
+            b[60..64].copy_from_slice(&0x40u32.to_le_bytes());
+            b[0x40..0x44].copy_from_slice(b"PE\0\0");
+            b[0x44..0x46].copy_from_slice(&machine.to_le_bytes());
+            b
+        };
+        let (x86, x64, other) = (dir.join("x86.dll"), dir.join("x64.dll"), dir.join("not.dll"));
+        std::fs::write(&x86, pe(0x014c)).unwrap();
+        std::fs::write(&x64, pe(0x8664)).unwrap();
+        std::fs::write(&other, b"hello").unwrap();
+        assert_eq!(is_32_bit_library(&x86), cfg!(target_pointer_width = "64"));
+        assert!(!is_32_bit_library(&x64));
+        assert!(!is_32_bit_library(&other));
+        assert!(!is_32_bit_library(&dir.join("missing.dll")));
+        let _ = std::fs::remove_dir_all(&dir);
+    }
 
     #[test]
     fn references_round_trip() {

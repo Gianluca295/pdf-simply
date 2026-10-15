@@ -178,7 +178,14 @@ impl PdfCraftApp {
                     Ok(ids) => choices.extend(ids.into_iter().map(|id| SignerChoice::Token(Box::new(id)))),
                     Err(e) => {
                         log::info!("{}: {e}", library.display());
-                        problems.push(format!("{}: {e}", library.display()));
+                        if sign::pkcs11::is_32_bit_library(&library) {
+                            problems.push(crate::i18n::fmt(
+                                tl!("{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again."),
+                                &[("file", &library.display().to_string())],
+                            ));
+                        } else {
+                            problems.push(format!("{}: {e}", library.display()));
+                        }
                     }
                 }
             }

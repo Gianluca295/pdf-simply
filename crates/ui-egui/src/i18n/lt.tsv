@@ -2682,3 +2682,4 @@ key	Space	Tarpas
 	Choose the key's file…	Pasirinkti rakto failą…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Rakto programinės įrangos failas (.dll), pavyzdžiui, bit4xpki.dll aplanke C:\\Windows\\System32 arba aplanke, kuriame įdiegta programinė įranga.
 	Key software (.dll)	Rakto programinė įranga (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} yra 32 bitų rakto programinės įrangos versija (pvz., Firma4ng ją laiko savo aplanke), kurios PDF Simply negali naudoti. Įdiekite rakto Windows tvarkyklę, kuri prideda ir 64 bitų versiją, tada spauskite Ieškoti iš naujo.

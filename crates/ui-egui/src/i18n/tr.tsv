@@ -2423,3 +2423,4 @@ animation effects	Off	Kapalı
 	Choose the key's file…	Anahtarın dosyasını seç…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Anahtarın yazılım dosyası (.dll), örneğin C:\\Windows\\System32 içindeki bit4xpki.dll veya yazılımın kurulduğu klasör.
 	Key software (.dll)	Anahtar yazılımı (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file}, anahtar yazılımının 32 bit sürümüdür (örneğin Firma4ng klasöründe bir tane tutar) ve PDF Simply bunu kullanamaz. 64 bit sürümü de ekleyen anahtarın Windows sürücüsünü kurun, ardından Yeniden ara'ya basın.

@@ -2448,3 +2448,4 @@ animation effects	Off	معطّلة
 	Choose the key's file…	اختر ملف المفتاح…
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	ملف برنامج المفتاح (.dll)، مثل bit4xpki.dll في C:\\Windows\\System32 أو في المجلد الذي ثُبّت فيه البرنامج.
 	Key software (.dll)	برنامج المفتاح (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} هو إصدار 32 بت من برنامج المفتاح (يحتفظ Firma4ng مثلاً بنسخة منه في مجلده)، ولا يستطيع PDF Simply استخدامه. ثبّت برنامج تشغيل المفتاح لنظام Windows، الذي يضيف أيضاً إصدار 64 بت، ثم اضغط على البحث مجدداً.

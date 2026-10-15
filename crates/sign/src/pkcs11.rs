@@ -40,6 +40,12 @@ const KNOWN: &[&str] = &[
     "asepkcs",
     "OcsCryptoki",
     "opensc-pkcs11",
+    // Thales/Gemalto IDPrime, SafeNet eToken, IDEMIA/Oberthur and Charismathics middleware,
+    // which some Italian qualified-signature cards and keys use.
+    "IDPrimePKCS1164",
+    "eTPKCS11",
+    "aetpkss1",
+    "cmP11",
 ];
 
 /// A certificate on a token, with what is needed to find its key again.
@@ -95,8 +101,28 @@ pub fn libraries() -> Vec<PathBuf> {
             }
         }
     }
+    // Vendor installers that keep the library in their own folder under Program Files.
+    let names: Vec<String> = KNOWN.iter().map(|n| library_file(n).to_ascii_lowercase()).collect();
+    for dir in program_dirs() {
+        let mut in_dir = Vec::new();
+        search_depth(&dir, &names, 0, 3, &mut in_dir);
+        found.extend(in_dir.into_iter().filter(|p| !found.contains(p)).collect::<Vec<_>>());
+    }
     found.extend(on_removable_drives().into_iter().filter(|p| !found.contains(p)).collect::<Vec<_>>());
     found
+}
+
+/// Windows: the Program Files folders (64-bit first).
+fn program_dirs() -> Vec<PathBuf> {
+    if !cfg!(target_os = "windows") {
+        return Vec::new();
+    }
+    ["ProgramW6432", "ProgramFiles", "ProgramFiles(x86)"].iter().filter_map(std::env::var_os).map(PathBuf::from).fold(Vec::new(), |mut dirs, d| {
+        if !dirs.contains(&d) {
+            dirs.push(d);
+        }
+        dirs
+    })
 }
 
 /// The certificates on every token `library` sees, each with its key's id. Certificates
@@ -298,14 +324,17 @@ fn on_removable_drives() -> Vec<PathBuf> {
 }
 
 fn search(dir: &Path, names: &[String], depth: usize, found: &mut Vec<PathBuf>) {
-    const MAX_DEPTH: usize = 4;
+    search_depth(dir, names, depth, 4, found);
+}
+
+fn search_depth(dir: &Path, names: &[String], depth: usize, max_depth: usize, found: &mut Vec<PathBuf>) {
     const MAX_ENTRIES: usize = 4096;
     let Ok(entries) = std::fs::read_dir(dir) else { return };
     for entry in entries.flatten().take(MAX_ENTRIES) {
         let path = entry.path();
         let Ok(kind) = entry.file_type() else { continue };
-        if kind.is_dir() && depth < MAX_DEPTH {
-            search(&path, names, depth + 1, found);
+        if kind.is_dir() && depth < max_depth {
+            search_depth(&path, names, depth + 1, max_depth, found);
         } else if kind.is_file() && path.file_name().is_some_and(|n| names.contains(&n.to_string_lossy().to_ascii_lowercase())) {
             found.push(path);
         }

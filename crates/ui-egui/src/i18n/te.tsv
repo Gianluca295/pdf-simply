@@ -2336,3 +2336,7 @@ animation effects	Off	ఆఫ్
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	జారీదారు ఇటాలియన్ AgID జాబితాలో లేరు (మరొక EU దేశ జాబితాలో ఉండవచ్చు).
 	The AgID list could not be checked.	AgID జాబితాను తనిఖీ చేయలేకపోయాము.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	సర్టిఫికెట్ గడువు ముగిసింది: గడువు ముగిసిన సర్టిఫికెట్ల రద్దులను జారీదారులు ప్రచురించడం ఆపవచ్చు, కాబట్టి ఈ సమాధానం తక్కువ ఖచ్చితమైనది.
+	The key's software was found but could not be used: {problem}	కీ సాఫ్ట్‌వేర్ కనబడింది కానీ వాడలేము: {problem}
+	Choose the key's file…	కీ ఫైల్‌ను ఎంచుకోండి…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	కీ సాఫ్ట్‌వేర్ ఫైల్ (.dll), ఉదాహరణకు C:\\Windows\\System32 లోని bit4xpki.dll, లేదా సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ అయిన ఫోల్డర్.
+	Key software (.dll)	కీ సాఫ్ట్‌వేర్ (.dll)

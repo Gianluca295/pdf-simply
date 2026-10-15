@@ -2437,3 +2437,7 @@ animation effects	Off	Desativados
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	O emissor não está na lista italiana AgID (pode estar na lista de outro país da UE).
 	The AgID list could not be checked.	Não foi possível verificar a lista AgID.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	O certificado expirou: os emissores podem parar de publicar revogações de certificados expirados, então esta resposta é menos segura.
+	The key's software was found but could not be used: {problem}	O software da chave foi encontrado, mas não pode ser usado: {problem}
+	Choose the key's file…	Escolher o arquivo da chave…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	O arquivo do software da chave (.dll), por exemplo bit4xpki.dll em C:\\Windows\\System32 ou na pasta onde o software foi instalado.
+	Key software (.dll)	Software da chave (.dll)

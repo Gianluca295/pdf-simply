@@ -2428,3 +2428,7 @@ animation effects	Off	Izklopljeni
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Izdajatelja ni na italijanskem seznamu AgID (lahko je na seznamu druge države EU).
 	The AgID list could not be checked.	Seznama AgID ni bilo mogoče preveriti.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Potrdilo je poteklo: izdajatelji lahko prenehajo objavljati preklice poteklih potrdil, zato je ta odgovor manj zanesljiv.
+	The key's software was found but could not be used: {problem}	Programska oprema ključa je bila najdena, a je ni mogoče uporabiti: {problem}
+	Choose the key's file…	Izberi datoteko ključa…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Datoteka programske opreme ključa (.dll), na primer bit4xpki.dll v C:\\Windows\\System32 ali v mapi, kamor je bila nameščena.
+	Key software (.dll)	Programska oprema ključa (.dll)

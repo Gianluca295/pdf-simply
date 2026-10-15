@@ -2297,3 +2297,7 @@ animation effects	Off	關
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	簽發者不在義大利 AgID 清單中（可能在其他歐盟國家的清單中）。
 	The AgID list could not be checked.	無法檢查 AgID 清單。
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	憑證已過期：簽發者可能不再公布過期憑證的撤銷資訊，因此這個結果較不確定。
+	The key's software was found but could not be used: {problem}	找到了金鑰軟體，但無法使用：{problem}
+	Choose the key's file…	選擇金鑰檔案…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	金鑰軟體檔案 (.dll)，例如 C:\\Windows\\System32 中的 bit4xpki.dll，或軟體安裝資料夾中的檔案。
+	Key software (.dll)	金鑰軟體 (.dll)

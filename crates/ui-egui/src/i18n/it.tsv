@@ -2443,3 +2443,7 @@ animation effects	Off	Disattivati
 	A revocation list was out of date or not signed by the issuer.	Un elenco dei certificati revocati era scaduto o non era firmato dal certificatore.
 	A revocation list could not be read.	Non è stato possibile leggere un elenco dei certificati revocati.
 	A revocation list could not be downloaded.	Non è stato possibile scaricare un elenco dei certificati revocati.
+	The key's software was found but could not be used: {problem}	Il software della chiavetta è stato trovato ma non si può usare: {problem}
+	Choose the key's file…	Scegli il file della chiavetta…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Il file del software della chiavetta (.dll), per esempio bit4xpki.dll in C:\\Windows\\System32 o nella cartella dove è stato installato il software della chiavetta.
+	Key software (.dll)	Software della chiavetta (.dll)

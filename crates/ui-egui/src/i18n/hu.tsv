@@ -2422,3 +2422,7 @@ animation effects	Off	Ki
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	A kibocsátó nem szerepel az olasz AgID-listán (lehet, hogy egy másik uniós ország listáján szerepel).
 	The AgID list could not be checked.	Az AgID-listát nem sikerült ellenőrizni.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	A tanúsítvány lejárt: a kibocsátók abbahagyhatják a lejárt tanúsítványok visszavonásának közzétételét, ezért ez a válasz kevésbé biztos.
+	The key's software was found but could not be used: {problem}	A kulcs szoftvere megvan, de nem használható: {problem}
+	Choose the key's file…	A kulcs fájljának kiválasztása…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	A kulcs szoftverének fájlja (.dll), például bit4xpki.dll a C:\\Windows\\System32 mappában vagy a szoftver telepítési mappájában.
+	Key software (.dll)	Kulcsszoftver (.dll)

@@ -2421,3 +2421,7 @@ animation effects	Off	Өшірулі
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Беруші Италияның AgID тізімінде жоқ (ол ЕО-ның басқа елінің тізімінде болуы мүмкін).
 	The AgID list could not be checked.	AgID тізімін тексеру мүмкін болмады.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Сертификаттың мерзімі өткен: берушілер мерзімі өткен сертификаттардың кері шақырылуын жарияламауы мүмкін, сондықтан бұл жауап онша сенімді емес.
+	The key's software was found but could not be used: {problem}	Кілттің бағдарламасы табылды, бірақ оны пайдалану мүмкін емес: {problem}
+	Choose the key's file…	Кілттің файлын таңдау…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Кілт бағдарламасының файлы (.dll), мысалы C:\\Windows\\System32 ішіндегі bit4xpki.dll немесе бағдарлама орнатылған қалта.
+	Key software (.dll)	Кілт бағдарламасы (.dll)

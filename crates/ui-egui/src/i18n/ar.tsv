@@ -2444,3 +2444,7 @@ animation effects	Off	معطّلة
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	جهة الإصدار ليست في قائمة AgID الإيطالية (قد تكون في قائمة دولة أخرى في الاتحاد الأوروبي).
 	The AgID list could not be checked.	تعذّر التحقق من قائمة AgID.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	انتهت صلاحية الشهادة: قد تتوقف جهات الإصدار عن نشر إلغاء الشهادات المنتهية، لذا فهذه الإجابة أقل يقيناً.
+	The key's software was found but could not be used: {problem}	تم العثور على برنامج المفتاح لكن لا يمكن استخدامه: {problem}
+	Choose the key's file…	اختر ملف المفتاح…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	ملف برنامج المفتاح (.dll)، مثل bit4xpki.dll في C:\\Windows\\System32 أو في المجلد الذي ثُبّت فيه البرنامج.
+	Key software (.dll)	برنامج المفتاح (.dll)

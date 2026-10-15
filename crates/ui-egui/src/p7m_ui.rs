@@ -155,6 +155,8 @@ pub struct P7mSignDraft {
     pub wrong: Vec<u32>,
     /// Where the token's library search looked, for the "no key found" help.
     pub libraries: Vec<String>,
+    /// Key libraries found that could not be used, with why (shown when no key is found).
+    pub problems: Vec<String>,
 }
 
 impl PdfCraftApp {
@@ -163,20 +165,35 @@ impl PdfCraftApp {
         let Some((_, doc)) = self.active_ids() else { return };
         let mut choices = Vec::new();
         let mut libraries = Vec::new();
+        let mut problems = Vec::new();
         #[cfg(not(target_arch = "wasm32"))]
-        for library in sign::pkcs11::libraries() {
-            libraries.push(library.display().to_string());
-            match sign::pkcs11::identities(&library) {
-                Ok(ids) => choices.extend(ids.into_iter().map(|id| SignerChoice::Token(Box::new(id)))),
-                Err(e) => log::info!("{}: {e}", library.display()),
+        {
+            // The library the user chose by hand comes first.
+            let chosen = self.pkcs11_library.as_ref().map(std::path::PathBuf::from).filter(|p| p.is_file());
+            let mut all: Vec<std::path::PathBuf> = chosen.into_iter().collect();
+            all.extend(sign::pkcs11::libraries().into_iter().filter(|p| !all.contains(p)).collect::<Vec<_>>());
+            for library in all {
+                libraries.push(library.display().to_string());
+                match sign::pkcs11::identities(&library) {
+                    Ok(ids) => choices.extend(ids.into_iter().map(|id| SignerChoice::Token(Box::new(id)))),
+                    Err(e) => {
+                        log::info!("{}: {e}", library.display());
+                        problems.push(format!("{}: {e}", library.display()));
+                    }
+                }
             }
         }
+        // The key's certificate may also be in the Windows store (its driver puts it there):
+        // always look, since certificates not meant for signing are greyed and never chosen.
+        let store = self.os_key_store_ids;
+        self.os_key_store_ids = true;
         self.refresh_signing_ids();
+        self.os_key_store_ids = store;
         choices.extend(self.digital_ids.iter().filter(|e| e.unusable.is_none()).cloned().map(SignerChoice::Id));
         // Only a key's certificate is chosen in advance; anything else the user picks.
         let selected = choices.iter().position(SignerChoice::is_token);
         let wrong = vec![0; choices.len()];
-        self.p7m_sign = Some(P7mSignDraft { doc, choices, selected, secret: String::new(), error: None, wrong, libraries });
+        self.p7m_sign = Some(P7mSignDraft { doc, choices, selected, secret: String::new(), error: None, wrong, libraries, problems });
     }
 
     /// Sign the document with the chosen identity, then ask where to save the `.p7m`.
@@ -534,6 +551,7 @@ pub(crate) fn dialog(app: &mut PdfCraftApp, ctx: &egui::Context) {
     let Some(mut d) = app.p7m_sign.take() else { return };
     let mut close = false;
     let mut go = false;
+    let mut pick = false;
     let t = Tokens::get(ctx);
     let modal = widgets::show_modal(ctx, "p7m-sign", |ui| {
         ui.set_width(520.0);
@@ -556,6 +574,20 @@ pub(crate) fn dialog(app: &mut PdfCraftApp, ctx: &egui::Context) {
                         .small()
                         .color(t.text_muted),
                     );
+            }
+            for p in &d.problems {
+                ui.label(
+                    egui::RichText::new(crate::i18n::fmt(tl!("The key's software was found but could not be used: {problem}"), &[("problem", p)]))
+                        .small()
+                        .color(Color32::from_rgb(0xD7, 0x37, 0x3F)),
+                );
+            }
+            #[cfg(not(target_arch = "wasm32"))]
+            if widgets::pill_button(ui, tl!("Choose the key's file…"), false)
+                .on_hover_text(tl!("The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed."))
+                .clicked()
+            {
+                pick = true;
             }
         }
         for (i, choice) in d.choices.iter().enumerate() {
@@ -620,6 +652,17 @@ pub(crate) fn dialog(app: &mut PdfCraftApp, ctx: &egui::Context) {
     });
     if modal.should_close() {
         close = true;
+    }
+    #[cfg(not(target_arch = "wasm32"))]
+    if pick {
+        app.p7m_sign = Some(d);
+        let dialog =
+            rfd::AsyncFileDialog::new().set_title(tl!("Choose the key's file…")).add_filter(tl!("Key software (.dll)"), &["dll", "so", "dylib"]);
+        app.ask_one(crate::pickers::Ask::File(dialog), None, |app, path| {
+            app.pkcs11_library = Some(path.display().to_string());
+            app.start_p7m_signing();
+        });
+        return;
     }
     if close {
         // Search again: list the keys afresh, keeping the dialog open.

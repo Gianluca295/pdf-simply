@@ -2336,3 +2336,7 @@ animation effects	Off	Выкл
 	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Издателя нет в итальянском списке AgID (он может быть в списке другой страны ЕС).
 	The AgID list could not be checked.	Не удалось проверить список AgID.
 	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Срок действия сертификата истёк: издатели могут перестать публиковать отзывы истёкших сертификатов, поэтому этот ответ менее надёжен.
+	The key's software was found but could not be used: {problem}	ПО ключа найдено, но его нельзя использовать: {problem}
+	Choose the key's file…	Выбрать файл ключа…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Файл ПО ключа (.dll), например bit4xpki.dll в C:\\Windows\\System32 или в папке, куда установлено ПО ключа.
+	Key software (.dll)	ПО ключа (.dll)

@@ -639,6 +639,8 @@ pub struct PdfCraftApp {
     pub p7m_pending: Vec<(String, p7m_ui::P7mOpened)>,
     /// How *Check online* reaches the certificate issuers and AgID (the desktop app sets it).
     pub online_fetch: Option<p7m_ui::OnlineFetch>,
+    /// The key's PKCS #11 library chosen by hand (PDF Simply), when the search doesn't find it.
+    pub pkcs11_library: Option<String>,
     /// Online checks under way, per document.
     pub(crate) p7m_online: std::collections::HashMap<DocId, std::sync::mpsc::Receiver<Vec<pdfcraft_engine::sign::online::Report>>>,
     /// Signatures panel: expanded entries (field names).
@@ -966,6 +968,7 @@ impl PdfCraftApp {
             p7m_opened: std::collections::HashMap::new(),
             p7m_pending: Vec::new(),
             online_fetch: None,
+            pkcs11_library: None,
             p7m_online: std::collections::HashMap::new(),
             sig_expanded: Vec::new(),
             a11y_options: a11y_ui::A11yOptions::default(),
@@ -2135,7 +2138,7 @@ impl PdfCraftApp {
     /// Serialize the user's persistent state (recent files, theme). Local only.
     pub fn persist(&self) -> String {
         let trusted: Vec<String> = self.session.trusted_certificates().iter().map(pdfcraft_engine::sign::x509::to_pem).collect();
-        serde_json::json!({
+        let mut v = serde_json::json!({
             "docking": self.docking,
             "docking_left_open": self.left_open,
             "docking_right": self.right,
@@ -2194,8 +2197,10 @@ impl PdfCraftApp {
             "combine_zoom": self.combine_zoom,
             "comments_panel_closed": self.comments_panel_closed,
             "right_panel_closed": self.right_panel_closed,
-        })
-        .to_string()
+        });
+        // PDF Simply's own settings, added outside the macro (it is at its recursion limit).
+        v["pkcs11_library"] = serde_json::json!(self.pkcs11_library);
+        v.to_string()
     }
 
     /// Restore state written by `persist`. Unknown or malformed data is ignored.
@@ -2340,6 +2345,7 @@ impl PdfCraftApp {
             self.digital_ids = ids;
         }
         self.custom_stamps = stamps_ui::decode(&v["custom_stamps"]);
+        self.pkcs11_library = v["pkcs11_library"].as_str().map(str::to_string);
         self.custom_actions = actions_ui::decode(&v["actions"]);
         if let Some(on) = v["javascript"].as_bool() {
             self.session.set_javascript(on);

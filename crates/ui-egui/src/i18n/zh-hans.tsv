@@ -2367,3 +2367,23 @@ animation effects	Off	关
 	The certificate was not valid at the signing time.	签名日期时证书无效。
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	签名没有 signing-certificate 属性：它是 PKCS #7，而不是 CAdES。
 	The signer's certificate does not chain to a trusted certificate.	签名人的证书无法追溯到受信任的证书。
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	警告：{who} 的证书已于 {date}（签名之前）被吊销或暂停。签名无效。
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	注意：{who} 的证书已于 {date} 被吊销或暂停。签名时间来自签名者的电脑，因此无法证明签名在先。
+	Checked online: the certificate is not revoked.	已在线检查：证书未被吊销。
+	Checking online…	正在在线检查…
+	Check online	在线检查
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	向证书颁发者询问证书是否被吊销或暂停，并检查 AgID 合格颁发者列表。不会发送文档。
+	Role stated in the certificate: {role}	证书中注明的职务：{role}
+	Timestamp (marca temporale) from an authority: {time}	认证机构的时间戳 (marca temporale)：{time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	在线检查会向证书颁发者询问证书是否被吊销或暂停，并检查 AgID 合格颁发者列表。只检查证书：文档不会发送到任何地方。
+	Online check of {date}:	{date} 的在线检查：
+	the certificate is not revoked or suspended.	证书未被吊销或暂停。
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	证书已于 {date}（签名之前）被吊销或暂停：签名无效。
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	证书已于 {date}（签名之后）被吊销或暂停（时间戳证明签名在先）。
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	证书已于 {date} 被吊销或暂停。签名时间来自签名者的电脑：无法证明签名在先。
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	无法检查吊销状态（颁发者没有响应，或没有网络连接）。
+	The issuer is a qualified certification authority on the AgID list.	颁发者是 AgID 列表中的合格认证机构。
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	颁发者在 AgID 列表中，但已不再是合格认证机构。
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	颁发者不在意大利 AgID 列表中（可能在其他欧盟国家的列表中）。
+	The AgID list could not be checked.	无法检查 AgID 列表。
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	证书已过期：颁发者可能不再公布过期证书的吊销信息，因此这个结果不太确定。

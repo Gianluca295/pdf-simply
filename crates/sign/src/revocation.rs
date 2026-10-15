@@ -12,6 +12,8 @@ const MAX_EVIDENCE: usize = 2 * 1024 * 1024;
 
 const ID_PKIX_OCSP_BASIC: &str = "1.3.6.1.5.5.7.48.1.1";
 const EKU_OCSP_SIGNING: &str = "1.3.6.1.5.5.7.3.9";
+/// The ASN.1 ENUMERATED tag.
+const ENUMERATED: u8 = 0x0A;
 
 /// What a piece of revocation evidence says about a certificate at a point in time.
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -181,7 +183,16 @@ impl OcspResponse {
             return Err(bad("OCSP response is empty or exceeds the 2 MiB limit"));
         }
         let resp = Tlv::parse_all(bytes)?.expect(tag::SEQUENCE, "OCSPResponse")?.children()?;
-        let status = resp.first().ok_or_else(|| bad("missing responseStatus"))?.u64()?;
+        // OCSPResponseStatus is an ENUMERATED (tag 10), which is what responders send; an
+        // INTEGER is tolerated too.
+        let status_tlv = resp.first().ok_or_else(|| bad("missing responseStatus"))?;
+        let status = match status_tlv.tag {
+            ENUMERATED => match status_tlv.value {
+                [v] if *v < 0x80 => u64::from(*v),
+                _ => return Err(bad("responseStatus")),
+            },
+            _ => status_tlv.u64()?,
+        };
         if status != 0 {
             return Err(bad(format!("responder reported an error (status {status})")));
         }
@@ -199,10 +210,14 @@ impl OcspResponse {
         let mut responder_cert = None;
         for t in it {
             if t.tag == tag::ctx(0) {
+                // certs [0] EXPLICIT SEQUENCE OF Certificate (RFC 6960 §4.2.1); a bare
+                // certificate directly inside [0] is tolerated too.
                 for c in t.children()? {
-                    if c.tag == tag::SEQUENCE
-                        && let Ok(cert) = Certificate::parse(c.raw)
-                    {
+                    let candidates = match Certificate::parse(c.raw) {
+                        Ok(cert) => vec![cert],
+                        Err(_) => c.children().unwrap_or_default().iter().filter_map(|x| Certificate::parse(x.raw).ok()).collect(),
+                    };
+                    for cert in candidates {
                         responder_cert.get_or_insert(cert);
                     }
                 }

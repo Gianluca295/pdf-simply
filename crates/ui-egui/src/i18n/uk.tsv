@@ -2425,3 +2425,23 @@ animation effects	Off	Вимкнено
 	The certificate was not valid at the signing time.	Сертифікат був недійсний на дату підпису.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Підпис не має атрибута signing-certificate: це PKCS #7, а не CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Сертифікат підписувача не веде до довіреного сертифіката.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	УВАГА: сертифікат {who} було ВІДКЛИКАНО або ПРИЗУПИНЕНО {date}, до підпису. Підпис НЕДІЙСНИЙ.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Обережно: сертифікат {who} було відкликано або призупинено {date}. Дата підпису взята з комп'ютера підписувача, тому не можна довести, що підпис був раніше.
+	Checked online: the certificate is not revoked.	Перевірено онлайн: сертифікат не відкликано.
+	Checking online…	Перевірка онлайн…
+	Check online	Перевірити онлайн
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Запитує в видавця сертифіката, чи його відкликано або призупинено, і перевіряє список кваліфікованих видавців AgID. Документ не надсилається.
+	Role stated in the certificate: {role}	Роль, зазначена в сертифікаті: {role}
+	Timestamp (marca temporale) from an authority: {time}	Позначка часу (marca temporale) від служби: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Перевірка онлайн запитує в видавця сертифіката, чи його відкликано або призупинено, і перевіряє список кваліфікованих видавців AgID. Перевіряється лише сертифікат: документ нікуди не надсилається.
+	Online check of {date}:	Перевірка онлайн від {date}:
+	the certificate is not revoked or suspended.	сертифікат не відкликано і не призупинено.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертифікат було ВІДКЛИКАНО або ПРИЗУПИНЕНО {date}, до підпису: підпис НЕДІЙСНИЙ.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертифікат було відкликано або призупинено {date}, після підпису (позначка часу доводить, що підпис був раніше).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертифікат було відкликано або призупинено {date}. Дата підпису взята з комп'ютера підписувача: не можна довести, що підпис був раніше.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	не вдалося перевірити відкликання (видавець не відповів або немає підключення до інтернету).
+	The issuer is a qualified certification authority on the AgID list.	Видавець — кваліфікований центр сертифікації зі списку AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Видавець є в списку AgID, але більше не є кваліфікованим центром сертифікації.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Видавця немає в італійському списку AgID (він може бути в списку іншої країни ЄС).
+	The AgID list could not be checked.	Не вдалося перевірити список AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Термін дії сертифіката минув: видавці можуть перестати публікувати відкликання прострочених сертифікатів, тому ця відповідь менш надійна.

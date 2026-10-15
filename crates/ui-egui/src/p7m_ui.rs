@@ -1,14 +1,32 @@
 //! PDF Simply: the Italian digital signature. Sign as a `.p7m` (CAdES, the document inside the
 //! signature) with a smart-card key through its vendor's PKCS #11 library, a Windows or Keychain
 //! store identity, or a digital ID file; and open `.p7m` files, showing the document inside and
-//! the result of checking its signatures in a bar above it.
+//! the result of checking its signatures in a bar above it. *Check online* asks, when the user
+//! presses it, whether each signer's certificate was revoked or suspended and whether its issuer
+//! is on the Italian trusted list (`sign::online`; the desktop app supplies the connection).
+
+use std::sync::Arc;
 
 use egui::{Align, Color32, Layout};
 use pdfcraft_engine::DocId;
-use pdfcraft_engine::sign::{self, Certificate, DigestAlg, PrivateKey};
+use pdfcraft_engine::sign::online::{Report, Request, Revocation, TrustedList};
+use pdfcraft_engine::sign::{self, Certificate, DigestAlg, PrivateKey, Time};
 
 use crate::theme::Tokens;
 use crate::{PdfCraftApp, widgets};
+
+/// Answers the online check's requests (blocking; it runs on its own thread). The desktop app
+/// sets it ([`PdfCraftApp::online_fetch`]); without it there is no *Check online*.
+pub type OnlineFetch = Arc<dyn Fn(Request<'_>) -> Result<Vec<u8>, String> + Send + Sync>;
+
+const RED: Color32 = Color32::from_rgb(0xD7, 0x37, 0x3F);
+const GREEN: Color32 = Color32::from_rgb(0x2D, 0x9D, 0x78);
+const ORANGE: Color32 = Color32::from_rgb(0xE6, 0x86, 0x19);
+
+/// "dd/mm/yyyy hh:mm UTC".
+fn when(t: Time) -> String {
+    format!("{:02}/{:02}/{:04} {:02}:{:02} UTC", t.day, t.month, t.year, t.hour, t.minute)
+}
 
 /// One signature of an opened `.p7m`, ready to show.
 #[derive(Clone, Debug, PartialEq)]
@@ -22,6 +40,25 @@ pub struct SignerLine {
     pub certificate_valid: bool,
     pub trusted: bool,
     pub notes: Vec<String>,
+    /// The role the certificate states (its title, such as "Notaio"), when it states one.
+    pub role: Option<String>,
+    /// The time of a verified timestamp (marca temporale).
+    pub timestamp: Option<String>,
+    /// When the signature was made: the timestamp's time, else the signer's clock.
+    pub signed_at: Option<Time>,
+    /// For the online check.
+    pub certificate: Option<Certificate>,
+    pub carried: Vec<Certificate>,
+}
+
+impl SignerLine {
+    /// Revoked or suspended since before the signature (or with no signing time to compare).
+    fn revoked_before_signing(&self, report: &Report) -> Option<Time> {
+        match report.revocation {
+            Revocation::Revoked { at, .. } if self.signed_at.is_none_or(|t| at <= t) => Some(at),
+            _ => None,
+        }
+    }
 }
 
 /// What opening a `.p7m` found, kept with the document it showed.
@@ -30,6 +67,8 @@ pub struct P7mOpened {
     pub file: String,
     pub signers: Vec<SignerLine>,
     pub details_open: bool,
+    /// What *Check online* found, one report per signer.
+    pub online: Option<Vec<Report>>,
 }
 
 impl P7mOpened {
@@ -221,7 +260,8 @@ impl PdfCraftApp {
         let envelope = sign::p7m::open(bytes, &trust)
             .map_err(|e| crate::i18n::fmt(tl!("This is not a signed file that can be read: {e}"), &[("e", &e.to_string())]))?;
         let inner = sign::p7m::inner_file_name(name).to_string();
-        let opened = P7mOpened { file: name.to_string(), signers: envelope.signers.iter().map(signer_line).collect(), details_open: false };
+        let opened =
+            P7mOpened { file: name.to_string(), signers: envelope.signers.iter().map(signer_line).collect(), details_open: false, online: None };
         let before = self.views.len();
         self.try_open(&inner, None, std::sync::Arc::new(envelope.content), None, activate)?;
         match self.views.get(before).map(|v| v.id) {
@@ -232,6 +272,43 @@ impl PdfCraftApp {
             None => self.p7m_pending.push((inner, opened)),
         }
         Ok(())
+    }
+
+    /// *Check online*: ask, on another thread, about every signer's certificate.
+    pub(crate) fn start_online_check(&mut self, doc: DocId) {
+        let (Some(fetch), Some(opened)) = (self.online_fetch.clone(), self.p7m_opened.get(&doc)) else { return };
+        let jobs: Vec<(Option<Certificate>, Vec<Certificate>)> = opened.signers.iter().map(|s| (s.certificate.clone(), s.carried.clone())).collect();
+        #[cfg(not(target_arch = "wasm32"))]
+        {
+            let (tx, rx) = std::sync::mpsc::channel();
+            let ctx = self.ctx.clone();
+            std::thread::spawn(move || {
+                let secs = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).map(|d| d.as_secs()).unwrap_or_default();
+                let now = Time::from_unix(i64::try_from(secs).unwrap_or(i64::MAX));
+                let reports = jobs
+                    .into_iter()
+                    .map(|(cert, carried)| match cert {
+                        Some(cert) => sign::online::check(&cert, &carried, now, &mut |r| fetch(r)),
+                        None => Report {
+                            revocation: Revocation::Unknown,
+                            trusted_list: TrustedList::Unreachable,
+                            issuer: None,
+                            checked_at: now,
+                            expired: false,
+                            notes: vec!["The signer's certificate is not in the file.".to_string()],
+                        },
+                    })
+                    .collect::<Vec<_>>();
+                // The receiver may be gone (the document was closed): nothing to report to then.
+                let _ = tx.send(reports);
+                if let Some(ctx) = ctx {
+                    ctx.request_repaint();
+                }
+            });
+            self.p7m_online.insert(doc, rx);
+        }
+        #[cfg(target_arch = "wasm32")]
+        let _ = (fetch, jobs);
     }
 
     /// A document opened after a password prompt gets the `.p7m` result waiting for its name.
@@ -245,7 +322,7 @@ impl PdfCraftApp {
 
 fn signer_line(s: &sign::p7m::Signer) -> SignerLine {
     let issuer = s.certificate.as_ref().map(|c| c.issuer.common_name().map(str::to_string).unwrap_or_else(|| c.issuer.display())).unwrap_or_default();
-    let time = s.signing_time.map(|t| format!("{:02}/{:02}/{:04} {:02}:{:02} UTC", t.day, t.month, t.year, t.hour, t.minute));
+    let time = s.signing_time.map(when);
     SignerLine {
         name: s.name(),
         issuer,
@@ -255,6 +332,11 @@ fn signer_line(s: &sign::p7m::Signer) -> SignerLine {
         certificate_valid: s.certificate_valid,
         trusted: s.trusted,
         notes: s.notes.clone(),
+        role: s.certificate.as_ref().and_then(|c| c.subject.get("2.5.4.12")).map(str::to_string),
+        timestamp: s.timestamp.map(when),
+        signed_at: s.signed_at(),
+        certificate: s.certificate.clone(),
+        carried: s.carried.clone(),
     }
 }
 
@@ -269,34 +351,81 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
         let name = app.session.get(doc).map(|d| d.name.clone()).unwrap_or_default();
         app.claim_pending_p7m(doc, &name);
     }
+    if let Some(Ok(reports)) = app.p7m_online.get(&doc).map(std::sync::mpsc::Receiver::try_recv) {
+        app.p7m_online.remove(&doc);
+        if let Some(opened) = app.p7m_opened.get_mut(&doc) {
+            opened.online = Some(reports);
+            opened.details_open = true;
+        }
+    }
+    let checking = app.p7m_online.contains_key(&doc);
+    let can_check = app.online_fetch.is_some();
     let Some(opened) = app.p7m_opened.get_mut(&doc) else { return };
     let names: Vec<String> = opened.signers.iter().map(|s| s.name.clone()).collect();
     let who = names.join(", ");
-    let (icon, color, text) = if !opened.intact() {
-        ("circle-x", Color32::from_rgb(0xD7, 0x37, 0x3F), tl!("Signature NOT valid: the document was changed after it was signed.").to_string())
-    } else if opened.valid() {
-        ("circle-check", Color32::from_rgb(0x2D, 0x9D, 0x78), crate::i18n::fmt(tl!("Signed by {who}: the signature is valid."), &[("who", &who)]))
-    } else if opened.qualified() {
+    let reports = opened.online.as_deref().unwrap_or_default();
+    let revoked_before = opened.signers.iter().zip(reports).find_map(|(s, r)| s.revoked_before_signing(r).map(|at| (s.name.clone(), at)));
+    let revoked_after = opened.signers.iter().zip(reports).find_map(|(s, r)| match r.revocation {
+        Revocation::Revoked { at, .. } if s.revoked_before_signing(r).is_none() => Some((s.name.clone(), at, s.timestamp.is_some())),
+        _ => None,
+    });
+    let all_good = !reports.is_empty() && reports.iter().all(|r| matches!(r.revocation, Revocation::Good { .. }));
+    let (icon, color, mut text) = if let Some((who, at)) = &revoked_before {
         (
-            "circle-check",
-            Color32::from_rgb(0x2D, 0x9D, 0x78),
-            crate::i18n::fmt(tl!("Signed by {who} with a qualified certificate: the signature is intact."), &[("who", &who)]),
+            "circle-x",
+            RED,
+            crate::i18n::fmt(
+                tl!("WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid."),
+                &[("who", who), ("date", &when(*at))],
+            ),
         )
+    } else if let Some((who, at, false)) = &revoked_after {
+        (
+            "triangle-alert",
+            ORANGE,
+            crate::i18n::fmt(
+                tl!(
+                    "Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first."
+                ),
+                &[("who", who), ("date", &when(*at))],
+            ),
+        )
+    } else if !opened.intact() {
+        ("circle-x", RED, tl!("Signature NOT valid: the document was changed after it was signed.").to_string())
+    } else if opened.valid() {
+        ("circle-check", GREEN, crate::i18n::fmt(tl!("Signed by {who}: the signature is valid."), &[("who", &who)]))
+    } else if opened.qualified() {
+        ("circle-check", GREEN, crate::i18n::fmt(tl!("Signed by {who} with a qualified certificate: the signature is intact."), &[("who", &who)]))
     } else {
         (
             "triangle-alert",
-            Color32::from_rgb(0xE6, 0x86, 0x19),
+            ORANGE,
             crate::i18n::fmt(tl!("Signed by {who}: the signature is intact, but the certificate could not be confirmed."), &[("who", &who)]),
         )
     };
+    if revoked_before.is_none() && revoked_after.is_none() && all_good && opened.intact() {
+        text.push(' ');
+        text.push_str(tl!("Checked online: the certificate is not revoked."));
+    }
     let mut toggle = false;
+    let mut check = false;
     crate::canvas::notice_bar(ui, t, icon, color, text, |ui| {
         if widgets::pill_button(ui, if opened.details_open { tl!("Hide details") } else { tl!("Details") }, false).clicked() {
             toggle = true;
         }
+        if checking {
+            ui.add(egui::Spinner::new());
+            ui.label(tl!("Checking online…"));
+        } else if can_check && widgets::pill_button(ui, tl!("Check online"), false).on_hover_text(tl!("Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.")).clicked() {
+            check = true;
+        }
     });
     if toggle {
         opened.details_open = !opened.details_open;
+    }
+    if check {
+        app.start_online_check(doc);
+        return;
     }
     if !opened.details_open {
         return;
@@ -308,9 +437,15 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
             let title = if opened.signers.len() > 1 { format!("{}. {}", i + 1, s.name) } else { s.name.clone() };
             ui.label(egui::RichText::new(title).strong());
             let yes_no = |b: bool| if b { tl!("yes") } else { tl!("no") };
+            if let Some(role) = &s.role {
+                ui.label(crate::i18n::fmt(tl!("Role stated in the certificate: {role}"), &[("role", role)]));
+            }
             ui.label(crate::i18n::fmt(tl!("Certificate issued by: {issuer}"), &[("issuer", &s.issuer)]));
             if let Some(time) = &s.time {
                 ui.label(crate::i18n::fmt(tl!("Signed on: {time} (the signer's computer clock)"), &[("time", time)]));
+            }
+            if let Some(stamp) = &s.timestamp {
+                ui.label(crate::i18n::fmt(tl!("Timestamp (marca temporale) from an authority: {time}"), &[("time", stamp)]));
             }
             ui.label(crate::i18n::fmt(tl!("Document unchanged since signing: {v}"), &[("v", yes_no(s.intact))]));
             ui.label(crate::i18n::fmt(tl!("Qualified certificate (legally valid digital signature): {v}"), &[("v", yes_no(s.qualified))]));
@@ -320,16 +455,78 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
             for note in s.notes.iter().filter(|n| !(s.qualified && n.contains("does not chain to a trusted"))) {
                 ui.label(egui::RichText::new(format!("• {}", tl!(note))).small().color(t.text_muted));
             }
+            if let Some(report) = reports.get(i) {
+                online_lines(ui, t, s, report);
+            }
         }
         ui.add_space(6.0);
-        ui.label(
-            egui::RichText::new(tl!(
+        let footnote = if can_check {
+            tl!(
+                "Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere."
+            )
+        } else {
+            tl!(
                 "PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers)."
+            )
+        };
+        ui.label(egui::RichText::new(footnote).small().color(t.text_muted));
+    });
+}
+
+/// What *Check online* found for one signer, in the details.
+fn online_lines(ui: &mut egui::Ui, t: &Tokens, s: &SignerLine, r: &Report) {
+    ui.add_space(2.0);
+    ui.label(egui::RichText::new(crate::i18n::fmt(tl!("Online check of {date}:"), &[("date", &when(r.checked_at))])).strong());
+    let (color, line) = match &r.revocation {
+        Revocation::Good { .. } => (GREEN, tl!("the certificate is not revoked or suspended.").to_string()),
+        Revocation::Revoked { at, .. } if s.revoked_before_signing(r).is_some() => (
+            RED,
+            crate::i18n::fmt(
+                tl!("the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid."),
+                &[("date", &when(*at))],
+            ),
+        ),
+        Revocation::Revoked { at, .. } if s.timestamp.is_some() => (
+            ORANGE,
+            crate::i18n::fmt(
+                tl!("the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first)."),
+                &[("date", &when(*at))],
+            ),
+        ),
+        Revocation::Revoked { at, .. } => (
+            ORANGE,
+            crate::i18n::fmt(
+                tl!(
+                    "the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first."
+                ),
+                &[("date", &when(*at))],
+            ),
+        ),
+        Revocation::Unknown => {
+            (ORANGE, tl!("the revocation could not be checked (no answer from the issuer, or no internet connection).").to_string())
+        }
+    };
+    ui.label(egui::RichText::new(format!("• {line}")).color(color));
+    let list = match r.trusted_list {
+        TrustedList::Active => tl!("The issuer is a qualified certification authority on the AgID list."),
+        TrustedList::Withdrawn => tl!("The issuer is on the AgID list, but it is no longer a qualified certification authority."),
+        TrustedList::Absent => tl!("The issuer is not on the Italian AgID list (it may be on another EU country's list)."),
+        TrustedList::Unreachable => tl!("The AgID list could not be checked."),
+    };
+    ui.label(format!("• {list}"));
+    if r.expired && matches!(r.revocation, Revocation::Good { .. }) {
+        ui.label(
+            egui::RichText::new(format!(
+                "• {}",
+                tl!("The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.")
             ))
             .small()
             .color(t.text_muted),
         );
-    });
+    }
+    for note in &r.notes {
+        ui.label(egui::RichText::new(format!("• {}", tl!(note))).small().color(t.text_muted));
+    }
 }
 
 /// The Sign as .p7m dialog. Returns when it is done (closed or signed).

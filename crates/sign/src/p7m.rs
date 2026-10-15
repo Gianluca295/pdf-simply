@@ -7,9 +7,10 @@
 //! [`open`] reads one back: DER or base64 (PEM-style or bare), and nested envelopes
 //! (`file.pdf.p7m.p7m`, a document signed again by a second signer), and checks each signature.
 //!
-//! What [`open`] does not do: online revocation checks (OCSP/CRL) and the EU Trusted Lists. A
-//! signer whose chain doesn't reach a certificate in the caller's [`TrustStore`] is reported as
-//! intact but not trusted, never as valid.
+//! [`open`] never goes online: revocation (OCSP/CRL) and the Italian trusted list are checked
+//! by [`crate::online`], only when the user asks. A signer whose chain doesn't reach a
+//! certificate in the caller's [`TrustStore`] is reported as intact but not trusted, never as
+//! valid.
 
 use crate::SignError;
 use crate::cms::{DATA, SIGNED_DATA, SignedData};
@@ -92,6 +93,12 @@ pub struct Signer {
     /// ETSI EN 319 412-5): the kind a qualified electronic signature (firma digitale) uses. It is
     /// the certificate's own claim; whether its issuer is on the EU Trusted Lists is not checked.
     pub qualified: bool,
+    /// The time of an attached, verified RFC 3161 timestamp (marca temporale): unlike the
+    /// signing time, it comes from a timestamping authority, not the signer's clock.
+    pub timestamp: Option<Time>,
+    /// The certificates the signature carries (the signer's and, sometimes, its issuers), for
+    /// the online check.
+    pub carried: Vec<Certificate>,
     /// Why the signature is not valid or not trusted, in English, for the details.
     pub notes: Vec<String>,
 }
@@ -100,6 +107,12 @@ impl Signer {
     /// Intact, by a certificate valid then and trusted.
     pub fn valid(&self) -> bool {
         self.intact && self.certificate_valid && self.trusted
+    }
+
+    /// When the signature was made, as reliably as the file says: the timestamp's time, else
+    /// the signer's own clock.
+    pub fn signed_at(&self) -> Option<Time> {
+        self.timestamp.or(self.signing_time)
     }
 
     /// The signer's name as the certificate gives it.
@@ -186,10 +199,17 @@ fn check(sd: &SignedData, content: &[u8], trust: &TrustStore) -> Signer {
     if !s.signing_certificate {
         notes.push("The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.".to_string());
     }
+    let timestamp = s.timestamp_token.as_deref().and_then(|raw| match crate::timestamp::parse_token(raw) {
+        Ok(t) if t.imprint == t.digest.digest(&[&s.signature]) => Some(t.gen_time),
+        _ => {
+            notes.push("The attached timestamp could not be verified.".to_string());
+            None
+        }
+    });
     let (certificate_valid, trusted) = match &certificate {
         None => (false, false),
         Some(cert) => {
-            let at = s.signing_time;
+            let at = timestamp.or(s.signing_time);
             let in_window = |t: Time| cert.not_before <= t && t <= cert.not_after;
             let certificate_valid = match at {
                 Some(t) => in_window(t),
@@ -212,7 +232,18 @@ fn check(sd: &SignedData, content: &[u8], trust: &TrustStore) -> Signer {
         }
     };
     let qualified = certificate.as_ref().is_some_and(is_qualified);
-    Signer { certificate, intact, cades: s.signing_certificate, signing_time: s.signing_time, certificate_valid, trusted, qualified, notes }
+    Signer {
+        certificate,
+        intact,
+        cades: s.signing_certificate,
+        signing_time: s.signing_time,
+        certificate_valid,
+        trusted,
+        qualified,
+        timestamp,
+        carried: sd.certificates.clone(),
+        notes,
+    }
 }
 
 /// The qcStatements extension (1.3.6.1.5.5.7.1.3) holding the QcCompliance statement

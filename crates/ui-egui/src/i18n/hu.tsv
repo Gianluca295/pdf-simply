@@ -2402,3 +2402,23 @@ animation effects	Off	Ki
 	The certificate was not valid at the signing time.	A tanúsítvány nem volt érvényes az aláírás napján.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Az aláírásnak nincs signing-certificate attribútuma: PKCS #7, nem CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Az aláíró tanúsítványa nem vezet megbízható tanúsítványhoz.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	FIGYELEM: {who} tanúsítványát {date} napon VISSZAVONTÁK vagy FELFÜGGESZTETTÉK, az aláírás előtt. Az aláírás NEM érvényes.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Vigyázat: {who} tanúsítványát {date} napon visszavonták vagy felfüggesztették. Az aláírás dátuma az aláíró számítógépéről származik, ezért nem bizonyítható, hogy az aláírás korábbi.
+	Checked online: the certificate is not revoked.	Online ellenőrizve: a tanúsítvány nincs visszavonva.
+	Checking online…	Online ellenőrzés…
+	Check online	Online ellenőrzés
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Megkérdezi a tanúsítvány kibocsátóját, hogy visszavonták vagy felfüggesztették-e, és ellenőrzi a minősített kibocsátók AgID-listáját. A dokumentumot nem küldi el.
+	Role stated in the certificate: {role}	A tanúsítványban megadott szerep: {role}
+	Timestamp (marca temporale) from an authority: {time}	Időbélyeg (marca temporale) egy szolgáltatótól: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Az online ellenőrzés megkérdezi a tanúsítvány kibocsátóját, hogy visszavonták vagy felfüggesztették-e, és ellenőrzi a minősített kibocsátók AgID-listáját. Csak a tanúsítványt ellenőrzi: a dokumentumot sehová nem küldi el.
+	Online check of {date}:	Online ellenőrzés, {date}:
+	the certificate is not revoked or suspended.	a tanúsítvány nincs visszavonva vagy felfüggesztve.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	a tanúsítványt {date} napon VISSZAVONTÁK vagy FELFÜGGESZTETTÉK, az aláírás előtt: az aláírás NEM érvényes.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	a tanúsítványt {date} napon visszavonták vagy felfüggesztették, az aláírás után (az időbélyeg bizonyítja, hogy az aláírás korábbi).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	a tanúsítványt {date} napon visszavonták vagy felfüggesztették. Az aláírás dátuma az aláíró számítógépéről származik: nem bizonyítható, hogy az aláírás korábbi.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	a visszavonást nem sikerült ellenőrizni (a kibocsátó nem válaszolt, vagy nincs internetkapcsolat).
+	The issuer is a qualified certification authority on the AgID list.	A kibocsátó minősített hitelesítésszolgáltató az AgID-listán.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	A kibocsátó szerepel az AgID-listán, de már nem minősített hitelesítésszolgáltató.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	A kibocsátó nem szerepel az olasz AgID-listán (lehet, hogy egy másik uniós ország listáján szerepel).
+	The AgID list could not be checked.	Az AgID-listát nem sikerült ellenőrizni.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	A tanúsítvány lejárt: a kibocsátók abbahagyhatják a lejárt tanúsítványok visszavonásának közzétételét, ezért ez a válasz kevésbé biztos.

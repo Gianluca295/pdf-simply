@@ -2277,3 +2277,23 @@ animation effects	Off	關
 	The certificate was not valid at the signing time.	簽署日期時憑證無效。
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	簽章沒有 signing-certificate 屬性：它是 PKCS #7，而不是 CAdES。
 	The signer's certificate does not chain to a trusted certificate.	簽署人的憑證無法追溯到受信任的憑證。
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	警告：{who} 的憑證已於 {date}（簽署之前）被撤銷或暫停。簽章無效。
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	注意：{who} 的憑證已於 {date} 被撤銷或暫停。簽署時間來自簽署者的電腦，因此無法證明簽章在先。
+	Checked online: the certificate is not revoked.	已線上檢查：憑證未被撤銷。
+	Checking online…	正在線上檢查…
+	Check online	線上檢查
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	向憑證簽發者詢問憑證是否被撤銷或暫停，並檢查 AgID 合格簽發者清單。不會傳送文件。
+	Role stated in the certificate: {role}	憑證中註明的職務：{role}
+	Timestamp (marca temporale) from an authority: {time}	認證機構的時戳 (marca temporale)：{time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	線上檢查會向憑證簽發者詢問憑證是否被撤銷或暫停，並檢查 AgID 合格簽發者清單。只檢查憑證：文件不會傳送到任何地方。
+	Online check of {date}:	{date} 的線上檢查：
+	the certificate is not revoked or suspended.	憑證未被撤銷或暫停。
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	憑證已於 {date}（簽署之前）被撤銷或暫停：簽章無效。
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	憑證已於 {date}（簽署之後）被撤銷或暫停（時戳證明簽章在先）。
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	憑證已於 {date} 被撤銷或暫停。簽署時間來自簽署者的電腦：無法證明簽章在先。
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	無法檢查撤銷狀態（簽發者沒有回應，或沒有網路連線）。
+	The issuer is a qualified certification authority on the AgID list.	簽發者是 AgID 清單中的合格憑證機構。
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	簽發者在 AgID 清單中，但已不再是合格憑證機構。
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	簽發者不在義大利 AgID 清單中（可能在其他歐盟國家的清單中）。
+	The AgID list could not be checked.	無法檢查 AgID 清單。
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	憑證已過期：簽發者可能不再公布過期憑證的撤銷資訊，因此這個結果較不確定。

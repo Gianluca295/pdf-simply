@@ -2403,3 +2403,23 @@ animation effects	Off	オフ
 	The certificate was not valid at the signing time.	署名日に証明書が有効ではありませんでした。
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	署名に signing-certificate 属性がありません：CAdES ではなく PKCS #7 です。
 	The signer's certificate does not chain to a trusted certificate.	署名者の証明書が信頼済みの証明書につながりません。
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	警告: {who} の証明書は署名の前の {date} に失効または一時停止されています。署名は有効ではありません。
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	注意: {who} の証明書は {date} に失効または一時停止されました。署名日時は署名者のコンピューターの時刻のため、署名が先だったことを証明できません。
+	Checked online: the certificate is not revoked.	オンラインで確認済み: 証明書は失効していません。
+	Checking online…	オンラインで確認中…
+	Check online	オンラインで確認
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	証明書の発行者に失効または一時停止されていないかを問い合わせ、AgID の適格発行者リストを確認します。文書は送信されません。
+	Role stated in the certificate: {role}	証明書に記載された役職: {role}
+	Timestamp (marca temporale) from an authority: {time}	認定機関のタイムスタンプ (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	オンラインで確認は、証明書の発行者に失効または一時停止されていないかを問い合わせ、AgID の適格発行者リストを確認します。確認するのは証明書だけで、文書はどこにも送信されません。
+	Online check of {date}:	{date} のオンライン確認:
+	the certificate is not revoked or suspended.	証明書は失効も一時停止もされていません。
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	証明書は署名の前の {date} に失効または一時停止されています: 署名は有効ではありません。
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	証明書は署名の後の {date} に失効または一時停止されました (タイムスタンプにより署名が先だったことが証明されます)。
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	証明書は {date} に失効または一時停止されました。署名日時は署名者のコンピューターの時刻のため、署名が先だったことを証明できません。
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	失効を確認できませんでした (発行者から応答がないか、インターネットに接続されていません)。
+	The issuer is a qualified certification authority on the AgID list.	発行者は AgID リストに載っている適格認証局です。
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	発行者は AgID リストに載っていますが、現在は適格認証局ではありません。
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	発行者はイタリアの AgID リストに載っていません (他の EU 加盟国のリストに載っている可能性があります)。
+	The AgID list could not be checked.	AgID リストを確認できませんでした。
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	証明書は期限切れです: 発行者は期限切れ証明書の失効を公開しなくなることがあるため、この結果は確実性が低くなります。

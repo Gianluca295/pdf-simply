@@ -2647,3 +2647,34 @@ key	Space	Tarpas
 	The certificate was not valid at the signing time.	Sertifikatas negaliojo pasirašymo dieną.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Parašas neturi signing-certificate atributo: tai PKCS #7, o ne CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Pasirašiusiojo sertifikatas neveda į patikimą sertifikatą.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	DĖMESIO: {who} sertifikatas {date} buvo ATŠAUKTAS arba SUSTABDYTAS, prieš pasirašymą. Parašas NEGALIOJA.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Atsargiai: {who} sertifikatas {date} buvo atšauktas arba sustabdytas. Pasirašymo data paimta iš pasirašiusiojo kompiuterio, todėl neįmanoma įrodyti, kad parašas buvo anksčiau.
+	Checked online: the certificate is not revoked.	Patikrinta internetu: sertifikatas neatšauktas.
+	Checking online…	Tikrinama internetu…
+	Check online	Tikrinti internetu
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Paklausia sertifikato išdavėjo, ar jis buvo atšauktas ar sustabdytas, ir patikrina AgID kvalifikuotų išdavėjų sąrašą. Dokumentas nesiunčiamas.
+	Role stated in the certificate: {role}	Sertifikate nurodytas vaidmuo: {role}
+	Timestamp (marca temporale) from an authority: {time}	Laiko žymė (marca temporale) iš tarnybos: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Tikrinimas internetu paklausia sertifikato išdavėjo, ar jis buvo atšauktas ar sustabdytas, ir patikrina AgID kvalifikuotų išdavėjų sąrašą. Tikrinamas tik sertifikatas: dokumentas niekur nesiunčiamas.
+	Online check of {date}:	Patikrinimas internetu {date}:
+	the certificate is not revoked or suspended.	sertifikatas nėra atšauktas ar sustabdytas.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	sertifikatas {date} buvo ATŠAUKTAS arba SUSTABDYTAS, prieš pasirašymą: parašas NEGALIOJA.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	sertifikatas {date} buvo atšauktas arba sustabdytas, po pasirašymo (laiko žymė įrodo, kad parašas buvo anksčiau).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	sertifikatas {date} buvo atšauktas arba sustabdytas. Pasirašymo data paimta iš pasirašiusiojo kompiuterio: neįmanoma įrodyti, kad parašas buvo anksčiau.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	atšaukimo patikrinti nepavyko (išdavėjas neatsakė arba nėra interneto ryšio).
+	The issuer is a qualified certification authority on the AgID list.	Išdavėjas yra kvalifikuota sertifikavimo įstaiga iš AgID sąrašo.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Išdavėjas yra AgID sąraše, bet nebėra kvalifikuota sertifikavimo įstaiga.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Išdavėjo nėra Italijos AgID sąraše (jis gali būti kitos ES šalies sąraše).
+	The AgID list could not be checked.	AgID sąrašo patikrinti nepavyko.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Sertifikato galiojimas baigėsi: išdavėjai gali nebeskelbti pasibaigusių sertifikatų atšaukimų, todėl šis atsakymas mažiau patikimas.
+	The attached timestamp could not be verified.	Pridėtos laiko žymės patikrinti nepavyko.
+	The Italian trusted list could not be read.	Italijos patikimų sąrašo perskaityti nepavyko.
+	The Italian trusted list could not be downloaded.	Italijos patikimų sąrašo atsisiųsti nepavyko.
+	The issuer's certificate could not be downloaded.	Išdavėjo sertifikato atsisiųsti nepavyko.
+	The issuer's certificate was not found, so the revocation status could not be checked.	Išdavėjo sertifikatas nerastas, todėl atšaukimo būsenos patikrinti nepavyko.
+	An OCSP answer did not cover this certificate or was not signed by its issuer.	OCSP atsakymas neapėmė šio sertifikato arba nebuvo pasirašytas jo išdavėjo.
+	An OCSP answer could not be read.	OCSP atsakymo perskaityti nepavyko.
+	The OCSP service did not answer.	OCSP tarnyba neatsakė.
+	A revocation list was out of date or not signed by the issuer.	Atšauktųjų sąrašas buvo pasenęs arba nepasirašytas išdavėjo.
+	A revocation list could not be read.	Atšauktųjų sąrašo perskaityti nepavyko.
+	A revocation list could not be downloaded.	Atšauktųjų sąrašo atsisiųsti nepavyko.

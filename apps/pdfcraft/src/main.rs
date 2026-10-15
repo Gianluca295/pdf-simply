@@ -36,6 +36,7 @@ mod decorations;
 mod logging;
 #[cfg(target_os = "windows")]
 mod motion;
+mod online;
 mod reopen;
 mod single_instance;
 mod text_scale;
@@ -361,6 +362,7 @@ fn app_creator<'a>(
             app.motion.source = Some(motion::source());
         }
         app.update_source = Some(std::sync::Arc::new(updates::latest_release));
+        app.online_fetch = Some(std::sync::Arc::new(online::fetch));
         app.printer_source = Some(pdfcraft_ui_egui::system_printers());
         app.os_key_store_ids = cfg!(any(target_os = "macos", target_os = "windows"));
         #[cfg(target_os = "macos")]

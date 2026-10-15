@@ -2413,3 +2413,23 @@ animation effects	Off	Ανενεργά
 	The certificate was not valid at the signing time.	Το πιστοποιητικό δεν ήταν έγκυρο την ημερομηνία υπογραφής.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Η υπογραφή δεν έχει χαρακτηριστικό signing-certificate: είναι PKCS #7, όχι CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Το πιστοποιητικό του υπογράφοντος δεν οδηγεί σε αξιόπιστο πιστοποιητικό.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ΠΡΟΣΟΧΗ: το πιστοποιητικό του/της {who} ΑΝΑΚΛΗΘΗΚΕ ή ΑΝΑΣΤΑΛΗΚΕ στις {date}, πριν από την υπογραφή. Η υπογραφή ΔΕΝ είναι έγκυρη.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Προσοχή: το πιστοποιητικό του/της {who} ανακλήθηκε ή ανεστάλη στις {date}. Η ημερομηνία υπογραφής προέρχεται από τον υπολογιστή του υπογράφοντος, οπότε δεν μπορεί να αποδειχθεί ότι η υπογραφή προηγήθηκε.
+	Checked online: the certificate is not revoked.	Ελέγχθηκε online: το πιστοποιητικό δεν έχει ανακληθεί.
+	Checking online…	Έλεγχος online…
+	Check online	Έλεγχος online
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Ρωτά τον εκδότη του πιστοποιητικού αν ανακλήθηκε ή ανεστάλη και ελέγχει τη λίστα AgID των εγκεκριμένων εκδοτών. Το έγγραφο δεν αποστέλλεται.
+	Role stated in the certificate: {role}	Ρόλος που αναφέρει το πιστοποιητικό: {role}
+	Timestamp (marca temporale) from an authority: {time}	Χρονοσήμανση (marca temporale) από αρχή: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Ο έλεγχος online ρωτά τον εκδότη του πιστοποιητικού αν ανακλήθηκε ή ανεστάλη και ελέγχει τη λίστα AgID των εγκεκριμένων εκδοτών. Ελέγχεται μόνο το πιστοποιητικό: το έγγραφο δεν αποστέλλεται πουθενά.
+	Online check of {date}:	Έλεγχος online της {date}:
+	the certificate is not revoked or suspended.	το πιστοποιητικό δεν έχει ανακληθεί ούτε ανασταλεί.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	το πιστοποιητικό ΑΝΑΚΛΗΘΗΚΕ ή ΑΝΑΣΤΑΛΗΚΕ στις {date}, πριν από την υπογραφή: η υπογραφή ΔΕΝ είναι έγκυρη.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	το πιστοποιητικό ανακλήθηκε ή ανεστάλη στις {date}, μετά την υπογραφή (η χρονοσήμανση αποδεικνύει ότι η υπογραφή προηγήθηκε).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	το πιστοποιητικό ανακλήθηκε ή ανεστάλη στις {date}. Η ημερομηνία υπογραφής προέρχεται από τον υπολογιστή του υπογράφοντος: δεν μπορεί να αποδειχθεί ότι η υπογραφή προηγήθηκε.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	η ανάκληση δεν μπόρεσε να ελεγχθεί (καμία απάντηση από τον εκδότη ή καμία σύνδεση στο internet).
+	The issuer is a qualified certification authority on the AgID list.	Ο εκδότης είναι εγκεκριμένη αρχή πιστοποίησης της λίστας AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Ο εκδότης είναι στη λίστα AgID, αλλά δεν είναι πλέον εγκεκριμένη αρχή πιστοποίησης.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Ο εκδότης δεν είναι στην ιταλική λίστα AgID (μπορεί να είναι στη λίστα άλλης χώρας της ΕΕ).
+	The AgID list could not be checked.	Η λίστα AgID δεν μπόρεσε να ελεγχθεί.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Το πιστοποιητικό έχει λήξει: οι εκδότες μπορεί να σταματήσουν να δημοσιεύουν ανακλήσεις ληγμένων πιστοποιητικών, οπότε αυτή η απάντηση είναι λιγότερο βέβαιη.

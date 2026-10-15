@@ -3,6 +3,11 @@
 > **PDF Simply** è una versione di [PdfCraft](https://github.com/storytold/pdfcraft) con le funzioni
 > che servono in Italia: firma digitale `.p7m` (CAdES) con la chiavetta (Aruba, InfoCamere e altre),
 > apertura e verifica dei file `.p7m`, conversione in PDF/A per l'Agenzia delle Entrate.
+>
+> **Verifica online** (pulsante nella barra di un `.p7m`): chiede al certificatore se il certificato di
+> chi ha firmato è stato revocato o sospeso (OCSP, poi l'elenco CRL) e controlla l'elenco AgID dei
+> certificatori qualificati. È l'unica eccezione alla regola di PdfCraft "nessuna connessione":
+> parte solo quando l'utente preme il pulsante e invia solo i dati del certificato, mai il documento.
 > PdfCraft è stato creato dal team ArtCraft e dai suoi contributori: tutto il resto del programma è
 > loro, con la stessa licenza (MIT OR Apache-2.0). PDF Simply non è un prodotto ArtCraft e non ne
 > usa nome e logo.

@@ -34,7 +34,8 @@ impl Name {
         Ok(Name { attrs, raw: t.raw.to_vec() })
     }
 
-    fn get(&self, oid: &str) -> Option<&str> {
+    /// The value of the first attribute with this OID, such as `2.5.4.12` (title).
+    pub fn get(&self, oid: &str) -> Option<&str> {
         self.attrs.iter().find(|(o, _)| o == oid).map(|(_, v)| v.as_str())
     }
 
@@ -139,6 +140,9 @@ pub struct Certificate {
     pub ocsp_urls: Vec<String>,
     /// CRL distribution point URLs (2.5.29.31).
     pub crl_urls: Vec<String>,
+    /// Where the issuer's certificate can be downloaded, from the Authority Information Access
+    /// (`caIssuers`, 1.3.6.1.5.5.7.48.2).
+    pub ca_issuer_urls: Vec<String>,
     /// The `version` field: 0 for v1, 1 for v2, 2 for v3.
     pub version: u64,
     /// OIDs of extensions marked critical that PdfCraft does not process (RFC 5280 §4.2).
@@ -186,6 +190,7 @@ struct Extensions {
     extended_key_usage: Option<Vec<String>>,
     ocsp_urls: Vec<String>,
     crl_urls: Vec<String>,
+    ca_issuer_urls: Vec<String>,
 }
 
 impl Extensions {
@@ -244,6 +249,8 @@ impl Extensions {
                     let Ok(a) = access.children() else { continue };
                     if a.len() >= 2 && a[0].oid().ok().as_deref() == Some("1.3.6.1.5.5.7.48.1") && a[1].tag == tag::ctx_prim(6) {
                         self.ocsp_urls.push(String::from_utf8_lossy(a[1].value).into_owned());
+                    } else if a.len() >= 2 && a[0].oid().ok().as_deref() == Some("1.3.6.1.5.5.7.48.2") && a[1].tag == tag::ctx_prim(6) {
+                        self.ca_issuer_urls.push(String::from_utf8_lossy(a[1].value).into_owned());
                     }
                 }
             }
@@ -327,6 +334,7 @@ impl Certificate {
             extended_key_usage,
             ocsp_urls,
             crl_urls,
+            ca_issuer_urls,
         } = ext;
         Ok(Certificate {
             raw: raw.to_vec(),
@@ -348,6 +356,7 @@ impl Certificate {
             extended_key_usage,
             ocsp_urls,
             crl_urls,
+            ca_issuer_urls,
             version,
             unknown_critical,
         })
@@ -571,7 +580,7 @@ pub fn to_pem(cert: &Certificate) -> String {
     format!("-----BEGIN CERTIFICATE-----\n{}\n-----END CERTIFICATE-----\n", body.join("\n"))
 }
 
-fn base64(s: &str) -> Option<Vec<u8>> {
+pub(crate) fn base64(s: &str) -> Option<Vec<u8>> {
     let val = |c: u8| -> Option<u32> {
         Some(match c {
             b'A'..=b'Z' => c - b'A',

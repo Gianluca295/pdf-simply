@@ -2408,3 +2408,23 @@ animation effects	Off	Izklopljeni
 	The certificate was not valid at the signing time.	Potrdilo na dan podpisa ni bilo veljavno.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nima atributa signing-certificate: je PKCS #7, ne CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Potrdilo podpisnika ne vodi do zaupanja vrednega potrdila.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	POZOR: potrdilo osebe {who} je bilo {date} PREKLICANO ali ZAČASNO ODVZETO, pred podpisom. Podpis NI veljaven.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Previdno: potrdilo osebe {who} je bilo {date} preklicano ali začasno odvzeto. Datum podpisa izhaja iz računalnika podpisnika, zato ni mogoče dokazati, da je bil podpis prej.
+	Checked online: the certificate is not revoked.	Preverjeno na spletu: potrdilo ni preklicano.
+	Checking online…	Preverjanje na spletu…
+	Check online	Preveri na spletu
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Vpraša izdajatelja potrdila, ali je bilo preklicano ali začasno odvzeto, in preveri seznam kvalificiranih izdajateljev AgID. Dokument se ne pošlje.
+	Role stated in the certificate: {role}	Vloga, navedena v potrdilu: {role}
+	Timestamp (marca temporale) from an authority: {time}	Časovni žig (marca temporale) overitelja: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Preveri na spletu vpraša izdajatelja potrdila, ali je bilo preklicano ali začasno odvzeto, in preveri seznam kvalificiranih izdajateljev AgID. Preveri se samo potrdilo: dokument se nikamor ne pošlje.
+	Online check of {date}:	Spletno preverjanje dne {date}:
+	the certificate is not revoked or suspended.	potrdilo ni preklicano niti začasno odvzeto.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	potrdilo je bilo {date} PREKLICANO ali ZAČASNO ODVZETO, pred podpisom: podpis NI veljaven.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	potrdilo je bilo {date} preklicano ali začasno odvzeto, po podpisu (časovni žig dokazuje, da je bil podpis prej).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	potrdilo je bilo {date} preklicano ali začasno odvzeto. Datum podpisa izhaja iz računalnika podpisnika: ni mogoče dokazati, da je bil podpis prej.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	preklica ni bilo mogoče preveriti (izdajatelj ni odgovoril ali ni internetne povezave).
+	The issuer is a qualified certification authority on the AgID list.	Izdajatelj je kvalificirani overitelj s seznama AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Izdajatelj je na seznamu AgID, vendar ni več kvalificirani overitelj.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Izdajatelja ni na italijanskem seznamu AgID (lahko je na seznamu druge države EU).
+	The AgID list could not be checked.	Seznama AgID ni bilo mogoče preveriti.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Potrdilo je poteklo: izdajatelji lahko prenehajo objavljati preklice poteklih potrdil, zato je ta odgovor manj zanesljiv.

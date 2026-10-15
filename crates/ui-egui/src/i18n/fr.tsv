@@ -2403,3 +2403,23 @@ animation effects	Off	Désactivés
 	The certificate was not valid at the signing time.	Le certificat n’était pas valide à la date de signature.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	La signature n’a pas d’attribut signing-certificate : c’est du PKCS #7, pas du CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Le certificat du signataire ne remonte pas à un certificat de confiance.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ATTENTION : le certificat de {who} a été RÉVOQUÉ ou SUSPENDU le {date}, avant la signature. La signature n'est PAS valide.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Attention : le certificat de {who} a été révoqué ou suspendu le {date}. La date de signature vient de l'ordinateur du signataire, on ne peut donc pas prouver que la signature est antérieure.
+	Checked online: the certificate is not revoked.	Vérifié en ligne : le certificat n'est pas révoqué.
+	Checking online…	Vérification en ligne…
+	Check online	Vérifier en ligne
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Demande à l'émetteur du certificat s'il a été révoqué ou suspendu et consulte la liste AgID des émetteurs qualifiés. Le document n'est pas envoyé.
+	Role stated in the certificate: {role}	Rôle indiqué dans le certificat : {role}
+	Timestamp (marca temporale) from an authority: {time}	Horodatage (marca temporale) d'une autorité : {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Vérifier en ligne demande à l'émetteur du certificat s'il a été révoqué ou suspendu et consulte la liste AgID des émetteurs qualifiés. Seul le certificat est vérifié : le document n'est envoyé nulle part.
+	Online check of {date}:	Vérification en ligne du {date} :
+	the certificate is not revoked or suspended.	le certificat n'est ni révoqué ni suspendu.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	le certificat a été RÉVOQUÉ ou SUSPENDU le {date}, avant la signature : la signature n'est PAS valide.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	le certificat a été révoqué ou suspendu le {date}, après la signature (l'horodatage prouve que la signature est antérieure).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	le certificat a été révoqué ou suspendu le {date}. La date de signature vient de l'ordinateur du signataire : on ne peut pas prouver que la signature est antérieure.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	la révocation n'a pas pu être vérifiée (pas de réponse de l'émetteur ou pas de connexion internet).
+	The issuer is a qualified certification authority on the AgID list.	L'émetteur est une autorité de certification qualifiée de la liste AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	L'émetteur figure sur la liste AgID, mais n'est plus une autorité de certification qualifiée.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	L'émetteur ne figure pas sur la liste italienne AgID (il peut figurer sur la liste d'un autre pays de l'UE).
+	The AgID list could not be checked.	La liste AgID n'a pas pu être vérifiée.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Le certificat a expiré : les émetteurs peuvent cesser de publier les révocations des certificats expirés, cette réponse est donc moins sûre.

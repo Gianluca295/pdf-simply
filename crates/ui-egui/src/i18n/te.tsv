@@ -2316,3 +2316,23 @@ animation effects	Off	ఆఫ్
 	The certificate was not valid at the signing time.	సంతకం తేదీన సర్టిఫికెట్ చెల్లుబాటులో లేదు.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	సంతకంలో signing-certificate లక్షణం లేదు: ఇది PKCS #7, CAdES కాదు.
 	The signer's certificate does not chain to a trusted certificate.	సంతకం చేసినవారి సర్టిఫికెట్ విశ్వసనీయ సర్టిఫికెట్‌కు చేరదు.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	హెచ్చరిక: {who} సర్టిఫికెట్ సంతకానికి ముందే {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం చెల్లదు.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	జాగ్రత్త: {who} సర్టిఫికెట్ {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం తేదీ సంతకం చేసినవారి కంప్యూటర్ నుండి వచ్చింది, కాబట్టి సంతకం ముందే జరిగిందని నిరూపించలేము.
+	Checked online: the certificate is not revoked.	ఆన్‌లైన్‌లో తనిఖీ చేయబడింది: సర్టిఫికెట్ రద్దు కాలేదు.
+	Checking online…	ఆన్‌లైన్‌లో తనిఖీ చేస్తోంది…
+	Check online	ఆన్‌లైన్‌లో తనిఖీ చేయి
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	సర్టిఫికెట్ రద్దయిందా లేదా నిలిపివేయబడిందా అని జారీదారుని అడుగుతుంది, అర్హత గల జారీదారుల AgID జాబితాను తనిఖీ చేస్తుంది. పత్రం పంపబడదు.
+	Role stated in the certificate: {role}	సర్టిఫికెట్‌లో పేర్కొన్న హోదా: {role}
+	Timestamp (marca temporale) from an authority: {time}	అధీకృత సంస్థ నుండి టైమ్‌స్టాంప్ (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	ఆన్‌లైన్ తనిఖీ సర్టిఫికెట్ రద్దయిందా లేదా నిలిపివేయబడిందా అని జారీదారుని అడుగుతుంది, అర్హత గల జారీదారుల AgID జాబితాను తనిఖీ చేస్తుంది. సర్టిఫికెట్ మాత్రమే తనిఖీ చేయబడుతుంది: పత్రం ఎక్కడికీ పంపబడదు.
+	Online check of {date}:	{date} నాటి ఆన్‌లైన్ తనిఖీ:
+	the certificate is not revoked or suspended.	సర్టిఫికెట్ రద్దు కాలేదు, నిలిపివేయబడలేదు.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	సర్టిఫికెట్ సంతకానికి ముందే {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది: సంతకం చెల్లదు.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	సర్టిఫికెట్ సంతకం తర్వాత {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది (సంతకం ముందే జరిగిందని టైమ్‌స్టాంప్ నిరూపిస్తుంది).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	సర్టిఫికెట్ {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం తేదీ సంతకం చేసినవారి కంప్యూటర్ నుండి వచ్చింది: సంతకం ముందే జరిగిందని నిరూపించలేము.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	రద్దును తనిఖీ చేయలేకపోయాము (జారీదారు నుండి స్పందన లేదు, లేదా ఇంటర్నెట్ కనెక్షన్ లేదు).
+	The issuer is a qualified certification authority on the AgID list.	జారీదారు AgID జాబితాలోని అర్హత గల సర్టిఫికేషన్ సంస్థ.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	జారీదారు AgID జాబితాలో ఉన్నారు, కానీ ఇకపై అర్హత గల సర్టిఫికేషన్ సంస్థ కాదు.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	జారీదారు ఇటాలియన్ AgID జాబితాలో లేరు (మరొక EU దేశ జాబితాలో ఉండవచ్చు).
+	The AgID list could not be checked.	AgID జాబితాను తనిఖీ చేయలేకపోయాము.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	సర్టిఫికెట్ గడువు ముగిసింది: గడువు ముగిసిన సర్టిఫికెట్ల రద్దులను జారీదారులు ప్రచురించడం ఆపవచ్చు, కాబట్టి ఈ సమాధానం తక్కువ ఖచ్చితమైనది.

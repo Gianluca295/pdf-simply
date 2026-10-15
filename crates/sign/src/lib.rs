@@ -15,6 +15,7 @@ pub mod graphic;
 #[cfg(target_os = "macos")]
 pub mod keychain;
 pub mod keys;
+pub mod online;
 pub mod p7m;
 pub mod pdf;
 #[cfg(not(target_arch = "wasm32"))]

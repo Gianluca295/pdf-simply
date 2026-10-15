@@ -2399,3 +2399,23 @@ animation effects	Off	Kapalı
 	The certificate was not valid at the signing time.	Sertifika imza tarihinde geçerli değildi.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	İmzanın signing-certificate özniteliği yok: bu PKCS #7, CAdES değil.
 	The signer's certificate does not chain to a trusted certificate.	İmzalayanın sertifikası güvenilir bir sertifikaya ulaşmıyor.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	UYARI: {who} kişisinin sertifikası {date} tarihinde, imzadan önce İPTAL EDİLDİ veya ASKIYA ALINDI. İmza GEÇERLİ DEĞİL.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Dikkat: {who} kişisinin sertifikası {date} tarihinde iptal edildi veya askıya alındı. İmza tarihi imzalayanın bilgisayarından geliyor, bu yüzden imzanın daha önce atıldığı kanıtlanamaz.
+	Checked online: the certificate is not revoked.	Çevrimiçi denetlendi: sertifika iptal edilmemiş.
+	Checking online…	Çevrimiçi denetleniyor…
+	Check online	Çevrimiçi denetle
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Sertifikayı verene iptal edilip edilmediğini veya askıya alınıp alınmadığını sorar ve nitelikli verenlerin AgID listesini denetler. Belge gönderilmez.
+	Role stated in the certificate: {role}	Sertifikada belirtilen görev: {role}
+	Timestamp (marca temporale) from an authority: {time}	Bir kurumdan zaman damgası (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Çevrimiçi denetle, sertifikayı verene iptal edilip edilmediğini veya askıya alınıp alınmadığını sorar ve nitelikli verenlerin AgID listesini denetler. Yalnızca sertifika denetlenir: belge hiçbir yere gönderilmez.
+	Online check of {date}:	{date} tarihli çevrimiçi denetim:
+	the certificate is not revoked or suspended.	sertifika iptal edilmemiş veya askıya alınmamış.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	sertifika {date} tarihinde, imzadan önce İPTAL EDİLDİ veya ASKIYA ALINDI: imza GEÇERLİ DEĞİL.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	sertifika {date} tarihinde, imzadan sonra iptal edildi veya askıya alındı (zaman damgası imzanın önce atıldığını kanıtlıyor).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	sertifika {date} tarihinde iptal edildi veya askıya alındı. İmza tarihi imzalayanın bilgisayarından geliyor: imzanın önce atıldığı kanıtlanamaz.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	iptal durumu denetlenemedi (verenden yanıt yok veya internet bağlantısı yok).
+	The issuer is a qualified certification authority on the AgID list.	Veren, AgID listesindeki nitelikli bir sertifika makamıdır.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Veren AgID listesinde, ancak artık nitelikli bir sertifika makamı değil.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Veren İtalyan AgID listesinde değil (başka bir AB ülkesinin listesinde olabilir).
+	The AgID list could not be checked.	AgID listesi denetlenemedi.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Sertifikanın süresi dolmuş: verenler süresi dolan sertifikaların iptallerini yayımlamayı bırakabilir, bu yüzden bu yanıt daha az kesindir.

@@ -2366,3 +2366,23 @@ animation effects	Off	Изключени
 	The certificate was not valid at the signing time.	Сертификатът не е бил валиден към датата на подписа.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Подписът няма атрибут signing-certificate: това е PKCS #7, не CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Сертификатът на подписващия не води до доверен сертификат.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ВНИМАНИЕ: сертификатът на {who} е ОТТЕГЛЕН или СПРЯН на {date}, преди подписа. Подписът НЕ е валиден.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Внимание: сертификатът на {who} е оттеглен или спрян на {date}. Датата на подписа идва от компютъра на подписалия, затова не може да се докаже, че подписът е по-ранен.
+	Checked online: the certificate is not revoked.	Проверено онлайн: сертификатът не е оттеглен.
+	Checking online…	Проверка онлайн…
+	Check online	Провери онлайн
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Пита издателя на сертификата дали е оттеглен или спрян и проверява списъка на AgID с квалифицирани издатели. Документът не се изпраща.
+	Role stated in the certificate: {role}	Роля, посочена в сертификата: {role}
+	Timestamp (marca temporale) from an authority: {time}	Времеви печат (marca temporale) от доставчик: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Проверката онлайн пита издателя на сертификата дали е оттеглен или спрян и проверява списъка на AgID с квалифицирани издатели. Проверява се само сертификатът: документът не се изпраща никъде.
+	Online check of {date}:	Онлайн проверка от {date}:
+	the certificate is not revoked or suspended.	сертификатът не е оттеглен или спрян.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертификатът е ОТТЕГЛЕН или СПРЯН на {date}, преди подписа: подписът НЕ е валиден.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертификатът е оттеглен или спрян на {date}, след подписа (времевият печат доказва, че подписът е по-ранен).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертификатът е оттеглен или спрян на {date}. Датата на подписа идва от компютъра на подписалия: не може да се докаже, че подписът е по-ранен.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	оттеглянето не можа да се провери (няма отговор от издателя или няма интернет връзка).
+	The issuer is a qualified certification authority on the AgID list.	Издателят е квалифициран удостоверител от списъка на AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Издателят е в списъка на AgID, но вече не е квалифициран удостоверител.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Издателят не е в италианския списък на AgID (може да е в списъка на друга държава от ЕС).
+	The AgID list could not be checked.	Списъкът на AgID не можа да се провери.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Сертификатът е изтекъл: издателите може да спрат да публикуват оттеглянията на изтекли сертификати, затова този отговор е по-малко сигурен.

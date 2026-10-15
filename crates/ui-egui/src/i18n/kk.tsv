@@ -2401,3 +2401,23 @@ animation effects	Off	Өшірулі
 	The certificate was not valid at the signing time.	Қол қойылған күні сертификат жарамсыз болған.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Қолтаңбада signing-certificate атрибуты жоқ: бұл CAdES емес, PKCS #7.
 	The signer's certificate does not chain to a trusted certificate.	Қол қоюшының сертификаты сенімді сертификатқа апармайды.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	НАЗАР АУДАРЫҢЫЗ: {who} сертификаты {date} күні, қолтаңбаға дейін КЕРІ ШАҚЫРЫЛДЫ немесе ТОҚТАТЫЛДЫ. Қолтаңба ЖАРАМСЫЗ.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Абай болыңыз: {who} сертификаты {date} күні кері шақырылды немесе тоқтатылды. Қол қойылған күн қол қоюшының компьютерінен алынған, сондықтан қолтаңбаның бұрын қойылғанын дәлелдеу мүмкін емес.
+	Checked online: the certificate is not revoked.	Онлайн тексерілді: сертификат кері шақырылмаған.
+	Checking online…	Онлайн тексерілуде…
+	Check online	Онлайн тексеру
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Сертификат берушіден оның кері шақырылғанын немесе тоқтатылғанын сұрайды және AgID білікті берушілер тізімін тексереді. Құжат жіберілмейді.
+	Role stated in the certificate: {role}	Сертификатта көрсетілген рөл: {role}
+	Timestamp (marca temporale) from an authority: {time}	Қызметтен уақыт белгісі (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Онлайн тексеру сертификат берушіден оның кері шақырылғанын немесе тоқтатылғанын сұрайды және AgID білікті берушілер тізімін тексереді. Тек сертификат тексеріледі: құжат ешқайда жіберілмейді.
+	Online check of {date}:	{date} онлайн тексеру:
+	the certificate is not revoked or suspended.	сертификат кері шақырылмаған және тоқтатылмаған.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертификат {date} күні, қолтаңбаға дейін КЕРІ ШАҚЫРЫЛДЫ немесе ТОҚТАТЫЛДЫ: қолтаңба ЖАРАМСЫЗ.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертификат {date} күні, қолтаңбадан кейін кері шақырылды немесе тоқтатылды (уақыт белгісі қолтаңбаның бұрын қойылғанын дәлелдейді).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертификат {date} күні кері шақырылды немесе тоқтатылды. Қол қойылған күн қол қоюшының компьютерінен алынған: қолтаңбаның бұрын қойылғанын дәлелдеу мүмкін емес.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	кері шақыруды тексеру мүмкін болмады (берушіден жауап жоқ немесе интернет байланысы жоқ).
+	The issuer is a qualified certification authority on the AgID list.	Беруші — AgID тізіміндегі білікті куәландырушы орталық.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Беруші AgID тізімінде бар, бірақ енді білікті куәландырушы орталық емес.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Беруші Италияның AgID тізімінде жоқ (ол ЕО-ның басқа елінің тізімінде болуы мүмкін).
+	The AgID list could not be checked.	AgID тізімін тексеру мүмкін болмады.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Сертификаттың мерзімі өткен: берушілер мерзімі өткен сертификаттардың кері шақырылуын жарияламауы мүмкін, сондықтан бұл жауап онша сенімді емес.

@@ -2417,3 +2417,23 @@ animation effects	Off	Desativados
 	The certificate was not valid at the signing time.	O certificado não era válido na data da assinatura.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	A assinatura não tem o atributo signing-certificate: é PKCS #7, não CAdES.
 	The signer's certificate does not chain to a trusted certificate.	O certificado de quem assinou não leva a um certificado confiável.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ATENÇÃO: o certificado de {who} foi REVOGADO ou SUSPENSO em {date}, antes da assinatura. A assinatura NÃO é válida.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Cuidado: o certificado de {who} foi revogado ou suspenso em {date}. A data da assinatura vem do computador de quem assinou, então não é possível provar que a assinatura veio antes.
+	Checked online: the certificate is not revoked.	Verificado online: o certificado não está revogado.
+	Checking online…	Verificando online…
+	Check online	Verificar online
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Pergunta ao emissor do certificado se ele foi revogado ou suspenso e consulta a lista AgID de emissores qualificados. O documento não é enviado.
+	Role stated in the certificate: {role}	Função indicada no certificado: {role}
+	Timestamp (marca temporale) from an authority: {time}	Carimbo do tempo (marca temporale) de uma autoridade: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Verificar online pergunta ao emissor do certificado se ele foi revogado ou suspenso e consulta a lista AgID de emissores qualificados. Só o certificado é verificado: o documento não é enviado a lugar nenhum.
+	Online check of {date}:	Verificação online de {date}:
+	the certificate is not revoked or suspended.	o certificado não está revogado nem suspenso.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	o certificado foi REVOGADO ou SUSPENSO em {date}, antes da assinatura: a assinatura NÃO é válida.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	o certificado foi revogado ou suspenso em {date}, depois da assinatura (o carimbo do tempo prova que a assinatura veio antes).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	o certificado foi revogado ou suspenso em {date}. A data da assinatura vem do computador de quem assinou: não é possível provar que a assinatura veio antes.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	não foi possível verificar a revogação (sem resposta do emissor ou sem conexão com a internet).
+	The issuer is a qualified certification authority on the AgID list.	O emissor é uma autoridade certificadora qualificada da lista AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	O emissor está na lista AgID, mas não é mais uma autoridade certificadora qualificada.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	O emissor não está na lista italiana AgID (pode estar na lista de outro país da UE).
+	The AgID list could not be checked.	Não foi possível verificar a lista AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	O certificado expirou: os emissores podem parar de publicar revogações de certificados expirados, então esta resposta é menos segura.

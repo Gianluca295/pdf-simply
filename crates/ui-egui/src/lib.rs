@@ -637,6 +637,10 @@ pub struct PdfCraftApp {
     pub p7m_opened: std::collections::HashMap<DocId, p7m_ui::P7mOpened>,
     /// `.p7m` results waiting for their document (opened after a password prompt), by name.
     pub p7m_pending: Vec<(String, p7m_ui::P7mOpened)>,
+    /// How *Check online* reaches the certificate issuers and AgID (the desktop app sets it).
+    pub online_fetch: Option<p7m_ui::OnlineFetch>,
+    /// Online checks under way, per document.
+    pub(crate) p7m_online: std::collections::HashMap<DocId, std::sync::mpsc::Receiver<Vec<pdfcraft_engine::sign::online::Report>>>,
     /// Signatures panel: expanded entries (field names).
     pub sig_expanded: Vec<String>,
     /// Accessibility Checker: options, the last check, and rules skipped by hand.
@@ -961,6 +965,8 @@ impl PdfCraftApp {
             p7m_sign: None,
             p7m_opened: std::collections::HashMap::new(),
             p7m_pending: Vec::new(),
+            online_fetch: None,
+            p7m_online: std::collections::HashMap::new(),
             sig_expanded: Vec::new(),
             a11y_options: a11y_ui::A11yOptions::default(),
             ocr_draft: ocr_ui::OcrDraft::default(),

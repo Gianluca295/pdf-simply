@@ -2316,3 +2316,23 @@ animation effects	Off	Выкл
 	The certificate was not valid at the signing time.	Сертификат был недействителен на дату подписи.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	У подписи нет атрибута signing-certificate: это PKCS #7, а не CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Сертификат подписавшего не ведёт к доверенному сертификату.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ВНИМАНИЕ: сертификат {who} был ОТОЗВАН или ПРИОСТАНОВЛЕН {date}, до подписи. Подпись НЕДЕЙСТВИТЕЛЬНА.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Осторожно: сертификат {who} был отозван или приостановлен {date}. Дата подписи взята с компьютера подписавшего, поэтому нельзя доказать, что подпись была раньше.
+	Checked online: the certificate is not revoked.	Проверено онлайн: сертификат не отозван.
+	Checking online…	Проверка онлайн…
+	Check online	Проверить онлайн
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Запрашивает у издателя сертификата, не отозван ли он и не приостановлен ли, и проверяет список квалифицированных издателей AgID. Документ не отправляется.
+	Role stated in the certificate: {role}	Роль, указанная в сертификате: {role}
+	Timestamp (marca temporale) from an authority: {time}	Метка времени (marca temporale) от службы: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Проверка онлайн запрашивает у издателя сертификата, не отозван ли он и не приостановлен ли, и проверяет список квалифицированных издателей AgID. Проверяется только сертификат: документ никуда не отправляется.
+	Online check of {date}:	Проверка онлайн от {date}:
+	the certificate is not revoked or suspended.	сертификат не отозван и не приостановлен.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертификат был ОТОЗВАН или ПРИОСТАНОВЛЕН {date}, до подписи: подпись НЕДЕЙСТВИТЕЛЬНА.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертификат был отозван или приостановлен {date}, после подписи (метка времени доказывает, что подпись была раньше).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертификат был отозван или приостановлен {date}. Дата подписи взята с компьютера подписавшего: нельзя доказать, что подпись была раньше.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	не удалось проверить отзыв (издатель не ответил или нет подключения к интернету).
+	The issuer is a qualified certification authority on the AgID list.	Издатель — квалифицированный удостоверяющий центр из списка AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Издатель есть в списке AgID, но больше не является квалифицированным удостоверяющим центром.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Издателя нет в итальянском списке AgID (он может быть в списке другой страны ЕС).
+	The AgID list could not be checked.	Не удалось проверить список AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Срок действия сертификата истёк: издатели могут перестать публиковать отзывы истёкших сертификатов, поэтому этот ответ менее надёжен.

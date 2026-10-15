@@ -2477,3 +2477,23 @@ animation effects	Off	Vypnuto
 	The certificate was not valid at the signing time.	Certifikát nebyl k datu podpisu platný.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nemá atribut signing-certificate: jde o PKCS #7, ne CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Certifikát podepisujícího nevede k důvěryhodnému certifikátu.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	POZOR: certifikát {who} byl {date} ZNEPLATNĚN nebo POZASTAVEN, před podpisem. Podpis NENÍ platný.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Pozor: certifikát {who} byl {date} zneplatněn nebo pozastaven. Datum podpisu pochází z počítače podepisujícího, takže nelze prokázat, že podpis byl dříve.
+	Checked online: the certificate is not revoked.	Ověřeno online: certifikát není zneplatněn.
+	Checking online…	Ověřuje se online…
+	Check online	Ověřit online
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Zeptá se vydavatele certifikátu, zda byl zneplatněn nebo pozastaven, a zkontroluje seznam kvalifikovaných vydavatelů AgID. Dokument se neodesílá.
+	Role stated in the certificate: {role}	Role uvedená v certifikátu: {role}
+	Timestamp (marca temporale) from an authority: {time}	Časové razítko (marca temporale) od autority: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Ověřit online se zeptá vydavatele certifikátu, zda byl zneplatněn nebo pozastaven, a zkontroluje seznam kvalifikovaných vydavatelů AgID. Kontroluje se jen certifikát: dokument se nikam neodesílá.
+	Online check of {date}:	Ověření online ze dne {date}:
+	the certificate is not revoked or suspended.	certifikát není zneplatněn ani pozastaven.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	certifikát byl {date} ZNEPLATNĚN nebo POZASTAVEN, před podpisem: podpis NENÍ platný.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	certifikát byl {date} zneplatněn nebo pozastaven, po podpisu (časové razítko dokazuje, že podpis byl dříve).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	certifikát byl {date} zneplatněn nebo pozastaven. Datum podpisu pochází z počítače podepisujícího: nelze prokázat, že podpis byl dříve.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	zneplatnění nebylo možné ověřit (vydavatel neodpověděl nebo chybí připojení k internetu).
+	The issuer is a qualified certification authority on the AgID list.	Vydavatel je kvalifikovaná certifikační autorita na seznamu AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Vydavatel je na seznamu AgID, ale už není kvalifikovanou certifikační autoritou.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Vydavatel není na italském seznamu AgID (může být na seznamu jiné země EU).
+	The AgID list could not be checked.	Seznam AgID nebylo možné zkontrolovat.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Certifikát vypršel: vydavatelé mohou přestat zveřejňovat zneplatnění vypršelých certifikátů, takže tato odpověď je méně jistá.

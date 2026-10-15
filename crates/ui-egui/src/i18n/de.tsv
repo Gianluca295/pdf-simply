@@ -2404,3 +2404,23 @@ animation effects	Off	Aus
 	The certificate was not valid at the signing time.	Das Zertifikat war am Signaturdatum nicht gültig.
 	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Die Signatur hat kein signing-certificate-Attribut: Sie ist PKCS #7, nicht CAdES.
 	The signer's certificate does not chain to a trusted certificate.	Das Zertifikat der unterzeichnenden Person führt zu keinem vertrauenswürdigen Zertifikat.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ACHTUNG: Das Zertifikat von {who} wurde am {date} WIDERRUFEN oder GESPERRT, vor der Signatur. Die Signatur ist NICHT gültig.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Vorsicht: Das Zertifikat von {who} wurde am {date} widerrufen oder gesperrt. Das Signaturdatum stammt vom Computer des Unterzeichners, daher lässt sich nicht beweisen, dass die Signatur früher war.
+	Checked online: the certificate is not revoked.	Online geprüft: Das Zertifikat ist nicht widerrufen.
+	Checking online…	Online-Prüfung läuft…
+	Check online	Online prüfen
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Fragt den Aussteller des Zertifikats, ob es widerrufen oder gesperrt wurde, und prüft die AgID-Liste der qualifizierten Aussteller. Das Dokument wird nicht gesendet.
+	Role stated in the certificate: {role}	Im Zertifikat angegebene Rolle: {role}
+	Timestamp (marca temporale) from an authority: {time}	Zeitstempel (marca temporale) einer Stelle: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Online prüfen fragt den Aussteller des Zertifikats, ob es widerrufen oder gesperrt wurde, und prüft die AgID-Liste der qualifizierten Aussteller. Nur das Zertifikat wird geprüft: Das Dokument wird nirgendwohin gesendet.
+	Online check of {date}:	Online-Prüfung vom {date}:
+	the certificate is not revoked or suspended.	das Zertifikat ist weder widerrufen noch gesperrt.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	das Zertifikat wurde am {date} WIDERRUFEN oder GESPERRT, vor der Signatur: Die Signatur ist NICHT gültig.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	das Zertifikat wurde am {date} widerrufen oder gesperrt, nach der Signatur (der Zeitstempel beweist, dass die Signatur früher war).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	das Zertifikat wurde am {date} widerrufen oder gesperrt. Das Signaturdatum stammt vom Computer des Unterzeichners: Es lässt sich nicht beweisen, dass die Signatur früher war.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	der Widerruf konnte nicht geprüft werden (keine Antwort vom Aussteller oder keine Internetverbindung).
+	The issuer is a qualified certification authority on the AgID list.	Der Aussteller ist eine qualifizierte Zertifizierungsstelle auf der AgID-Liste.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Der Aussteller steht auf der AgID-Liste, ist aber keine qualifizierte Zertifizierungsstelle mehr.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Der Aussteller steht nicht auf der italienischen AgID-Liste (er kann auf der Liste eines anderen EU-Landes stehen).
+	The AgID list could not be checked.	Die AgID-Liste konnte nicht geprüft werden.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Das Zertifikat ist abgelaufen: Aussteller veröffentlichen Widerrufe abgelaufener Zertifikate eventuell nicht mehr, daher ist diese Antwort weniger sicher.

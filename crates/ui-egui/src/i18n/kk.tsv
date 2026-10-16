@@ -2426,3 +2426,6 @@ animation effects	Off	Өшірулі
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Кілт бағдарламасының файлы (.dll), мысалы C:\\Windows\\System32 ішіндегі bit4xpki.dll немесе бағдарлама орнатылған қалта.
 	Key software (.dll)	Кілт бағдарламасы (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} — кілт бағдарламасының 32 биттік нұсқасы (мысалы, Firma4ng оны өз қалтасында сақтайды), PDF Simply оны пайдалана алмайды. 64 биттік нұсқасын да қосатын кілттің Windows драйверін орнатып, Қайта іздеу түймесін басыңыз.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Қолтаңба ЖАРАМСЫЗ: қол қойылған күні {who} сертификатының мерзімі өтіп кеткен (немесе әлі басталмаған).
+	Certificate valid from {from} to {to}	Сертификат {from} бастап {to} дейін жарамды
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	МЕРЗІМІ ӨТКЕН ({date}): осы сертификатпен қойылған қолтаңба жарамсыз болады.

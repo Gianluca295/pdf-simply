@@ -23,6 +23,17 @@ const RED: Color32 = Color32::from_rgb(0xD7, 0x37, 0x3F);
 const GREEN: Color32 = Color32::from_rgb(0x2D, 0x9D, 0x78);
 const ORANGE: Color32 = Color32::from_rgb(0xE6, 0x86, 0x19);
 
+/// Why `cert` can't make a valid signature now (expired or not yet valid), with its end date.
+fn out_of_date(cert: &Certificate, now: Time) -> Option<String> {
+    (now < cert.not_before || now > cert.not_after).then(|| {
+        let t = cert.not_after;
+        crate::i18n::fmt(
+            tl!("EXPIRED on {date}: a signature made with this certificate would not be valid."),
+            &[("date", &format!("{:02}/{:02}/{:04}", t.day, t.month, t.year))],
+        )
+    })
+}
+
 /// "dd/mm/yyyy hh:mm UTC".
 fn when(t: Time) -> String {
     format!("{:02}/{:02}/{:04} {:02}:{:02} UTC", t.day, t.month, t.year, t.hour, t.minute)
@@ -102,6 +113,16 @@ impl SignerChoice {
             #[cfg(not(target_arch = "wasm32"))]
             SignerChoice::Token(t) => t.certificate.display_name(),
             SignerChoice::Id(e) => e.name.clone(),
+        }
+    }
+
+    /// The certificate, when it is known before signing (a key's; a store or file ID shows it
+    /// only once opened).
+    fn certificate(&self) -> Option<&Certificate> {
+        match self {
+            #[cfg(not(target_arch = "wasm32"))]
+            SignerChoice::Token(t) => Some(&t.certificate),
+            SignerChoice::Id(_) => None,
         }
     }
 
@@ -197,8 +218,9 @@ impl PdfCraftApp {
         self.refresh_signing_ids();
         self.os_key_store_ids = store;
         choices.extend(self.digital_ids.iter().filter(|e| e.unusable.is_none()).cloned().map(SignerChoice::Id));
-        // Only a key's certificate is chosen in advance; anything else the user picks.
-        let selected = choices.iter().position(SignerChoice::is_token);
+        // Only a key's certificate in date is chosen in advance; anything else the user picks.
+        let now = sign::Time::from_unix(self.session.now_secs());
+        let selected = choices.iter().position(|c| c.is_token() && c.certificate().is_some_and(|cert| out_of_date(cert, now).is_none()));
         let wrong = vec![0; choices.len()];
         self.p7m_sign = Some(P7mSignDraft { doc, choices, selected, secret: String::new(), error: None, wrong, libraries, problems });
     }
@@ -214,9 +236,16 @@ impl PdfCraftApp {
         if choice.needs_secret() && d.secret.is_empty() {
             return Err(if choice.is_token() { tl!("Type the PIN.") } else { tl!("Type the digital ID's password.") }.to_string());
         }
-        let (key, cert, chain) = self.signing_identity(&choice, &d.secret)?;
-        let bytes = self.session.save_bytes(d.doc).map_err(|e| e.to_string())?;
         let now = sign::Time::from_unix(self.session.now_secs());
+        // Checked before the PIN is used: an expired certificate never costs an attempt.
+        if let Some(why) = choice.certificate().and_then(|c| out_of_date(c, now)) {
+            return Err(why);
+        }
+        let (key, cert, chain) = self.signing_identity(&choice, &d.secret)?;
+        if let Some(why) = out_of_date(&cert, now) {
+            return Err(why);
+        }
+        let bytes = self.session.save_bytes(d.doc).map_err(|e| e.to_string())?;
         let p7m = match sign::p7m::sign(&key, &cert, &chain, DigestAlg::Sha256, &bytes, now) {
             Ok(p7m) => p7m,
             Err(sign::SignError::WrongPassword) => {
@@ -414,6 +443,15 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
                 &[("who", who), ("date", &when(*at))],
             ),
         )
+    } else if let Some(s) = opened.signers.iter().find(|s| s.intact && !s.certificate_valid) {
+        (
+            "circle-x",
+            RED,
+            crate::i18n::fmt(
+                tl!("Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date."),
+                &[("who", &s.name)],
+            ),
+        )
     } else if !opened.intact() {
         ("circle-x", RED, tl!("Signature NOT valid: the document was changed after it was signed.").to_string())
     } else if opened.valid() {
@@ -427,7 +465,8 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
             crate::i18n::fmt(tl!("Signed by {who}: the signature is intact, but the certificate could not be confirmed."), &[("who", &who)]),
         )
     };
-    if revoked_before.is_none() && revoked_after.is_none() && all_good && opened.intact() {
+    let in_date = opened.signers.iter().all(|s| s.certificate_valid);
+    if revoked_before.is_none() && revoked_after.is_none() && all_good && opened.intact() && in_date {
         text.push(' ');
         text.push_str(tl!("Checked online: the certificate is not revoked."));
     }
@@ -473,7 +512,12 @@ pub(crate) fn bar(app: &mut PdfCraftApp, doc: DocId, ui: &mut egui::Ui, t: &Toke
             }
             ui.label(crate::i18n::fmt(tl!("Document unchanged since signing: {v}"), &[("v", yes_no(s.intact))]));
             ui.label(crate::i18n::fmt(tl!("Qualified certificate (legally valid digital signature): {v}"), &[("v", yes_no(s.qualified))]));
-            ui.label(crate::i18n::fmt(tl!("Certificate valid on the signing date: {v}"), &[("v", yes_no(s.certificate_valid))]));
+            if let Some(c) = &s.certificate {
+                let day = |t: Time| format!("{:02}/{:02}/{:04}", t.day, t.month, t.year);
+                ui.label(crate::i18n::fmt(tl!("Certificate valid from {from} to {to}"), &[("from", &day(c.not_before)), ("to", &day(c.not_after))]));
+            }
+            let valid = egui::RichText::new(crate::i18n::fmt(tl!("Certificate valid on the signing date: {v}"), &[("v", yes_no(s.certificate_valid))]));
+            ui.label(if s.certificate_valid { valid } else { valid.color(RED).strong() });
             // A qualified certificate already says who vouches for it: the missing trust-store
             // anchor would only confuse.
             for note in s.notes.iter().filter(|n| !(s.qualified && n.contains("does not chain to a trusted"))) {
@@ -560,6 +604,7 @@ pub(crate) fn dialog(app: &mut PdfCraftApp, ctx: &egui::Context) {
     let mut go = false;
     let mut pick = false;
     let t = Tokens::get(ctx);
+    let now = Time::from_unix(app.session.now_secs());
     let modal = widgets::show_modal(ctx, "p7m-sign", |ui| {
         ui.set_width(520.0);
         ui.horizontal(|ui| {
@@ -601,6 +646,9 @@ pub(crate) fn dialog(app: &mut PdfCraftApp, ctx: &egui::Context) {
             let selected = d.selected == Some(i);
             let resp = ui.add(widgets::radio(selected, &choice.name()));
             ui.label(egui::RichText::new(choice.detail()).small().color(t.text_muted));
+            if let Some(why) = choice.certificate().and_then(|c| out_of_date(c, now)) {
+                ui.label(egui::RichText::new(why).small().strong().color(RED));
+            }
             if resp.clicked() && !selected {
                 d.selected = Some(i);
                 d.secret.clear();

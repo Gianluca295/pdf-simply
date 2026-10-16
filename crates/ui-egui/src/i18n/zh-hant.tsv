@@ -2302,3 +2302,6 @@ animation effects	Off	關
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	金鑰軟體檔案 (.dll)，例如 C:\\Windows\\System32 中的 bit4xpki.dll，或軟體安裝資料夾中的檔案。
 	Key software (.dll)	金鑰軟體 (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} 是金鑰軟體的 32 位元版本（例如 Firma4ng 在其資料夾中放有一份），PDF Simply 無法使用。請安裝金鑰的 Windows 驅動程式（它也會加入 64 位元版本），然後按「重新搜尋」。
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	簽章無效：簽署之日 {who} 的憑證已過期（或尚未生效）。
+	Certificate valid from {from} to {to}	憑證有效期：{from} 至 {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	已於 {date} 過期：用此憑證進行的簽章將無效。

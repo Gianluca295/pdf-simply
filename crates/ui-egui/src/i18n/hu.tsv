@@ -2427,3 +2427,6 @@ animation effects	Off	Ki
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	A kulcs szoftverének fájlja (.dll), például bit4xpki.dll a C:\\Windows\\System32 mappában vagy a szoftver telepítési mappájában.
 	Key software (.dll)	Kulcsszoftver (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} a kulcs szoftverének 32 bites változata (például a Firma4ng tart egyet a mappájában), amelyet a PDF Simply nem tud használni. Telepítse a kulcs Windows-illesztőprogramját, amely a 64 bites változatot is hozzáadja, majd nyomja meg az Újrakeresés gombot.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Az aláírás NEM érvényes: {who} tanúsítványa az aláírás napján lejárt (vagy még nem volt érvényes).
+	Certificate valid from {from} to {to}	A tanúsítvány érvényes: {from} – {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	LEJÁRT: {date}. Az ezzel a tanúsítvánnyal készült aláírás nem lenne érvényes.

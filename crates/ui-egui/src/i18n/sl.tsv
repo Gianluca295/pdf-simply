@@ -2433,3 +2433,6 @@ animation effects	Off	Izklopljeni
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Datoteka programske opreme ključa (.dll), na primer bit4xpki.dll v C:\\Windows\\System32 ali v mapi, kamor je bila nameščena.
 	Key software (.dll)	Programska oprema ključa (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} je 32-bitna različica programske opreme ključa (Firma4ng jo na primer hrani v svoji mapi), ki je PDF Simply ne more uporabiti. Namestite gonilnik ključa za Windows, ki doda tudi 64-bitno različico, nato pritisnite Išči znova.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Podpis NI veljaven: potrdilo osebe {who} je na dan podpisa poteklo (ali še ni bilo veljavno).
+	Certificate valid from {from} to {to}	Potrdilo veljavno od {from} do {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	POTEKLO {date}: podpis s tem potrdilom ne bi bil veljaven.

@@ -2448,3 +2448,6 @@ animation effects	Off	Disattivati
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Il file del software della chiavetta (.dll), per esempio bit4xpki.dll in C:\\Windows\\System32 o nella cartella dove è stato installato il software della chiavetta.
 	Key software (.dll)	Software della chiavetta (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} è la versione a 32 bit del software della chiavetta (per esempio Firma4ng ne tiene una nella sua cartella), che PDF Simply non può usare. Installa il driver della chiavetta per Windows, che aggiunge anche la versione a 64 bit, poi premi Cerca di nuovo.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Firma NON valida: il certificato di {who} era scaduto (o non ancora valido) alla data della firma.
+	Certificate valid from {from} to {to}	Certificato valido dal {from} al {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	SCADUTO il {date}: una firma fatta con questo certificato non sarebbe valida.

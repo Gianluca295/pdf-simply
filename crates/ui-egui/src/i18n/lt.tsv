@@ -2683,3 +2683,6 @@ key	Space	Tarpas
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Rakto programinės įrangos failas (.dll), pavyzdžiui, bit4xpki.dll aplanke C:\\Windows\\System32 arba aplanke, kuriame įdiegta programinė įranga.
 	Key software (.dll)	Rakto programinė įranga (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} yra 32 bitų rakto programinės įrangos versija (pvz., Firma4ng ją laiko savo aplanke), kurios PDF Simply negali naudoti. Įdiekite rakto Windows tvarkyklę, kuri prideda ir 64 bitų versiją, tada spauskite Ieškoti iš naujo.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Parašas NEGALIOJA: {who} sertifikatas pasirašymo dieną buvo pasibaigęs (arba dar negaliojo).
+	Certificate valid from {from} to {to}	Sertifikatas galioja nuo {from} iki {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	PASIBAIGĘS {date}: šiuo sertifikatu sukurtas parašas negaliotų.

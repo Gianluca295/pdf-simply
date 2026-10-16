@@ -2341,3 +2341,6 @@ animation effects	Off	ఆఫ్
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	కీ సాఫ్ట్‌వేర్ ఫైల్ (.dll), ఉదాహరణకు C:\\Windows\\System32 లోని bit4xpki.dll, లేదా సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ అయిన ఫోల్డర్.
 	Key software (.dll)	కీ సాఫ్ట్‌వేర్ (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} కీ సాఫ్ట్‌వేర్ యొక్క 32-బిట్ వెర్షన్ (ఉదాహరణకు Firma4ng తన ఫోల్డర్‌లో ఒకటి ఉంచుతుంది), దీన్ని PDF Simply వాడలేదు. 64-బిట్ వెర్షన్‌ను కూడా జోడించే కీ Windows డ్రైవర్‌ను ఇన్‌స్టాల్ చేసి, మళ్ళీ వెతకండి నొక్కండి.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	సంతకం చెల్లదు: సంతకం తేదీన {who} సర్టిఫికెట్ గడువు ముగిసింది (లేదా ఇంకా చెల్లుబాటు కాలేదు).
+	Certificate valid from {from} to {to}	సర్టిఫికెట్ చెల్లుబాటు {from} నుండి {to} వరకు
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	{date} న గడువు ముగిసింది: ఈ సర్టిఫికెట్‌తో చేసిన సంతకం చెల్లదు.

@@ -2341,3 +2341,6 @@ animation effects	Off	Выкл
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Файл ПО ключа (.dll), например bit4xpki.dll в C:\\Windows\\System32 или в папке, куда установлено ПО ключа.
 	Key software (.dll)	ПО ключа (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} — 32-битная версия ПО ключа (например, Firma4ng хранит её в своей папке), которую PDF Simply не может использовать. Установите драйвер ключа для Windows, который добавит и 64-битную версию, затем нажмите «Искать снова».
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Подпись НЕДЕЙСТВИТЕЛЬНА: на дату подписи срок сертификата {who} истёк (или ещё не начался).
+	Certificate valid from {from} to {to}	Сертификат действителен с {from} по {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	ИСТЁК {date}: подпись этим сертификатом будет недействительна.

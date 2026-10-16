@@ -2428,3 +2428,6 @@ animation effects	Off	Désactivés
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Le fichier du logiciel de la clé (.dll), par exemple bit4xpki.dll dans C:\\Windows\\System32 ou dans le dossier d'installation du logiciel.
 	Key software (.dll)	Logiciel de la clé (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} est la version 32 bits du logiciel de la clé (Firma4ng, par exemple, en garde une dans son dossier), que PDF Simply ne peut pas utiliser. Installez le pilote Windows de la clé, qui ajoute aussi la version 64 bits, puis appuyez sur Rechercher à nouveau.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Signature NON valide : le certificat de {who} avait expiré (ou n'était pas encore valide) à la date de signature.
+	Certificate valid from {from} to {to}	Certificat valide du {from} au {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	EXPIRÉ le {date} : une signature faite avec ce certificat ne serait pas valide.

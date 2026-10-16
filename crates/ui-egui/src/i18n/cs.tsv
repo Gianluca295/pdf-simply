@@ -2502,3 +2502,6 @@ animation effects	Off	Vypnuto
 	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Soubor softwaru klíče (.dll), například bit4xpki.dll v C:\\Windows\\System32 nebo ve složce, kam byl software nainstalován.
 	Key software (.dll)	Software klíče (.dll)
 	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} je 32bitová verze softwaru klíče (například Firma4ng ji má ve své složce), kterou PDF Simply nemůže použít. Nainstalujte ovladač klíče pro Windows, který přidá i 64bitovou verzi, a stiskněte Hledat znovu.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Podpis NENÍ platný: certifikát {who} v den podpisu vypršel (nebo ještě nebyl platný).
+	Certificate valid from {from} to {to}	Certifikát platný od {from} do {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	VYPRŠEL {date}: podpis tímto certifikátem by nebyl platný.

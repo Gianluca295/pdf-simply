@@ -2354,3 +2354,80 @@ animation effects	Off	オフ
 	This document is trying to open a local file:	この文書はローカルファイルを開こうとしています：
 	Move tag earlier	タグを前へ移動
 	Move tag later	タグを後へ移動
+	PDF Simply on GitHub	GitHub の PDF Simply
+	Based on PdfCraft	PdfCraft がベース
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft チームと PdfCraft の貢献者による PdfCraft をもとに作られています。
+	Careful: the key says only a few attempts are left before the PIN locks.	注意：PIN がロックされるまでの残り試行回数が少ないとキーが知らせています。
+	Certificate issued by: {issuer}	証明書の発行者：{issuer}
+	Certificate valid on the signing date: {v}	署名日に有効な証明書：{v}
+	Choose a certificate.	証明書を選んでください。
+	Digital ID file · {issuer}	デジタル ID ファイル · {issuer}
+	Document unchanged since signing: {v}	署名後に文書は変更されていない：{v}
+	Hide details	詳細を隠す
+	Keychain · {issuer}	キーチェーン · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	証明書が見つかりません。キーを差し込み、数秒待ってから「もう一度検索」を押してください。
+	PDF and signed files (.p7m)	PDF と署名済みファイル (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	適格証明書（法的に有効な電子署名）：{v}
+	Search again	もう一度検索
+	Sign as a .p7m file (Italian digital signature)	.p7m ファイルとして署名（イタリアの電子署名）
+	Signature NOT valid: the document was changed after it was signed.	署名は無効です：署名後に文書が変更されています。
+	Signature PIN	署名用 PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} が適格証明書で署名：署名は改ざんされていません。
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} が署名：署名は改ざんされていませんが、証明書を確認できませんでした。
+	Signed by {who}: the signature is valid.	{who} が署名：署名は有効です。
+	Signed file (.p7m)	署名済みファイル (.p7m)
+	Signed file: {file}	署名済みファイル：{file}
+	Signed on: {time} (the signer's computer clock)	署名日時：{time}（署名者のコンピューターの時計）
+	Signing a .p7m is not available in the browser.	.p7m の署名はブラウザーでは使えません。
+	Sign…	署名…
+	Smart card or key "{token}" · {kind} · {issuer}	スマートカードまたはキー「{token}」 · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN がロックされています：キーに同梱の封筒にある PUK でロックを解除してください。
+	The certificate store will ask for the PIN, if needed.	必要な場合は証明書ストアが PIN を求めます。
+	This is not a signed file that can be read: {e}	読み取れる署名済みファイルではありません：{e}
+	Type the PIN.	PIN を入力してください。
+	Type the digital ID's password.	デジタル ID のパスワードを入力してください。
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	注意：これが最後の試行です。PIN をまた間違えるとロックされ、PUK が必要になります。
+	Windows certificates · {issuer}	Windows の証明書 · {issuer}
+	Wrong PIN	PIN が違います
+	authentication (not for signing)	認証用（署名には使えません）
+	no	いいえ
+	yes	はい
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what}（このセッションで {n} 回間違い）。何度か PIN を間違えるとキーがロックされます。
+	Sign as a .p7m file (CAdES)…	.p7m ファイルとして署名 (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	文書は CAdES 形式で署名され、イタリアの行政機関と Agenzia delle Entrate が受け付ける新しい .p7m ファイルに保存されます。開いている文書は変わりません。
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	キーのソフトウェアも見つかりません：キーに付属のソフトウェア（Aruba と InfoCamere のキーは Bit4id ドライバー）をインストールするか、キー本体の中を探してください。
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply は署名と証明書を確認しますが、証明書が失効しているかは確認しません。正式な確認には AgID 準拠の検証ツール（ArubaSign、Firma4NG、オンライン検証サービス）を使ってください。
+	The document was changed after it was signed.	署名後に文書が変更されています。
+	The signer's certificate is not in the file.	署名者の証明書がファイルにありません。
+	The signature value does not match the signer's key.	署名値が署名者の鍵と一致しません。
+	The certificate was not valid at the signing time.	署名日に証明書が有効ではありませんでした。
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	署名に signing-certificate 属性がありません：CAdES ではなく PKCS #7 です。
+	The signer's certificate does not chain to a trusted certificate.	署名者の証明書が信頼済みの証明書につながりません。
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	警告: {who} の証明書は署名の前の {date} に失効または一時停止されています。署名は有効ではありません。
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	注意: {who} の証明書は {date} に失効または一時停止されました。署名日時は署名者のコンピューターの時刻のため、署名が先だったことを証明できません。
+	Checked online: the certificate is not revoked.	オンラインで確認済み: 証明書は失効していません。
+	Checking online…	オンラインで確認中…
+	Check online	オンラインで確認
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	証明書の発行者に失効または一時停止されていないかを問い合わせ、AgID の適格発行者リストを確認します。文書は送信されません。
+	Role stated in the certificate: {role}	証明書に記載された役職: {role}
+	Timestamp (marca temporale) from an authority: {time}	認定機関のタイムスタンプ (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	オンラインで確認は、証明書の発行者に失効または一時停止されていないかを問い合わせ、AgID の適格発行者リストを確認します。確認するのは証明書だけで、文書はどこにも送信されません。
+	Online check of {date}:	{date} のオンライン確認:
+	the certificate is not revoked or suspended.	証明書は失効も一時停止もされていません。
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	証明書は署名の前の {date} に失効または一時停止されています: 署名は有効ではありません。
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	証明書は署名の後の {date} に失効または一時停止されました (タイムスタンプにより署名が先だったことが証明されます)。
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	証明書は {date} に失効または一時停止されました。署名日時は署名者のコンピューターの時刻のため、署名が先だったことを証明できません。
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	失効を確認できませんでした (発行者から応答がないか、インターネットに接続されていません)。
+	The issuer is a qualified certification authority on the AgID list.	発行者は AgID リストに載っている適格認証局です。
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	発行者は AgID リストに載っていますが、現在は適格認証局ではありません。
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	発行者はイタリアの AgID リストに載っていません (他の EU 加盟国のリストに載っている可能性があります)。
+	The AgID list could not be checked.	AgID リストを確認できませんでした。
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	証明書は期限切れです: 発行者は期限切れ証明書の失効を公開しなくなることがあるため、この結果は確実性が低くなります。
+	The key's software was found but could not be used: {problem}	キーのソフトウェアは見つかりましたが使用できません: {problem}
+	Choose the key's file…	キーのファイルを選択…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	キーのソフトウェアのファイル (.dll)。例: C:\\Windows\\System32 の bit4xpki.dll、またはソフトウェアのインストール先フォルダー。
+	Key software (.dll)	キーのソフトウェア (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} はキーのソフトウェアの 32 ビット版です (たとえば Firma4ng は自分のフォルダーに置いています)。PDF Simply では使えません。64 ビット版も追加されるキーの Windows 用ドライバーをインストールしてから、「再検索」を押してください。
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	署名は有効ではありません: 署名日の時点で {who} の証明書は期限切れ (またはまだ有効期間前) でした。
+	Certificate valid from {from} to {to}	証明書の有効期間: {from} ～ {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	{date} に期限切れ: この証明書で行った署名は有効になりません。

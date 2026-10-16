@@ -2598,3 +2598,91 @@ key	Space	Tarpas
 	This document is trying to open a local file:	Šis dokumentas bando atverti vietinį failą:
 	Move tag earlier	Perkelti žymą anksčiau
 	Move tag later	Perkelti žymą vėliau
+	PDF Simply on GitHub	PDF Simply sistemoje GitHub
+	Based on PdfCraft	Sukurta pagal PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Sukurta pagal ArtCraft komandos ir PdfCraft bendradarbių PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Dėmesio: raktas praneša, kad iki PIN užrakinimo liko nedaug bandymų.
+	Certificate issued by: {issuer}	Sertifikatą išdavė: {issuer}
+	Certificate valid on the signing date: {v}	Sertifikatas galiojo pasirašymo dieną: {v}
+	Choose a certificate.	Pasirinkite sertifikatą.
+	Digital ID file · {issuer}	Skaitmeninio ID failas · {issuer}
+	Document unchanged since signing: {v}	Dokumentas nepakeistas nuo pasirašymo: {v}
+	Hide details	Slėpti išsamią informaciją
+	Keychain · {issuer}	Raktinė · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Sertifikatų nerasta. Įjunkite raktą, palaukite kelias sekundes ir spustelėkite „Ieškoti dar kartą“.
+	PDF and signed files (.p7m)	PDF ir pasirašyti failai (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Kvalifikuotas sertifikatas (teisinę galią turintis parašas): {v}
+	Search again	Ieškoti dar kartą
+	Sign as a .p7m file (Italian digital signature)	Pasirašyti į .p7m failą (Italijos skaitmeninis parašas)
+	Signature NOT valid: the document was changed after it was signed.	Parašas NEGALIOJA: dokumentas pakeistas po pasirašymo.
+	Signature PIN	Parašo PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	Pasirašė {who} kvalifikuotu sertifikatu: parašas nepažeistas.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Pasirašė {who}: parašas nepažeistas, bet sertifikato patvirtinti nepavyko.
+	Signed by {who}: the signature is valid.	Pasirašė {who}: parašas galioja.
+	Signed file (.p7m)	Pasirašytas failas (.p7m)
+	Signed file: {file}	Pasirašytas failas: {file}
+	Signed on: {time} (the signer's computer clock)	Pasirašyta: {time} (pasirašiusiojo kompiuterio laikrodis)
+	Signing a .p7m is not available in the browser.	Pasirašymas .p7m naršyklėje negalimas.
+	Sign…	Pasirašyti…
+	Smart card or key "{token}" · {kind} · {issuer}	Lustinė kortelė ar raktas „{token}“ · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN užrakintas: atrakinkite jį PUK kodu (voke, gautame kartu su raktu).
+	The certificate store will ask for the PIN, if needed.	Jei reikės, sertifikatų saugykla paprašys PIN.
+	This is not a signed file that can be read: {e}	Tai nėra skaitomas pasirašytas failas: {e}
+	Type the PIN.	Įveskite PIN.
+	Type the digital ID's password.	Įveskite skaitmeninio ID slaptažodį.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	DĖMESIO: tai paskutinis bandymas. Jei PIN vėl bus neteisingas, jis užsirakins ir prireiks PUK.
+	Windows certificates · {issuer}	„Windows“ sertifikatai · {issuer}
+	Wrong PIN	Neteisingas PIN
+	authentication (not for signing)	autentifikavimas (ne pasirašymui)
+	no	ne
+	yes	taip
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (šioje sesijoje neteisingų: {n}). Po kelių neteisingų PIN raktas užsirakina.
+	Sign as a .p7m file (CAdES)…	Pasirašyti į .p7m failą (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokumentas pasirašomas CAdES formatu ir išsaugomas naujame .p7m faile – šį formatą priima Italijos institucijos ir Agenzia delle Entrate. Atidarytas dokumentas nesikeičia.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nerasta ir rakto programinė įranga: įdiekite kartu su raktu gautą programinę įrangą (Aruba ir InfoCamere raktams – Bit4id tvarkyklę) arba jos ieškokite pačiame rakte.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply tikrina parašą ir sertifikatą, bet ne jo atšaukimą. Oficialiam patikrinimui naudokite AgID reikalavimus atitinkantį tikrintuvą (ArubaSign, Firma4NG arba internetinius tikrintuvus).
+	The document was changed after it was signed.	Dokumentas pakeistas po pasirašymo.
+	The signer's certificate is not in the file.	Pasirašiusiojo sertifikato faile nėra.
+	The signature value does not match the signer's key.	Parašo reikšmė neatitinka pasirašiusiojo rakto.
+	The certificate was not valid at the signing time.	Sertifikatas negaliojo pasirašymo dieną.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Parašas neturi signing-certificate atributo: tai PKCS #7, o ne CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Pasirašiusiojo sertifikatas neveda į patikimą sertifikatą.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	DĖMESIO: {who} sertifikatas {date} buvo ATŠAUKTAS arba SUSTABDYTAS, prieš pasirašymą. Parašas NEGALIOJA.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Atsargiai: {who} sertifikatas {date} buvo atšauktas arba sustabdytas. Pasirašymo data paimta iš pasirašiusiojo kompiuterio, todėl neįmanoma įrodyti, kad parašas buvo anksčiau.
+	Checked online: the certificate is not revoked.	Patikrinta internetu: sertifikatas neatšauktas.
+	Checking online…	Tikrinama internetu…
+	Check online	Tikrinti internetu
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Paklausia sertifikato išdavėjo, ar jis buvo atšauktas ar sustabdytas, ir patikrina AgID kvalifikuotų išdavėjų sąrašą. Dokumentas nesiunčiamas.
+	Role stated in the certificate: {role}	Sertifikate nurodytas vaidmuo: {role}
+	Timestamp (marca temporale) from an authority: {time}	Laiko žymė (marca temporale) iš tarnybos: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Tikrinimas internetu paklausia sertifikato išdavėjo, ar jis buvo atšauktas ar sustabdytas, ir patikrina AgID kvalifikuotų išdavėjų sąrašą. Tikrinamas tik sertifikatas: dokumentas niekur nesiunčiamas.
+	Online check of {date}:	Patikrinimas internetu {date}:
+	the certificate is not revoked or suspended.	sertifikatas nėra atšauktas ar sustabdytas.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	sertifikatas {date} buvo ATŠAUKTAS arba SUSTABDYTAS, prieš pasirašymą: parašas NEGALIOJA.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	sertifikatas {date} buvo atšauktas arba sustabdytas, po pasirašymo (laiko žymė įrodo, kad parašas buvo anksčiau).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	sertifikatas {date} buvo atšauktas arba sustabdytas. Pasirašymo data paimta iš pasirašiusiojo kompiuterio: neįmanoma įrodyti, kad parašas buvo anksčiau.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	atšaukimo patikrinti nepavyko (išdavėjas neatsakė arba nėra interneto ryšio).
+	The issuer is a qualified certification authority on the AgID list.	Išdavėjas yra kvalifikuota sertifikavimo įstaiga iš AgID sąrašo.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Išdavėjas yra AgID sąraše, bet nebėra kvalifikuota sertifikavimo įstaiga.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Išdavėjo nėra Italijos AgID sąraše (jis gali būti kitos ES šalies sąraše).
+	The AgID list could not be checked.	AgID sąrašo patikrinti nepavyko.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Sertifikato galiojimas baigėsi: išdavėjai gali nebeskelbti pasibaigusių sertifikatų atšaukimų, todėl šis atsakymas mažiau patikimas.
+	The attached timestamp could not be verified.	Pridėtos laiko žymės patikrinti nepavyko.
+	The Italian trusted list could not be read.	Italijos patikimų sąrašo perskaityti nepavyko.
+	The Italian trusted list could not be downloaded.	Italijos patikimų sąrašo atsisiųsti nepavyko.
+	The issuer's certificate could not be downloaded.	Išdavėjo sertifikato atsisiųsti nepavyko.
+	The issuer's certificate was not found, so the revocation status could not be checked.	Išdavėjo sertifikatas nerastas, todėl atšaukimo būsenos patikrinti nepavyko.
+	An OCSP answer did not cover this certificate or was not signed by its issuer.	OCSP atsakymas neapėmė šio sertifikato arba nebuvo pasirašytas jo išdavėjo.
+	An OCSP answer could not be read.	OCSP atsakymo perskaityti nepavyko.
+	The OCSP service did not answer.	OCSP tarnyba neatsakė.
+	A revocation list was out of date or not signed by the issuer.	Atšauktųjų sąrašas buvo pasenęs arba nepasirašytas išdavėjo.
+	A revocation list could not be read.	Atšauktųjų sąrašo perskaityti nepavyko.
+	A revocation list could not be downloaded.	Atšauktųjų sąrašo atsisiųsti nepavyko.
+	The key's software was found but could not be used: {problem}	Rakto programinė įranga rasta, bet jos naudoti negalima: {problem}
+	Choose the key's file…	Pasirinkti rakto failą…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Rakto programinės įrangos failas (.dll), pavyzdžiui, bit4xpki.dll aplanke C:\\Windows\\System32 arba aplanke, kuriame įdiegta programinė įranga.
+	Key software (.dll)	Rakto programinė įranga (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} yra 32 bitų rakto programinės įrangos versija (pvz., Firma4ng ją laiko savo aplanke), kurios PDF Simply negali naudoti. Įdiekite rakto Windows tvarkyklę, kuri prideda ir 64 bitų versiją, tada spauskite Ieškoti iš naujo.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Parašas NEGALIOJA: {who} sertifikatas pasirašymo dieną buvo pasibaigęs (arba dar negaliojo).
+	Certificate valid from {from} to {to}	Sertifikatas galioja nuo {from} iki {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	PASIBAIGĘS {date}: šiuo sertifikatu sukurtas parašas negaliotų.

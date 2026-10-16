@@ -241,6 +241,22 @@ fn windows_id(reference: &str) -> Result<DigitalId, String> {
     Err(format!("{reference}: Windows certificate store identities are only available on Windows"))
 }
 
+/// Open a digital ID from the list: a Keychain or Windows store identity, or a file with its
+/// password.
+pub(crate) fn open_digital_id(entry: &DigitalIdEntry, password: &str) -> Result<DigitalId, String> {
+    if entry.path.starts_with("keychain:") {
+        keychain_id(&entry.path)
+    } else if entry.path.starts_with("windows:") {
+        windows_id(&entry.path)
+    } else {
+        let bytes = std::fs::read(&entry.path).map_err(|e| format!("{}: {e}", entry.path))?;
+        sign::pkcs12::open(&bytes, password).map_err(|e| match e {
+            sign::SignError::WrongPassword => "The password is incorrect.".to_string(),
+            e => e.to_string(),
+        })
+    }
+}
+
 pub fn entry_for(path: &str, c: &Certificate) -> DigitalIdEntry {
     DigitalIdEntry {
         path: path.to_string(),
@@ -268,7 +284,7 @@ fn entry_unusable(u: &sign::windows::Unusable) -> DigitalIdEntry {
 impl PdfCraftApp {
     /// Start signing: the rectangle (or field) is known; show Sign with a Digital ID.
     pub fn start_signing(&mut self, page: usize, rect: Option<[f64; 4]>, field: Option<String>, certify: Option<u8>) {
-        self.refresh_os_key_store_ids();
+        self.refresh_signing_ids();
         let mut draft = SignDraft::new(page, rect, field, certify, &self.digital_ids);
         draft.graphic = match &self.sign_graphic {
             SignGraphic::FillSign if self.signature.is_none() => SignGraphic::Name,
@@ -282,7 +298,7 @@ impl PdfCraftApp {
     }
 
     /// List OS key store signing identities (after the file-based IDs).
-    fn refresh_os_key_store_ids(&mut self) {
+    pub(crate) fn refresh_signing_ids(&mut self) {
         self.digital_ids.retain(|e| !e.path.starts_with("keychain:") && !e.path.starts_with("windows:"));
         #[cfg(target_os = "macos")]
         if self.os_key_store_ids {
@@ -290,6 +306,7 @@ impl PdfCraftApp {
                 Ok(ids) => {
                     for id in ids {
                         let mut entry = entry_for(&sign::keychain::reference(&id.certificate), &id.certificate);
+                        entry.unusable = id.certificate.signing_problem().map(|p| p.said(&crate::i18n::words));
                         // Smart card identities say so ("… (smart card)").
                         if let Some(name) = id.friendly_name {
                             entry.name = name;
@@ -305,7 +322,11 @@ impl PdfCraftApp {
             match sign::windows::list() {
                 Ok(listing) => {
                     for id in &listing.ids {
-                        self.digital_ids.push(entry_for(&sign::windows::reference(&id.certificate), &id.certificate));
+                        let mut entry = entry_for(&sign::windows::reference(&id.certificate), &id.certificate);
+                        // PDF Simply: a certificate not issued for signing documents (a web
+                        // server's "localhost", for one) is shown greyed, never used.
+                        entry.unusable = id.certificate.signing_problem().map(|p| p.said(&crate::i18n::words));
+                        self.digital_ids.push(entry);
                     }
                     // Certificates without a private key aren't identities; the rest are shown
                     // greyed with why they can't sign (issue #179).
@@ -408,17 +429,7 @@ impl PdfCraftApp {
         let Some((_, doc_id)) = self.active_ids() else { return Err("no document".into()) };
         let d = self.sign_draft.clone().ok_or("nothing to sign")?;
         let entry = d.selected.and_then(|i| self.digital_ids.get(i)).filter(|e| e.unusable.is_none()).cloned().ok_or("Choose a digital ID.")?;
-        let id = if entry.path.starts_with("keychain:") {
-            keychain_id(&entry.path)?
-        } else if entry.path.starts_with("windows:") {
-            windows_id(&entry.path)?
-        } else {
-            let bytes = std::fs::read(&entry.path).map_err(|e| format!("{}: {e}", entry.path))?;
-            sign::pkcs12::open(&bytes, &d.password).map_err(|e| match e {
-                sign::SignError::WrongPassword => "The password is incorrect.".to_string(),
-                e => e.to_string(),
-            })?
-        };
+        let id = open_digital_id(&entry, &d.password)?;
         let some = |s: &str| (!s.trim().is_empty()).then(|| s.trim().to_string());
         // Only a visible signature shows its graphic.
         let graphic = match self.graphic_sig(&d.graphic) {

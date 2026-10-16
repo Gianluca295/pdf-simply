@@ -2059,6 +2059,9 @@ pub fn document_area(app: &mut PdfCraftApp, index: usize, ui: &mut egui::Ui) {
     {
         f.in_panel = false;
     }
+    // A document opened from a .p7m: the signature check, above the other notices (PDF Simply).
+    let doc_id = app.views[index].id;
+    crate::p7m_ui::bar(app, doc_id, ui, &crate::theme::Tokens::get(ui.ctx()));
     let Some(doc) = app.session.get(app.views[index].id) else { return };
     let info = &doc.info;
     if info.pages.is_empty() {
@@ -3862,7 +3865,7 @@ fn notices(
 /// of running under the buttons and past the document area into the side panel (#785). The
 /// buttons are centred on a row of button height, and the message's first line is centred on
 /// the same row; a wrapped message grows the bar downwards.
-fn notice_bar(ui: &mut egui::Ui, t: &Tokens, icon: &str, icon_color: Color32, text: String, buttons: impl FnOnce(&mut egui::Ui)) {
+pub(crate) fn notice_bar(ui: &mut egui::Ui, t: &Tokens, icon: &str, icon_color: Color32, text: String, buttons: impl FnOnce(&mut egui::Ui)) {
     const ROW: f32 = 28.0;
     const ICON: f32 = 16.0;
     egui::Frame::NONE.fill(t.accent_soft).inner_margin(egui::Margin::symmetric(14, 7)).show(ui, |ui| {

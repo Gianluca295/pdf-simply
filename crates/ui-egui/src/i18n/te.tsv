@@ -2267,3 +2267,80 @@ animation effects	Off	ఆఫ్
 	This document is trying to open a local file:	ఈ పత్రం ఒక స్థానిక ఫైల్‌ను తెరవడానికి ప్రయత్నిస్తోంది:
 	Move tag earlier	ట్యాగ్‌ను ముందుకు తరలించు
 	Move tag later	ట్యాగ్‌ను వెనుకకు తరలించు
+	PDF Simply on GitHub	GitHub లో PDF Simply
+	Based on PdfCraft	PdfCraft ఆధారంగా
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft బృందం మరియు PdfCraft సహకారుల PdfCraft ఆధారంగా రూపొందించబడింది.
+	Careful: the key says only a few attempts are left before the PIN locks.	జాగ్రత్త: PIN లాక్ అయ్యేలోపు కొన్ని ప్రయత్నాలే మిగిలాయని కీ చెబుతోంది.
+	Certificate issued by: {issuer}	సర్టిఫికెట్ జారీచేసినవారు: {issuer}
+	Certificate valid on the signing date: {v}	సంతకం తేదీన సర్టిఫికెట్ చెల్లుబాటు: {v}
+	Choose a certificate.	ఒక సర్టిఫికెట్‌ను ఎంచుకోండి.
+	Digital ID file · {issuer}	డిజిటల్ ID ఫైల్ · {issuer}
+	Document unchanged since signing: {v}	సంతకం తర్వాత పత్రం మారలేదు: {v}
+	Hide details	వివరాలను దాచు
+	Keychain · {issuer}	కీచెయిన్ · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	సర్టిఫికెట్ కనబడలేదు. కీని పెట్టి, కొన్ని సెకన్లు ఆగి, మళ్ళీ వెతుకు నొక్కండి.
+	PDF and signed files (.p7m)	PDF మరియు సంతకం చేసిన ఫైళ్లు (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	అర్హత సర్టిఫికెట్ (చట్టబద్ధమైన డిజిటల్ సంతకం): {v}
+	Search again	మళ్ళీ వెతుకు
+	Sign as a .p7m file (Italian digital signature)	.p7m ఫైల్‌గా సంతకం చేయి (ఇటాలియన్ డిజిటల్ సంతకం)
+	Signature NOT valid: the document was changed after it was signed.	సంతకం చెల్లదు: సంతకం తర్వాత పత్రం మార్చబడింది.
+	Signature PIN	సంతకం PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} అర్హత సర్టిఫికెట్‌తో సంతకం చేశారు: సంతకం చెక్కుచెదరలేదు.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} సంతకం చేశారు: సంతకం చెక్కుచెదరలేదు, కానీ సర్టిఫికెట్‌ను నిర్ధారించలేకపోయాం.
+	Signed by {who}: the signature is valid.	{who} సంతకం చేశారు: సంతకం చెల్లుతుంది.
+	Signed file (.p7m)	సంతకం చేసిన ఫైల్ (.p7m)
+	Signed file: {file}	సంతకం చేసిన ఫైల్: {file}
+	Signed on: {time} (the signer's computer clock)	సంతకం సమయం: {time} (సంతకం చేసినవారి కంప్యూటర్ గడియారం)
+	Signing a .p7m is not available in the browser.	.p7m సంతకం బ్రౌజర్‌లో అందుబాటులో లేదు.
+	Sign…	సంతకం చేయి…
+	Smart card or key "{token}" · {kind} · {issuer}	స్మార్ట్ కార్డ్ లేదా కీ "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN లాక్ అయింది: కీతో వచ్చిన కవర్‌లోని PUKతో దాన్ని అన్‌లాక్ చేయండి.
+	The certificate store will ask for the PIN, if needed.	అవసరమైతే సర్టిఫికెట్ స్టోర్ PIN అడుగుతుంది.
+	This is not a signed file that can be read: {e}	ఇది చదవగలిగే సంతకం చేసిన ఫైల్ కాదు: {e}
+	Type the PIN.	PIN టైప్ చేయండి.
+	Type the digital ID's password.	డిజిటల్ ID పాస్‌వర్డ్ టైప్ చేయండి.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	హెచ్చరిక: ఇదే చివరి ప్రయత్నం. PIN మళ్ళీ తప్పయితే అది లాక్ అవుతుంది, PUK అవసరం అవుతుంది.
+	Windows certificates · {issuer}	Windows సర్టిఫికెట్లు · {issuer}
+	Wrong PIN	తప్పు PIN
+	authentication (not for signing)	ప్రామాణీకరణ (సంతకానికి కాదు)
+	no	కాదు
+	yes	అవును
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (ఈ సెషన్‌లో {n} తప్పులు). కొన్ని తప్పు PINల తర్వాత కీ లాక్ అవుతుంది.
+	Sign as a .p7m file (CAdES)…	.p7m ఫైల్‌గా సంతకం చేయి (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	పత్రం CAdES ఫార్మాట్‌లో సంతకం చేయబడి, ఇటాలియన్ ప్రభుత్వ సంస్థలు మరియు Agenzia delle Entrate అంగీకరించే కొత్త .p7m ఫైల్‌గా సేవ్ అవుతుంది. తెరిచిన పత్రం మారదు.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	కీ సాఫ్ట్‌వేర్ కూడా కనబడలేదు: కీతో వచ్చిన సాఫ్ట్‌వేర్‌ను ఇన్‌స్టాల్ చేయండి (Aruba, InfoCamere కీలకు Bit4id డ్రైవర్), లేదా కీలోనే వెతకండి.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply సంతకాన్ని, సర్టిఫికెట్‌ను తనిఖీ చేస్తుంది, కానీ సర్టిఫికెట్ రద్దయిందో లేదో తనిఖీ చేయదు. అధికారిక తనిఖీ కోసం AgID కి అనుగుణమైన వెరిఫైయర్‌ను వాడండి (ArubaSign, Firma4NG లేదా ఆన్‌లైన్ వెరిఫైయర్లు).
+	The document was changed after it was signed.	సంతకం తర్వాత పత్రం మార్చబడింది.
+	The signer's certificate is not in the file.	సంతకం చేసినవారి సర్టిఫికెట్ ఫైల్‌లో లేదు.
+	The signature value does not match the signer's key.	సంతకం విలువ సంతకం చేసినవారి కీతో సరిపోలడం లేదు.
+	The certificate was not valid at the signing time.	సంతకం తేదీన సర్టిఫికెట్ చెల్లుబాటులో లేదు.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	సంతకంలో signing-certificate లక్షణం లేదు: ఇది PKCS #7, CAdES కాదు.
+	The signer's certificate does not chain to a trusted certificate.	సంతకం చేసినవారి సర్టిఫికెట్ విశ్వసనీయ సర్టిఫికెట్‌కు చేరదు.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	హెచ్చరిక: {who} సర్టిఫికెట్ సంతకానికి ముందే {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం చెల్లదు.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	జాగ్రత్త: {who} సర్టిఫికెట్ {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం తేదీ సంతకం చేసినవారి కంప్యూటర్ నుండి వచ్చింది, కాబట్టి సంతకం ముందే జరిగిందని నిరూపించలేము.
+	Checked online: the certificate is not revoked.	ఆన్‌లైన్‌లో తనిఖీ చేయబడింది: సర్టిఫికెట్ రద్దు కాలేదు.
+	Checking online…	ఆన్‌లైన్‌లో తనిఖీ చేస్తోంది…
+	Check online	ఆన్‌లైన్‌లో తనిఖీ చేయి
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	సర్టిఫికెట్ రద్దయిందా లేదా నిలిపివేయబడిందా అని జారీదారుని అడుగుతుంది, అర్హత గల జారీదారుల AgID జాబితాను తనిఖీ చేస్తుంది. పత్రం పంపబడదు.
+	Role stated in the certificate: {role}	సర్టిఫికెట్‌లో పేర్కొన్న హోదా: {role}
+	Timestamp (marca temporale) from an authority: {time}	అధీకృత సంస్థ నుండి టైమ్‌స్టాంప్ (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	ఆన్‌లైన్ తనిఖీ సర్టిఫికెట్ రద్దయిందా లేదా నిలిపివేయబడిందా అని జారీదారుని అడుగుతుంది, అర్హత గల జారీదారుల AgID జాబితాను తనిఖీ చేస్తుంది. సర్టిఫికెట్ మాత్రమే తనిఖీ చేయబడుతుంది: పత్రం ఎక్కడికీ పంపబడదు.
+	Online check of {date}:	{date} నాటి ఆన్‌లైన్ తనిఖీ:
+	the certificate is not revoked or suspended.	సర్టిఫికెట్ రద్దు కాలేదు, నిలిపివేయబడలేదు.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	సర్టిఫికెట్ సంతకానికి ముందే {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది: సంతకం చెల్లదు.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	సర్టిఫికెట్ సంతకం తర్వాత {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది (సంతకం ముందే జరిగిందని టైమ్‌స్టాంప్ నిరూపిస్తుంది).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	సర్టిఫికెట్ {date} న రద్దు చేయబడింది లేదా నిలిపివేయబడింది. సంతకం తేదీ సంతకం చేసినవారి కంప్యూటర్ నుండి వచ్చింది: సంతకం ముందే జరిగిందని నిరూపించలేము.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	రద్దును తనిఖీ చేయలేకపోయాము (జారీదారు నుండి స్పందన లేదు, లేదా ఇంటర్నెట్ కనెక్షన్ లేదు).
+	The issuer is a qualified certification authority on the AgID list.	జారీదారు AgID జాబితాలోని అర్హత గల సర్టిఫికేషన్ సంస్థ.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	జారీదారు AgID జాబితాలో ఉన్నారు, కానీ ఇకపై అర్హత గల సర్టిఫికేషన్ సంస్థ కాదు.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	జారీదారు ఇటాలియన్ AgID జాబితాలో లేరు (మరొక EU దేశ జాబితాలో ఉండవచ్చు).
+	The AgID list could not be checked.	AgID జాబితాను తనిఖీ చేయలేకపోయాము.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	సర్టిఫికెట్ గడువు ముగిసింది: గడువు ముగిసిన సర్టిఫికెట్ల రద్దులను జారీదారులు ప్రచురించడం ఆపవచ్చు, కాబట్టి ఈ సమాధానం తక్కువ ఖచ్చితమైనది.
+	The key's software was found but could not be used: {problem}	కీ సాఫ్ట్‌వేర్ కనబడింది కానీ వాడలేము: {problem}
+	Choose the key's file…	కీ ఫైల్‌ను ఎంచుకోండి…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	కీ సాఫ్ట్‌వేర్ ఫైల్ (.dll), ఉదాహరణకు C:\\Windows\\System32 లోని bit4xpki.dll, లేదా సాఫ్ట్‌వేర్ ఇన్‌స్టాల్ అయిన ఫోల్డర్.
+	Key software (.dll)	కీ సాఫ్ట్‌వేర్ (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} కీ సాఫ్ట్‌వేర్ యొక్క 32-బిట్ వెర్షన్ (ఉదాహరణకు Firma4ng తన ఫోల్డర్‌లో ఒకటి ఉంచుతుంది), దీన్ని PDF Simply వాడలేదు. 64-బిట్ వెర్షన్‌ను కూడా జోడించే కీ Windows డ్రైవర్‌ను ఇన్‌స్టాల్ చేసి, మళ్ళీ వెతకండి నొక్కండి.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	సంతకం చెల్లదు: సంతకం తేదీన {who} సర్టిఫికెట్ గడువు ముగిసింది (లేదా ఇంకా చెల్లుబాటు కాలేదు).
+	Certificate valid from {from} to {to}	సర్టిఫికెట్ చెల్లుబాటు {from} నుండి {to} వరకు
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	{date} న గడువు ముగిసింది: ఈ సర్టిఫికెట్‌తో చేసిన సంతకం చెల్లదు.

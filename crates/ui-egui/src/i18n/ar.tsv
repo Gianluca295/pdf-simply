@@ -2375,3 +2375,80 @@ animation effects	Off	معطّلة
 	This document is trying to open a local file:	يحاول هذا المستند فتح ملف محلي:
 	Move tag earlier	نقل العلامة للأعلى
 	Move tag later	نقل العلامة للأسفل
+	PDF Simply on GitHub	PDF Simply على GitHub
+	Based on PdfCraft	مبني على PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	مبني على PdfCraft من فريق ArtCraft والمساهمين في PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	انتبه: يشير المفتاح إلى أنه لم يتبقَّ سوى محاولات قليلة قبل قفل رمز PIN.
+	Certificate issued by: {issuer}	الشهادة صادرة عن: {issuer}
+	Certificate valid on the signing date: {v}	الشهادة صالحة في تاريخ التوقيع: {v}
+	Choose a certificate.	اختر شهادة.
+	Digital ID file · {issuer}	ملف هوية رقمية · {issuer}
+	Document unchanged since signing: {v}	المستند لم يتغير منذ التوقيع: {v}
+	Hide details	إخفاء التفاصيل
+	Keychain · {issuer}	سلسلة المفاتيح · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	لم يُعثر على أي شهادة. أدخل المفتاح وانتظر بضع ثوانٍ ثم اضغط إعادة البحث.
+	PDF and signed files (.p7m)	ملفات PDF والملفات الموقعة (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	شهادة مؤهلة (توقيع رقمي له قيمة قانونية): {v}
+	Search again	إعادة البحث
+	Sign as a .p7m file (Italian digital signature)	التوقيع في ملف .p7m (التوقيع الرقمي الإيطالي)
+	Signature NOT valid: the document was changed after it was signed.	التوقيع غير صالح: تم تعديل المستند بعد توقيعه.
+	Signature PIN	رمز PIN للتوقيع
+	Signed by {who} with a qualified certificate: the signature is intact.	وقّعه {who} بشهادة مؤهلة: التوقيع سليم.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	وقّعه {who}: التوقيع سليم، لكن تعذّر تأكيد الشهادة.
+	Signed by {who}: the signature is valid.	وقّعه {who}: التوقيع صالح.
+	Signed file (.p7m)	ملف موقّع (.p7m)
+	Signed file: {file}	الملف الموقّع: {file}
+	Signed on: {time} (the signer's computer clock)	تاريخ التوقيع: {time} (ساعة حاسوب الموقّع)
+	Signing a .p7m is not available in the browser.	التوقيع بصيغة .p7m غير متاح في المتصفح.
+	Sign…	توقيع…
+	Smart card or key "{token}" · {kind} · {issuer}	بطاقة ذكية أو مفتاح "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	رمز PIN مقفل: افتحه باستخدام PUK (في الظرف المرفق مع المفتاح).
+	The certificate store will ask for the PIN, if needed.	سيطلب مخزن الشهادات رمز PIN عند الحاجة.
+	This is not a signed file that can be read: {e}	هذا ليس ملفًا موقّعًا يمكن قراءته: {e}
+	Type the PIN.	اكتب رمز PIN.
+	Type the digital ID's password.	اكتب كلمة مرور الهوية الرقمية.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	انتبه: هذه آخر محاولة. إذا كان رمز PIN خاطئًا مرة أخرى فسيُقفل وستحتاج إلى PUK.
+	Windows certificates · {issuer}	شهادات Windows · {issuer}
+	Wrong PIN	رمز PIN خاطئ
+	authentication (not for signing)	مصادقة (ليست للتوقيع)
+	no	لا
+	yes	نعم
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} خاطئة في هذه الجلسة). بعد عدة رموز PIN خاطئة يُقفل المفتاح.
+	Sign as a .p7m file (CAdES)…	التوقيع في ملف .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	يُوقَّع المستند بصيغة CAdES ويُحفظ في ملف .p7m جديد، وهي الصيغة التي تقبلها الإدارات العامة الإيطالية وAgenzia delle Entrate. لا يتغير المستند المفتوح.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	لم يُعثر أيضًا على برنامج المفتاح: ثبّت البرنامج المرفق مع المفتاح (لمفاتيح Aruba وInfoCamere برنامج تشغيل Bit4id) أو ابحث عنه على المفتاح نفسه.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	يتحقق PDF Simply من التوقيع والشهادة، لا من إلغاء الشهادة. للتحقق الرسمي استخدم أداة تحقق متوافقة مع AgID (ArubaSign أو Firma4NG أو أدوات التحقق عبر الإنترنت).
+	The document was changed after it was signed.	تم تعديل المستند بعد توقيعه.
+	The signer's certificate is not in the file.	شهادة الموقّع غير موجودة في الملف.
+	The signature value does not match the signer's key.	قيمة التوقيع لا تطابق مفتاح الموقّع.
+	The certificate was not valid at the signing time.	لم تكن الشهادة صالحة في تاريخ التوقيع.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	التوقيع لا يحتوي على السمة signing-certificate: إنه PKCS #7 وليس CAdES.
+	The signer's certificate does not chain to a trusted certificate.	شهادة الموقّع لا تؤدي إلى شهادة موثوقة.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	تحذير: تم إلغاء أو تعليق شهادة {who} في {date}، قبل التوقيع. التوقيع غير صالح.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	انتبه: تم إلغاء أو تعليق شهادة {who} في {date}. تاريخ التوقيع مأخوذ من حاسوب الموقّع، لذا لا يمكن إثبات أن التوقيع جاء أولاً.
+	Checked online: the certificate is not revoked.	تم التحقق عبر الإنترنت: الشهادة غير ملغاة.
+	Checking online…	جارٍ التحقق عبر الإنترنت…
+	Check online	تحقق عبر الإنترنت
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	يسأل جهة إصدار الشهادة عمّا إذا كانت ملغاة أو معلّقة، ويتحقق من قائمة AgID للجهات المؤهلة. لا يتم إرسال المستند.
+	Role stated in the certificate: {role}	الدور المذكور في الشهادة: {role}
+	Timestamp (marca temporale) from an authority: {time}	ختم زمني (marca temporale) من جهة معتمدة: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	التحقق عبر الإنترنت يسأل جهة إصدار الشهادة عمّا إذا كانت ملغاة أو معلّقة، ويتحقق من قائمة AgID للجهات المؤهلة. يتم التحقق من الشهادة فقط: لا يُرسل المستند إلى أي مكان.
+	Online check of {date}:	التحقق عبر الإنترنت بتاريخ {date}:
+	the certificate is not revoked or suspended.	الشهادة ليست ملغاة ولا معلّقة.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	تم إلغاء أو تعليق الشهادة في {date}، قبل التوقيع: التوقيع غير صالح.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	تم إلغاء أو تعليق الشهادة في {date}، بعد التوقيع (الختم الزمني يثبت أن التوقيع جاء أولاً).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	تم إلغاء أو تعليق الشهادة في {date}. تاريخ التوقيع مأخوذ من حاسوب الموقّع: لا يمكن إثبات أن التوقيع جاء أولاً.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	تعذّر التحقق من الإلغاء (لا رد من جهة الإصدار أو لا يوجد اتصال بالإنترنت).
+	The issuer is a qualified certification authority on the AgID list.	جهة الإصدار هي جهة تصديق مؤهلة في قائمة AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	جهة الإصدار موجودة في قائمة AgID، لكنها لم تعد جهة تصديق مؤهلة.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	جهة الإصدار ليست في قائمة AgID الإيطالية (قد تكون في قائمة دولة أخرى في الاتحاد الأوروبي).
+	The AgID list could not be checked.	تعذّر التحقق من قائمة AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	انتهت صلاحية الشهادة: قد تتوقف جهات الإصدار عن نشر إلغاء الشهادات المنتهية، لذا فهذه الإجابة أقل يقيناً.
+	The key's software was found but could not be used: {problem}	تم العثور على برنامج المفتاح لكن لا يمكن استخدامه: {problem}
+	Choose the key's file…	اختر ملف المفتاح…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	ملف برنامج المفتاح (.dll)، مثل bit4xpki.dll في C:\\Windows\\System32 أو في المجلد الذي ثُبّت فيه البرنامج.
+	Key software (.dll)	برنامج المفتاح (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} هو إصدار 32 بت من برنامج المفتاح (يحتفظ Firma4ng مثلاً بنسخة منه في مجلده)، ولا يستطيع PDF Simply استخدامه. ثبّت برنامج تشغيل المفتاح لنظام Windows، الذي يضيف أيضاً إصدار 64 بت، ثم اضغط على البحث مجدداً.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	التوقيع غير صالح: كانت شهادة {who} منتهية (أو لم تكن سارية بعد) في تاريخ التوقيع.
+	Certificate valid from {from} to {to}	الشهادة صالحة من {from} إلى {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	منتهية في {date}: التوقيع بهذه الشهادة لن يكون صالحاً.

@@ -2428,3 +2428,80 @@ animation effects	Off	Vypnuto
 	This document is trying to open a local file:	Tento dokument se pokouší otevřít místní soubor:
 	Move tag earlier	Přesunout značku dříve
 	Move tag later	Přesunout značku později
+	PDF Simply on GitHub	PDF Simply na GitHubu
+	Based on PdfCraft	Založeno na PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Postaveno na PdfCraft od týmu ArtCraft a přispěvatelů PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Pozor: klíč hlásí, že do zablokování PINu zbývá jen několik pokusů.
+	Certificate issued by: {issuer}	Certifikát vydal: {issuer}
+	Certificate valid on the signing date: {v}	Certifikát platný k datu podpisu: {v}
+	Choose a certificate.	Vyberte certifikát.
+	Digital ID file · {issuer}	Soubor digitálního ID · {issuer}
+	Document unchanged since signing: {v}	Dokument od podpisu nezměněn: {v}
+	Hide details	Skrýt podrobnosti
+	Keychain · {issuer}	Klíčenka · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nebyl nalezen žádný certifikát. Připojte klíč, počkejte několik sekund a stiskněte Hledat znovu.
+	PDF and signed files (.p7m)	PDF a podepsané soubory (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Kvalifikovaný certifikát (právně platný elektronický podpis): {v}
+	Search again	Hledat znovu
+	Sign as a .p7m file (Italian digital signature)	Podepsat do souboru .p7m (italský elektronický podpis)
+	Signature NOT valid: the document was changed after it was signed.	Podpis NENÍ platný: dokument byl po podpisu změněn.
+	Signature PIN	PIN pro podpis
+	Signed by {who} with a qualified certificate: the signature is intact.	Podepsal(a) {who} kvalifikovaným certifikátem: podpis je neporušený.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Podepsal(a) {who}: podpis je neporušený, ale certifikát nelze potvrdit.
+	Signed by {who}: the signature is valid.	Podepsal(a) {who}: podpis je platný.
+	Signed file (.p7m)	Podepsaný soubor (.p7m)
+	Signed file: {file}	Podepsaný soubor: {file}
+	Signed on: {time} (the signer's computer clock)	Podepsáno: {time} (hodiny počítače podepisujícího)
+	Signing a .p7m is not available in the browser.	Podpis .p7m není v prohlížeči k dispozici.
+	Sign…	Podepsat…
+	Smart card or key "{token}" · {kind} · {issuer}	Čipová karta nebo klíč „{token}“ · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN je zablokovaný: odblokujte ho kódem PUK (v obálce dodané s klíčem).
+	The certificate store will ask for the PIN, if needed.	Úložiště certifikátů si v případě potřeby vyžádá PIN.
+	This is not a signed file that can be read: {e}	Toto není čitelný podepsaný soubor: {e}
+	Type the PIN.	Zadejte PIN.
+	Type the digital ID's password.	Zadejte heslo digitálního ID.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	POZOR: toto je poslední pokus. Pokud bude PIN opět chybný, zablokuje se a budete potřebovat PUK.
+	Windows certificates · {issuer}	Certifikáty Windows · {issuer}
+	Wrong PIN	Chybný PIN
+	authentication (not for signing)	ověření (ne pro podpis)
+	no	ne
+	yes	ano
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} chybných v této relaci). Po několika chybných PINech se klíč zablokuje.
+	Sign as a .p7m file (CAdES)…	Podepsat do souboru .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokument se podepíše ve formátu CAdES a uloží do nového souboru .p7m, který přijímají italské úřady a Agenzia delle Entrate. Otevřený dokument se nezmění.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nebyl nalezen ani software klíče: nainstalujte software dodaný s klíčem (pro klíče Aruba a InfoCamere ovladač Bit4id) nebo ho hledejte přímo na klíči.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply kontroluje podpis a certifikát, ne však jeho zneplatnění. Pro úřední ověření použijte ověřovač vyhovující AgID (ArubaSign, Firma4NG nebo online ověřovače).
+	The document was changed after it was signed.	Dokument byl po podpisu změněn.
+	The signer's certificate is not in the file.	Certifikát podepisujícího není v souboru.
+	The signature value does not match the signer's key.	Hodnota podpisu neodpovídá klíči podepisujícího.
+	The certificate was not valid at the signing time.	Certifikát nebyl k datu podpisu platný.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nemá atribut signing-certificate: jde o PKCS #7, ne CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Certifikát podepisujícího nevede k důvěryhodnému certifikátu.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	POZOR: certifikát {who} byl {date} ZNEPLATNĚN nebo POZASTAVEN, před podpisem. Podpis NENÍ platný.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Pozor: certifikát {who} byl {date} zneplatněn nebo pozastaven. Datum podpisu pochází z počítače podepisujícího, takže nelze prokázat, že podpis byl dříve.
+	Checked online: the certificate is not revoked.	Ověřeno online: certifikát není zneplatněn.
+	Checking online…	Ověřuje se online…
+	Check online	Ověřit online
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Zeptá se vydavatele certifikátu, zda byl zneplatněn nebo pozastaven, a zkontroluje seznam kvalifikovaných vydavatelů AgID. Dokument se neodesílá.
+	Role stated in the certificate: {role}	Role uvedená v certifikátu: {role}
+	Timestamp (marca temporale) from an authority: {time}	Časové razítko (marca temporale) od autority: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Ověřit online se zeptá vydavatele certifikátu, zda byl zneplatněn nebo pozastaven, a zkontroluje seznam kvalifikovaných vydavatelů AgID. Kontroluje se jen certifikát: dokument se nikam neodesílá.
+	Online check of {date}:	Ověření online ze dne {date}:
+	the certificate is not revoked or suspended.	certifikát není zneplatněn ani pozastaven.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	certifikát byl {date} ZNEPLATNĚN nebo POZASTAVEN, před podpisem: podpis NENÍ platný.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	certifikát byl {date} zneplatněn nebo pozastaven, po podpisu (časové razítko dokazuje, že podpis byl dříve).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	certifikát byl {date} zneplatněn nebo pozastaven. Datum podpisu pochází z počítače podepisujícího: nelze prokázat, že podpis byl dříve.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	zneplatnění nebylo možné ověřit (vydavatel neodpověděl nebo chybí připojení k internetu).
+	The issuer is a qualified certification authority on the AgID list.	Vydavatel je kvalifikovaná certifikační autorita na seznamu AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Vydavatel je na seznamu AgID, ale už není kvalifikovanou certifikační autoritou.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Vydavatel není na italském seznamu AgID (může být na seznamu jiné země EU).
+	The AgID list could not be checked.	Seznam AgID nebylo možné zkontrolovat.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Certifikát vypršel: vydavatelé mohou přestat zveřejňovat zneplatnění vypršelých certifikátů, takže tato odpověď je méně jistá.
+	The key's software was found but could not be used: {problem}	Software klíče byl nalezen, ale nelze ho použít: {problem}
+	Choose the key's file…	Vybrat soubor klíče…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Soubor softwaru klíče (.dll), například bit4xpki.dll v C:\\Windows\\System32 nebo ve složce, kam byl software nainstalován.
+	Key software (.dll)	Software klíče (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} je 32bitová verze softwaru klíče (například Firma4ng ji má ve své složce), kterou PDF Simply nemůže použít. Nainstalujte ovladač klíče pro Windows, který přidá i 64bitovou verzi, a stiskněte Hledat znovu.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Podpis NENÍ platný: certifikát {who} v den podpisu vypršel (nebo ještě nebyl platný).
+	Certificate valid from {from} to {to}	Certifikát platný od {from} do {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	VYPRŠEL {date}: podpis tímto certifikátem by nebyl platný.

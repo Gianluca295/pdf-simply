@@ -2352,3 +2352,80 @@ animation effects	Off	Өшірулі
 	This document is trying to open a local file:	Бұл құжат жергілікті файлды ашуға әрекеттеніп жатыр:
 	Move tag earlier	Тегті ертерек жылжыту
 	Move tag later	Тегті кейінірек жылжыту
+	PDF Simply on GitHub	PDF Simply GitHub-та
+	Based on PdfCraft	PdfCraft негізінде
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft командасы мен PdfCraft қатысушыларының PdfCraft бағдарламасы негізінде жасалған.
+	Careful: the key says only a few attempts are left before the PIN locks.	Назар аударыңыз: кілт PIN бұғатталғанға дейін бірнеше әрекет қалғанын хабарлайды.
+	Certificate issued by: {issuer}	Сертификатты берген: {issuer}
+	Certificate valid on the signing date: {v}	Қол қойылған күні сертификат жарамды: {v}
+	Choose a certificate.	Сертификатты таңдаңыз.
+	Digital ID file · {issuer}	Цифрлық ID файлы · {issuer}
+	Document unchanged since signing: {v}	Қол қойылғаннан бері құжат өзгермеген: {v}
+	Hide details	Мәліметтерді жасыру
+	Keychain · {issuer}	Кілттер байламы · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Сертификат табылмады. Кілтті қосып, бірнеше секунд күтіңіз де, «Қайта іздеу» түймесін басыңыз.
+	PDF and signed files (.p7m)	PDF және қол қойылған файлдар (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Біліктілік сертификаты (заңды күші бар қолтаңба): {v}
+	Search again	Қайта іздеу
+	Sign as a .p7m file (Italian digital signature)	.p7m файлына қол қою (Италияның цифрлық қолтаңбасы)
+	Signature NOT valid: the document was changed after it was signed.	Қолтаңба ЖАРАМСЫЗ: құжат қол қойылғаннан кейін өзгертілген.
+	Signature PIN	Қолтаңба PIN коды
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} біліктілік сертификатымен қол қойды: қолтаңба бүтін.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} қол қойды: қолтаңба бүтін, бірақ сертификатты растау мүмкін болмады.
+	Signed by {who}: the signature is valid.	{who} қол қойды: қолтаңба жарамды.
+	Signed file (.p7m)	Қол қойылған файл (.p7m)
+	Signed file: {file}	Қол қойылған файл: {file}
+	Signed on: {time} (the signer's computer clock)	Қол қойылған уақыты: {time} (қол қоюшының компьютер сағаты)
+	Signing a .p7m is not available in the browser.	.p7m қолтаңбасы браузерде қолжетімсіз.
+	Sign…	Қол қою…
+	Smart card or key "{token}" · {kind} · {issuer}	Смарт-карта немесе кілт «{token}» · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN бұғатталған: оны PUK арқылы ашыңыз (кілтпен бірге келген конвертте).
+	The certificate store will ask for the PIN, if needed.	Қажет болса, сертификаттар қоймасы PIN сұрайды.
+	This is not a signed file that can be read: {e}	Бұл оқылатын қол қойылған файл емес: {e}
+	Type the PIN.	PIN кодын енгізіңіз.
+	Type the digital ID's password.	Цифрлық ID құпиясөзін енгізіңіз.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	НАЗАР АУДАРЫҢЫЗ: бұл соңғы әрекет. PIN тағы қате болса, ол бұғатталады және PUK қажет болады.
+	Windows certificates · {issuer}	Windows сертификаттары · {issuer}
+	Wrong PIN	Қате PIN
+	authentication (not for signing)	аутентификация (қол қою үшін емес)
+	no	жоқ
+	yes	иә
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (осы сеанста {n} қате). Бірнеше қате PIN-нен кейін кілт бұғатталады.
+	Sign as a .p7m file (CAdES)…	.p7m файлына қол қою (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Құжатқа CAdES пішімінде қол қойылып, Италияның мемлекеттік органдары мен Agenzia delle Entrate қабылдайтын жаңа .p7m файлына сақталады. Ашық құжат өзгермейді.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Кілттің бағдарламасы да табылмады: кілтпен бірге келген бағдарламаны орнатыңыз (Aruba және InfoCamere кілттері үшін Bit4id драйвері) немесе оны кілттің өзінен іздеңіз.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply қолтаңба мен сертификатты тексереді, бірақ сертификаттың кері қайтарылғанын тексермейді. Ресми тексеру үшін AgID талаптарына сай тексерушіні пайдаланыңыз (ArubaSign, Firma4NG немесе онлайн тексерушілер).
+	The document was changed after it was signed.	Құжат қол қойылғаннан кейін өзгертілген.
+	The signer's certificate is not in the file.	Қол қоюшының сертификаты файлда жоқ.
+	The signature value does not match the signer's key.	Қолтаңба мәні қол қоюшының кілтіне сәйкес келмейді.
+	The certificate was not valid at the signing time.	Қол қойылған күні сертификат жарамсыз болған.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Қолтаңбада signing-certificate атрибуты жоқ: бұл CAdES емес, PKCS #7.
+	The signer's certificate does not chain to a trusted certificate.	Қол қоюшының сертификаты сенімді сертификатқа апармайды.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	НАЗАР АУДАРЫҢЫЗ: {who} сертификаты {date} күні, қолтаңбаға дейін КЕРІ ШАҚЫРЫЛДЫ немесе ТОҚТАТЫЛДЫ. Қолтаңба ЖАРАМСЫЗ.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Абай болыңыз: {who} сертификаты {date} күні кері шақырылды немесе тоқтатылды. Қол қойылған күн қол қоюшының компьютерінен алынған, сондықтан қолтаңбаның бұрын қойылғанын дәлелдеу мүмкін емес.
+	Checked online: the certificate is not revoked.	Онлайн тексерілді: сертификат кері шақырылмаған.
+	Checking online…	Онлайн тексерілуде…
+	Check online	Онлайн тексеру
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Сертификат берушіден оның кері шақырылғанын немесе тоқтатылғанын сұрайды және AgID білікті берушілер тізімін тексереді. Құжат жіберілмейді.
+	Role stated in the certificate: {role}	Сертификатта көрсетілген рөл: {role}
+	Timestamp (marca temporale) from an authority: {time}	Қызметтен уақыт белгісі (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Онлайн тексеру сертификат берушіден оның кері шақырылғанын немесе тоқтатылғанын сұрайды және AgID білікті берушілер тізімін тексереді. Тек сертификат тексеріледі: құжат ешқайда жіберілмейді.
+	Online check of {date}:	{date} онлайн тексеру:
+	the certificate is not revoked or suspended.	сертификат кері шақырылмаған және тоқтатылмаған.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертификат {date} күні, қолтаңбаға дейін КЕРІ ШАҚЫРЫЛДЫ немесе ТОҚТАТЫЛДЫ: қолтаңба ЖАРАМСЫЗ.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертификат {date} күні, қолтаңбадан кейін кері шақырылды немесе тоқтатылды (уақыт белгісі қолтаңбаның бұрын қойылғанын дәлелдейді).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертификат {date} күні кері шақырылды немесе тоқтатылды. Қол қойылған күн қол қоюшының компьютерінен алынған: қолтаңбаның бұрын қойылғанын дәлелдеу мүмкін емес.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	кері шақыруды тексеру мүмкін болмады (берушіден жауап жоқ немесе интернет байланысы жоқ).
+	The issuer is a qualified certification authority on the AgID list.	Беруші — AgID тізіміндегі білікті куәландырушы орталық.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Беруші AgID тізімінде бар, бірақ енді білікті куәландырушы орталық емес.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Беруші Италияның AgID тізімінде жоқ (ол ЕО-ның басқа елінің тізімінде болуы мүмкін).
+	The AgID list could not be checked.	AgID тізімін тексеру мүмкін болмады.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Сертификаттың мерзімі өткен: берушілер мерзімі өткен сертификаттардың кері шақырылуын жарияламауы мүмкін, сондықтан бұл жауап онша сенімді емес.
+	The key's software was found but could not be used: {problem}	Кілттің бағдарламасы табылды, бірақ оны пайдалану мүмкін емес: {problem}
+	Choose the key's file…	Кілттің файлын таңдау…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Кілт бағдарламасының файлы (.dll), мысалы C:\\Windows\\System32 ішіндегі bit4xpki.dll немесе бағдарлама орнатылған қалта.
+	Key software (.dll)	Кілт бағдарламасы (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} — кілт бағдарламасының 32 биттік нұсқасы (мысалы, Firma4ng оны өз қалтасында сақтайды), PDF Simply оны пайдалана алмайды. 64 биттік нұсқасын да қосатын кілттің Windows драйверін орнатып, Қайта іздеу түймесін басыңыз.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Қолтаңба ЖАРАМСЫЗ: қол қойылған күні {who} сертификатының мерзімі өтіп кеткен (немесе әлі басталмаған).
+	Certificate valid from {from} to {to}	Сертификат {from} бастап {to} дейін жарамды
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	МЕРЗІМІ ӨТКЕН ({date}): осы сертификатпен қойылған қолтаңба жарамсыз болады.

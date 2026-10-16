@@ -2350,3 +2350,80 @@ animation effects	Off	Kapalı
 	This document is trying to open a local file:	Bu belge yerel bir dosya açmaya çalışıyor:
 	Move tag earlier	Etiketi daha erken taşı
 	Move tag later	Etiketi daha geç taşı
+	PDF Simply on GitHub	GitHub'da PDF Simply
+	Based on PdfCraft	PdfCraft tabanlı
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	ArtCraft ekibi ve PdfCraft katkıda bulunanlarının PdfCraft'ı üzerine kurulmuştur.
+	Careful: the key says only a few attempts are left before the PIN locks.	Dikkat: anahtar, PIN kilitlenmeden önce yalnızca birkaç deneme kaldığını bildiriyor.
+	Certificate issued by: {issuer}	Sertifikayı veren: {issuer}
+	Certificate valid on the signing date: {v}	İmza tarihinde geçerli sertifika: {v}
+	Choose a certificate.	Bir sertifika seçin.
+	Digital ID file · {issuer}	Dijital kimlik dosyası · {issuer}
+	Document unchanged since signing: {v}	İmzadan sonra değişmemiş belge: {v}
+	Hide details	Ayrıntıları gizle
+	Keychain · {issuer}	Anahtar Zinciri · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Sertifika bulunamadı. Anahtarı takın, birkaç saniye bekleyin ve Yeniden ara'ya basın.
+	PDF and signed files (.p7m)	PDF ve imzalı dosyalar (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Nitelikli sertifika (yasal geçerli dijital imza): {v}
+	Search again	Yeniden ara
+	Sign as a .p7m file (Italian digital signature)	.p7m dosyası olarak imzala (İtalyan dijital imzası)
+	Signature NOT valid: the document was changed after it was signed.	İmza GEÇERSİZ: belge imzalandıktan sonra değiştirilmiş.
+	Signature PIN	İmza PIN'i
+	Signed by {who} with a qualified certificate: the signature is intact.	{who} nitelikli sertifikayla imzaladı: imza bozulmamış.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	{who} imzaladı: imza bozulmamış, ancak sertifika doğrulanamadı.
+	Signed by {who}: the signature is valid.	{who} imzaladı: imza geçerli.
+	Signed file (.p7m)	İmzalı dosya (.p7m)
+	Signed file: {file}	İmzalı dosya: {file}
+	Signed on: {time} (the signer's computer clock)	İmza zamanı: {time} (imzalayanın bilgisayar saati)
+	Signing a .p7m is not available in the browser.	.p7m imzası tarayıcıda kullanılamaz.
+	Sign…	İmzala…
+	Smart card or key "{token}" · {kind} · {issuer}	Akıllı kart veya anahtar "{token}" · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN kilitli: anahtarla gelen zarftaki PUK ile kilidi açın.
+	The certificate store will ask for the PIN, if needed.	Gerekirse sertifika deposu PIN'i soracaktır.
+	This is not a signed file that can be read: {e}	Bu okunabilir bir imzalı dosya değil: {e}
+	Type the PIN.	PIN'i yazın.
+	Type the digital ID's password.	Dijital kimliğin parolasını yazın.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	DİKKAT: bu son deneme. PIN yine yanlışsa kilitlenir ve PUK gerekir.
+	Windows certificates · {issuer}	Windows sertifikaları · {issuer}
+	Wrong PIN	Yanlış PIN
+	authentication (not for signing)	kimlik doğrulama (imza için değil)
+	no	hayır
+	yes	evet
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (bu oturumda {n} yanlış). Birkaç yanlış PIN'den sonra anahtar kilitlenir.
+	Sign as a .p7m file (CAdES)…	.p7m dosyası olarak imzala (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Belge CAdES biçiminde imzalanır ve İtalyan kamu kurumlarının ve Agenzia delle Entrate'nin kabul ettiği biçimde yeni bir .p7m dosyasına kaydedilir. Açık belge değişmez.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Anahtarın yazılımı da bulunamadı: anahtarla gelen yazılımı kurun (Aruba ve InfoCamere anahtarları için Bit4id sürücüsü) veya anahtarın kendisinde arayın.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply imzayı ve sertifikayı denetler, ancak sertifikanın iptal edilip edilmediğini denetlemez. Resmî denetim için AgID uyumlu bir doğrulayıcı kullanın (ArubaSign, Firma4NG veya çevrimiçi doğrulayıcılar).
+	The document was changed after it was signed.	Belge imzalandıktan sonra değiştirilmiş.
+	The signer's certificate is not in the file.	İmzalayanın sertifikası dosyada yok.
+	The signature value does not match the signer's key.	İmza değeri imzalayanın anahtarıyla eşleşmiyor.
+	The certificate was not valid at the signing time.	Sertifika imza tarihinde geçerli değildi.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	İmzanın signing-certificate özniteliği yok: bu PKCS #7, CAdES değil.
+	The signer's certificate does not chain to a trusted certificate.	İmzalayanın sertifikası güvenilir bir sertifikaya ulaşmıyor.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	UYARI: {who} kişisinin sertifikası {date} tarihinde, imzadan önce İPTAL EDİLDİ veya ASKIYA ALINDI. İmza GEÇERLİ DEĞİL.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Dikkat: {who} kişisinin sertifikası {date} tarihinde iptal edildi veya askıya alındı. İmza tarihi imzalayanın bilgisayarından geliyor, bu yüzden imzanın daha önce atıldığı kanıtlanamaz.
+	Checked online: the certificate is not revoked.	Çevrimiçi denetlendi: sertifika iptal edilmemiş.
+	Checking online…	Çevrimiçi denetleniyor…
+	Check online	Çevrimiçi denetle
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Sertifikayı verene iptal edilip edilmediğini veya askıya alınıp alınmadığını sorar ve nitelikli verenlerin AgID listesini denetler. Belge gönderilmez.
+	Role stated in the certificate: {role}	Sertifikada belirtilen görev: {role}
+	Timestamp (marca temporale) from an authority: {time}	Bir kurumdan zaman damgası (marca temporale): {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Çevrimiçi denetle, sertifikayı verene iptal edilip edilmediğini veya askıya alınıp alınmadığını sorar ve nitelikli verenlerin AgID listesini denetler. Yalnızca sertifika denetlenir: belge hiçbir yere gönderilmez.
+	Online check of {date}:	{date} tarihli çevrimiçi denetim:
+	the certificate is not revoked or suspended.	sertifika iptal edilmemiş veya askıya alınmamış.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	sertifika {date} tarihinde, imzadan önce İPTAL EDİLDİ veya ASKIYA ALINDI: imza GEÇERLİ DEĞİL.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	sertifika {date} tarihinde, imzadan sonra iptal edildi veya askıya alındı (zaman damgası imzanın önce atıldığını kanıtlıyor).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	sertifika {date} tarihinde iptal edildi veya askıya alındı. İmza tarihi imzalayanın bilgisayarından geliyor: imzanın önce atıldığı kanıtlanamaz.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	iptal durumu denetlenemedi (verenden yanıt yok veya internet bağlantısı yok).
+	The issuer is a qualified certification authority on the AgID list.	Veren, AgID listesindeki nitelikli bir sertifika makamıdır.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Veren AgID listesinde, ancak artık nitelikli bir sertifika makamı değil.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Veren İtalyan AgID listesinde değil (başka bir AB ülkesinin listesinde olabilir).
+	The AgID list could not be checked.	AgID listesi denetlenemedi.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Sertifikanın süresi dolmuş: verenler süresi dolan sertifikaların iptallerini yayımlamayı bırakabilir, bu yüzden bu yanıt daha az kesindir.
+	The key's software was found but could not be used: {problem}	Anahtarın yazılımı bulundu ama kullanılamıyor: {problem}
+	Choose the key's file…	Anahtarın dosyasını seç…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Anahtarın yazılım dosyası (.dll), örneğin C:\\Windows\\System32 içindeki bit4xpki.dll veya yazılımın kurulduğu klasör.
+	Key software (.dll)	Anahtar yazılımı (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file}, anahtar yazılımının 32 bit sürümüdür (örneğin Firma4ng klasöründe bir tane tutar) ve PDF Simply bunu kullanamaz. 64 bit sürümü de ekleyen anahtarın Windows sürücüsünü kurun, ardından Yeniden ara'ya basın.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	İmza GEÇERLİ DEĞİL: {who} kişisinin sertifikası imza tarihinde süresi dolmuştu (veya henüz geçerli değildi).
+	Certificate valid from {from} to {to}	Sertifika geçerliliği: {from} – {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	SÜRESİ DOLDU ({date}): bu sertifikayla atılan imza geçerli olmaz.

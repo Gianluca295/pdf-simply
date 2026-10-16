@@ -2353,3 +2353,80 @@ animation effects	Off	Ki
 	This document is trying to open a local file:	Ez a dokumentum egy helyi fájlt próbál megnyitni:
 	Move tag earlier	Címke korábbra helyezése
 	Move tag later	Címke későbbre helyezése
+	PDF Simply on GitHub	A PDF Simply a GitHubon
+	Based on PdfCraft	A PdfCraft alapján
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Az ArtCraft csapat és a PdfCraft közreműködőinek PdfCraft programjára épül.
+	Careful: the key says only a few attempts are left before the PIN locks.	Figyelem: a kulcs szerint csak néhány próbálkozás maradt a PIN zárolásáig.
+	Certificate issued by: {issuer}	A tanúsítvány kiadója: {issuer}
+	Certificate valid on the signing date: {v}	A tanúsítvány érvényes volt az aláírás napján: {v}
+	Choose a certificate.	Válasszon tanúsítványt.
+	Digital ID file · {issuer}	Digitális azonosító fájl · {issuer}
+	Document unchanged since signing: {v}	A dokumentum az aláírás óta változatlan: {v}
+	Hide details	Részletek elrejtése
+	Keychain · {issuer}	Kulcskarika · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nem található tanúsítvány. Csatlakoztassa a kulcsot, várjon néhány másodpercet, majd nyomja meg az Újrakeresés gombot.
+	PDF and signed files (.p7m)	PDF és aláírt fájlok (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Minősített tanúsítvány (jogilag érvényes aláírás): {v}
+	Search again	Újrakeresés
+	Sign as a .p7m file (Italian digital signature)	Aláírás .p7m fájlba (olasz digitális aláírás)
+	Signature NOT valid: the document was changed after it was signed.	Az aláírás NEM érvényes: a dokumentumot az aláírás után módosították.
+	Signature PIN	Aláíró PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	Aláírta: {who}, minősített tanúsítvánnyal: az aláírás sértetlen.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Aláírta: {who}: az aláírás sértetlen, de a tanúsítványt nem sikerült megerősíteni.
+	Signed by {who}: the signature is valid.	Aláírta: {who}: az aláírás érvényes.
+	Signed file (.p7m)	Aláírt fájl (.p7m)
+	Signed file: {file}	Aláírt fájl: {file}
+	Signed on: {time} (the signer's computer clock)	Aláírás ideje: {time} (az aláíró számítógépének órája)
+	Signing a .p7m is not available in the browser.	A .p7m aláírás a böngészőben nem érhető el.
+	Sign…	Aláírás…
+	Smart card or key "{token}" · {kind} · {issuer}	Intelligens kártya vagy kulcs: „{token}” · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	A PIN zárolva van: oldja fel a PUK-kal (a kulccsal kapott borítékban).
+	The certificate store will ask for the PIN, if needed.	Szükség esetén a tanúsítványtár kéri a PIN-t.
+	This is not a signed file that can be read: {e}	Ez nem olvasható aláírt fájl: {e}
+	Type the PIN.	Írja be a PIN-t.
+	Type the digital ID's password.	Írja be a digitális azonosító jelszavát.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	FIGYELEM: ez az utolsó próbálkozás. Ha a PIN ismét hibás, zárolódik, és szüksége lesz a PUK-ra.
+	Windows certificates · {issuer}	Windows-tanúsítványok · {issuer}
+	Wrong PIN	Hibás PIN
+	authentication (not for signing)	hitelesítés (nem aláíráshoz)
+	no	nem
+	yes	igen
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} hibás ebben a munkamenetben). Néhány hibás PIN után a kulcs zárolódik.
+	Sign as a .p7m file (CAdES)…	Aláírás .p7m fájlba (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	A dokumentum CAdES formátumban kerül aláírásra, és új .p7m fájlba mentődik, amelyet az olasz hatóságok és az Agenzia delle Entrate elfogad. A megnyitott dokumentum nem változik.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	A kulcs szoftvere sem található: telepítse a kulccsal kapott szoftvert (Aruba és InfoCamere kulcsokhoz a Bit4id illesztőprogramot), vagy keresse magán a kulcson.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	A PDF Simply ellenőrzi az aláírást és a tanúsítványt, de azt nem, hogy a tanúsítványt visszavonták-e. Hivatalos ellenőrzéshez használjon AgID-megfelelő ellenőrzőt (ArubaSign, Firma4NG vagy online ellenőrzők).
+	The document was changed after it was signed.	A dokumentumot az aláírás után módosították.
+	The signer's certificate is not in the file.	Az aláíró tanúsítványa nincs a fájlban.
+	The signature value does not match the signer's key.	Az aláírás értéke nem egyezik az aláíró kulcsával.
+	The certificate was not valid at the signing time.	A tanúsítvány nem volt érvényes az aláírás napján.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Az aláírásnak nincs signing-certificate attribútuma: PKCS #7, nem CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Az aláíró tanúsítványa nem vezet megbízható tanúsítványhoz.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	FIGYELEM: {who} tanúsítványát {date} napon VISSZAVONTÁK vagy FELFÜGGESZTETTÉK, az aláírás előtt. Az aláírás NEM érvényes.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Vigyázat: {who} tanúsítványát {date} napon visszavonták vagy felfüggesztették. Az aláírás dátuma az aláíró számítógépéről származik, ezért nem bizonyítható, hogy az aláírás korábbi.
+	Checked online: the certificate is not revoked.	Online ellenőrizve: a tanúsítvány nincs visszavonva.
+	Checking online…	Online ellenőrzés…
+	Check online	Online ellenőrzés
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Megkérdezi a tanúsítvány kibocsátóját, hogy visszavonták vagy felfüggesztették-e, és ellenőrzi a minősített kibocsátók AgID-listáját. A dokumentumot nem küldi el.
+	Role stated in the certificate: {role}	A tanúsítványban megadott szerep: {role}
+	Timestamp (marca temporale) from an authority: {time}	Időbélyeg (marca temporale) egy szolgáltatótól: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Az online ellenőrzés megkérdezi a tanúsítvány kibocsátóját, hogy visszavonták vagy felfüggesztették-e, és ellenőrzi a minősített kibocsátók AgID-listáját. Csak a tanúsítványt ellenőrzi: a dokumentumot sehová nem küldi el.
+	Online check of {date}:	Online ellenőrzés, {date}:
+	the certificate is not revoked or suspended.	a tanúsítvány nincs visszavonva vagy felfüggesztve.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	a tanúsítványt {date} napon VISSZAVONTÁK vagy FELFÜGGESZTETTÉK, az aláírás előtt: az aláírás NEM érvényes.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	a tanúsítványt {date} napon visszavonták vagy felfüggesztették, az aláírás után (az időbélyeg bizonyítja, hogy az aláírás korábbi).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	a tanúsítványt {date} napon visszavonták vagy felfüggesztették. Az aláírás dátuma az aláíró számítógépéről származik: nem bizonyítható, hogy az aláírás korábbi.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	a visszavonást nem sikerült ellenőrizni (a kibocsátó nem válaszolt, vagy nincs internetkapcsolat).
+	The issuer is a qualified certification authority on the AgID list.	A kibocsátó minősített hitelesítésszolgáltató az AgID-listán.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	A kibocsátó szerepel az AgID-listán, de már nem minősített hitelesítésszolgáltató.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	A kibocsátó nem szerepel az olasz AgID-listán (lehet, hogy egy másik uniós ország listáján szerepel).
+	The AgID list could not be checked.	Az AgID-listát nem sikerült ellenőrizni.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	A tanúsítvány lejárt: a kibocsátók abbahagyhatják a lejárt tanúsítványok visszavonásának közzétételét, ezért ez a válasz kevésbé biztos.
+	The key's software was found but could not be used: {problem}	A kulcs szoftvere megvan, de nem használható: {problem}
+	Choose the key's file…	A kulcs fájljának kiválasztása…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	A kulcs szoftverének fájlja (.dll), például bit4xpki.dll a C:\\Windows\\System32 mappában vagy a szoftver telepítési mappájában.
+	Key software (.dll)	Kulcsszoftver (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} a kulcs szoftverének 32 bites változata (például a Firma4ng tart egyet a mappájában), amelyet a PDF Simply nem tud használni. Telepítse a kulcs Windows-illesztőprogramját, amely a 64 bites változatot is hozzáadja, majd nyomja meg az Újrakeresés gombot.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Az aláírás NEM érvényes: {who} tanúsítványa az aláírás napján lejárt (vagy még nem volt érvényes).
+	Certificate valid from {from} to {to}	A tanúsítvány érvényes: {from} – {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	LEJÁRT: {date}. Az ezzel a tanúsítvánnyal készült aláírás nem lenne érvényes.

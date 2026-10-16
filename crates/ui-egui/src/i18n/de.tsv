@@ -2355,3 +2355,80 @@ animation effects	Off	Aus
 	This document is trying to open a local file:	Dieses Dokument versucht, eine lokale Datei zu öffnen:
 	Move tag earlier	Tag früher verschieben
 	Move tag later	Tag später verschieben
+	PDF Simply on GitHub	PDF Simply auf GitHub
+	Based on PdfCraft	Basiert auf PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Basiert auf PdfCraft vom ArtCraft-Team und den PdfCraft-Mitwirkenden.
+	Careful: the key says only a few attempts are left before the PIN locks.	Achtung: Der Schlüssel meldet, dass nur noch wenige Versuche bis zur PIN-Sperre bleiben.
+	Certificate issued by: {issuer}	Zertifikat ausgestellt von: {issuer}
+	Certificate valid on the signing date: {v}	Zertifikat am Signaturdatum gültig: {v}
+	Choose a certificate.	Wählen Sie ein Zertifikat.
+	Digital ID file · {issuer}	Digitale-ID-Datei · {issuer}
+	Document unchanged since signing: {v}	Dokument seit der Signatur unverändert: {v}
+	Hide details	Details ausblenden
+	Keychain · {issuer}	Schlüsselbund · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Kein Zertifikat gefunden. Stecken Sie den Schlüssel ein, warten Sie einige Sekunden und klicken Sie auf Erneut suchen.
+	PDF and signed files (.p7m)	PDF und signierte Dateien (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Qualifiziertes Zertifikat (rechtsgültige digitale Signatur): {v}
+	Search again	Erneut suchen
+	Sign as a .p7m file (Italian digital signature)	Als .p7m-Datei signieren (italienische digitale Signatur)
+	Signature NOT valid: the document was changed after it was signed.	Signatur NICHT gültig: Das Dokument wurde nach der Signatur geändert.
+	Signature PIN	Signatur-PIN
+	Signed by {who} with a qualified certificate: the signature is intact.	Signiert von {who} mit qualifiziertem Zertifikat: Die Signatur ist unverändert.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Signiert von {who}: Die Signatur ist unverändert, aber das Zertifikat konnte nicht bestätigt werden.
+	Signed by {who}: the signature is valid.	Signiert von {who}: Die Signatur ist gültig.
+	Signed file (.p7m)	Signierte Datei (.p7m)
+	Signed file: {file}	Signierte Datei: {file}
+	Signed on: {time} (the signer's computer clock)	Signiert am: {time} (Uhr des Computers der unterzeichnenden Person)
+	Signing a .p7m is not available in the browser.	Das Signieren als .p7m ist im Browser nicht verfügbar.
+	Sign…	Signieren…
+	Smart card or key "{token}" · {kind} · {issuer}	Chipkarte oder Schlüssel „{token}“ · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	Die PIN ist gesperrt: Entsperren Sie sie mit der PUK (im Umschlag, der mit dem Schlüssel kam).
+	The certificate store will ask for the PIN, if needed.	Der Zertifikatsspeicher fragt bei Bedarf nach der PIN.
+	This is not a signed file that can be read: {e}	Dies ist keine lesbare signierte Datei: {e}
+	Type the PIN.	Geben Sie die PIN ein.
+	Type the digital ID's password.	Geben Sie das Passwort der digitalen ID ein.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	ACHTUNG: Dies ist der letzte Versuch. Ist die PIN wieder falsch, wird sie gesperrt und Sie brauchen die PUK.
+	Windows certificates · {issuer}	Windows-Zertifikate · {issuer}
+	Wrong PIN	Falsche PIN
+	authentication (not for signing)	Authentifizierung (nicht zum Signieren)
+	no	nein
+	yes	ja
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} falsch in dieser Sitzung). Nach einigen falschen PINs wird der Schlüssel gesperrt.
+	Sign as a .p7m file (CAdES)…	Als .p7m-Datei signieren (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Das Dokument wird im CAdES-Format signiert und als neue .p7m-Datei gespeichert, das Format, das italienische Behörden und die Agenzia delle Entrate akzeptieren. Das geöffnete Dokument ändert sich nicht.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Auch die Software des Schlüssels wurde nicht gefunden: Installieren Sie die mitgelieferte Software (für Aruba- und InfoCamere-Schlüssel den Bit4id-Treiber) oder suchen Sie sie auf dem Schlüssel selbst.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply prüft die Signatur und das Zertifikat, nicht aber, ob das Zertifikat widerrufen wurde. Für eine amtliche Prüfung nutzen Sie einen AgID-konformen Prüfer (ArubaSign, Firma4NG oder die Online-Prüfer).
+	The document was changed after it was signed.	Das Dokument wurde nach der Signatur geändert.
+	The signer's certificate is not in the file.	Das Zertifikat der unterzeichnenden Person ist nicht in der Datei.
+	The signature value does not match the signer's key.	Der Signaturwert passt nicht zum Schlüssel der unterzeichnenden Person.
+	The certificate was not valid at the signing time.	Das Zertifikat war am Signaturdatum nicht gültig.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Die Signatur hat kein signing-certificate-Attribut: Sie ist PKCS #7, nicht CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Das Zertifikat der unterzeichnenden Person führt zu keinem vertrauenswürdigen Zertifikat.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	ACHTUNG: Das Zertifikat von {who} wurde am {date} WIDERRUFEN oder GESPERRT, vor der Signatur. Die Signatur ist NICHT gültig.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Vorsicht: Das Zertifikat von {who} wurde am {date} widerrufen oder gesperrt. Das Signaturdatum stammt vom Computer des Unterzeichners, daher lässt sich nicht beweisen, dass die Signatur früher war.
+	Checked online: the certificate is not revoked.	Online geprüft: Das Zertifikat ist nicht widerrufen.
+	Checking online…	Online-Prüfung läuft…
+	Check online	Online prüfen
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Fragt den Aussteller des Zertifikats, ob es widerrufen oder gesperrt wurde, und prüft die AgID-Liste der qualifizierten Aussteller. Das Dokument wird nicht gesendet.
+	Role stated in the certificate: {role}	Im Zertifikat angegebene Rolle: {role}
+	Timestamp (marca temporale) from an authority: {time}	Zeitstempel (marca temporale) einer Stelle: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Online prüfen fragt den Aussteller des Zertifikats, ob es widerrufen oder gesperrt wurde, und prüft die AgID-Liste der qualifizierten Aussteller. Nur das Zertifikat wird geprüft: Das Dokument wird nirgendwohin gesendet.
+	Online check of {date}:	Online-Prüfung vom {date}:
+	the certificate is not revoked or suspended.	das Zertifikat ist weder widerrufen noch gesperrt.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	das Zertifikat wurde am {date} WIDERRUFEN oder GESPERRT, vor der Signatur: Die Signatur ist NICHT gültig.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	das Zertifikat wurde am {date} widerrufen oder gesperrt, nach der Signatur (der Zeitstempel beweist, dass die Signatur früher war).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	das Zertifikat wurde am {date} widerrufen oder gesperrt. Das Signaturdatum stammt vom Computer des Unterzeichners: Es lässt sich nicht beweisen, dass die Signatur früher war.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	der Widerruf konnte nicht geprüft werden (keine Antwort vom Aussteller oder keine Internetverbindung).
+	The issuer is a qualified certification authority on the AgID list.	Der Aussteller ist eine qualifizierte Zertifizierungsstelle auf der AgID-Liste.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Der Aussteller steht auf der AgID-Liste, ist aber keine qualifizierte Zertifizierungsstelle mehr.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Der Aussteller steht nicht auf der italienischen AgID-Liste (er kann auf der Liste eines anderen EU-Landes stehen).
+	The AgID list could not be checked.	Die AgID-Liste konnte nicht geprüft werden.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Das Zertifikat ist abgelaufen: Aussteller veröffentlichen Widerrufe abgelaufener Zertifikate eventuell nicht mehr, daher ist diese Antwort weniger sicher.
+	The key's software was found but could not be used: {problem}	Die Software des Schlüssels wurde gefunden, kann aber nicht verwendet werden: {problem}
+	Choose the key's file…	Datei des Schlüssels wählen…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Die Softwaredatei des Schlüssels (.dll), zum Beispiel bit4xpki.dll in C:\\Windows\\System32 oder im Installationsordner der Software.
+	Key software (.dll)	Schlüsselsoftware (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} ist die 32-Bit-Version der Schlüsselsoftware (Firma4ng hat zum Beispiel eine in seinem Ordner), die PDF Simply nicht verwenden kann. Installieren Sie den Windows-Treiber des Schlüssels, der auch die 64-Bit-Version hinzufügt, und drücken Sie dann Erneut suchen.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Signatur NICHT gültig: Das Zertifikat von {who} war am Signaturdatum abgelaufen (oder noch nicht gültig).
+	Certificate valid from {from} to {to}	Zertifikat gültig vom {from} bis {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	ABGELAUFEN am {date}: Eine Signatur mit diesem Zertifikat wäre nicht gültig.

@@ -479,6 +479,7 @@ impl PdfCraftApp {
                 self.quick_tool = crate::QuickTool::SignArea { certify };
                 self.notify_tr("Drag to draw the area where the signature should appear.");
             }
+            "sign.p7m" => self.start_p7m_signing(),
             "sign.certify_invisible" => {
                 let page = active.map_or(0, |i| self.views[i].current);
                 self.start_signing(page, None, None, Some(2));

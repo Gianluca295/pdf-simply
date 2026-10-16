@@ -2334,3 +2334,80 @@ animation effects	Off	Wyłączone
 	This document is trying to open a local file:	Ten dokument próbuje otworzyć plik lokalny:
 	Move tag earlier	Przenieś znacznik wcześniej
 	Move tag later	Przenieś znacznik później
+	PDF Simply on GitHub	PDF Simply w serwisie GitHub
+	Based on PdfCraft	Na bazie PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Zbudowane na bazie PdfCraft zespołu ArtCraft i współtwórców PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Uwaga: klucz informuje, że do zablokowania PIN-u zostało niewiele prób.
+	Certificate issued by: {issuer}	Certyfikat wystawiony przez: {issuer}
+	Certificate valid on the signing date: {v}	Certyfikat ważny w dniu podpisu: {v}
+	Choose a certificate.	Wybierz certyfikat.
+	Digital ID file · {issuer}	Plik identyfikatora cyfrowego · {issuer}
+	Document unchanged since signing: {v}	Dokument bez zmian od podpisania: {v}
+	Hide details	Ukryj szczegóły
+	Keychain · {issuer}	Pęk kluczy · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Nie znaleziono certyfikatu. Podłącz klucz, odczekaj kilka sekund i naciśnij Szukaj ponownie.
+	PDF and signed files (.p7m)	PDF i pliki podpisane (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Certyfikat kwalifikowany (podpis z mocą prawną): {v}
+	Search again	Szukaj ponownie
+	Sign as a .p7m file (Italian digital signature)	Podpisz jako plik .p7m (włoski podpis cyfrowy)
+	Signature NOT valid: the document was changed after it was signed.	Podpis NIEWAŻNY: dokument zmieniono po podpisaniu.
+	Signature PIN	PIN do podpisu
+	Signed by {who} with a qualified certificate: the signature is intact.	Podpisał(a) {who} certyfikatem kwalifikowanym: podpis jest nienaruszony.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Podpisał(a) {who}: podpis jest nienaruszony, ale nie udało się potwierdzić certyfikatu.
+	Signed by {who}: the signature is valid.	Podpisał(a) {who}: podpis jest ważny.
+	Signed file (.p7m)	Plik podpisany (.p7m)
+	Signed file: {file}	Plik podpisany: {file}
+	Signed on: {time} (the signer's computer clock)	Podpisano: {time} (zegar komputera podpisującego)
+	Signing a .p7m is not available in the browser.	Podpis .p7m nie jest dostępny w przeglądarce.
+	Sign…	Podpisz…
+	Smart card or key "{token}" · {kind} · {issuer}	Karta inteligentna lub klucz „{token}” · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN jest zablokowany: odblokuj go kodem PUK (w kopercie dołączonej do klucza).
+	The certificate store will ask for the PIN, if needed.	Magazyn certyfikatów w razie potrzeby poprosi o PIN.
+	This is not a signed file that can be read: {e}	To nie jest czytelny plik podpisany: {e}
+	Type the PIN.	Wpisz PIN.
+	Type the digital ID's password.	Wpisz hasło identyfikatora cyfrowego.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	UWAGA: to ostatnia próba. Jeśli PIN znów będzie błędny, zostanie zablokowany i potrzebny będzie PUK.
+	Windows certificates · {issuer}	Certyfikaty Windows · {issuer}
+	Wrong PIN	Błędny PIN
+	authentication (not for signing)	uwierzytelnianie (nie do podpisu)
+	no	nie
+	yes	tak
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} ({n} błędnych w tej sesji). Po kilku błędnych PIN-ach klucz się blokuje.
+	Sign as a .p7m file (CAdES)…	Podpisz jako plik .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Dokument zostanie podpisany w formacie CAdES i zapisany jako nowy plik .p7m, akceptowany przez włoską administrację i Agenzia delle Entrate. Otwarty dokument się nie zmieni.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Nie znaleziono też oprogramowania klucza: zainstaluj oprogramowanie dołączone do klucza (dla kluczy Aruba i InfoCamere sterownik Bit4id) albo poszukaj go na samym kluczu.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply sprawdza podpis i certyfikat, ale nie jego unieważnienie. Do oficjalnej weryfikacji użyj weryfikatora zgodnego z AgID (ArubaSign, Firma4NG lub weryfikatory online).
+	The document was changed after it was signed.	Dokument zmieniono po podpisaniu.
+	The signer's certificate is not in the file.	W pliku nie ma certyfikatu podpisującego.
+	The signature value does not match the signer's key.	Wartość podpisu nie pasuje do klucza podpisującego.
+	The certificate was not valid at the signing time.	Certyfikat nie był ważny w dniu podpisu.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Podpis nie ma atrybutu signing-certificate: to PKCS #7, nie CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Certyfikat podpisującego nie prowadzi do zaufanego certyfikatu.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	UWAGA: certyfikat {who} został UNIEWAŻNIONY lub ZAWIESZONY {date}, przed podpisem. Podpis NIE jest ważny.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Uwaga: certyfikat {who} został unieważniony lub zawieszony {date}. Data podpisu pochodzi z komputera podpisującego, więc nie da się udowodnić, że podpis był wcześniej.
+	Checked online: the certificate is not revoked.	Sprawdzono online: certyfikat nie jest unieważniony.
+	Checking online…	Sprawdzanie online…
+	Check online	Sprawdź online
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Pyta wystawcę certyfikatu, czy został unieważniony lub zawieszony, i sprawdza listę kwalifikowanych wystawców AgID. Dokument nie jest wysyłany.
+	Role stated in the certificate: {role}	Rola podana w certyfikacie: {role}
+	Timestamp (marca temporale) from an authority: {time}	Znacznik czasu (marca temporale) od urzędu: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Sprawdź online pyta wystawcę certyfikatu, czy został unieważniony lub zawieszony, i sprawdza listę kwalifikowanych wystawców AgID. Sprawdzany jest tylko certyfikat: dokument nie jest nigdzie wysyłany.
+	Online check of {date}:	Sprawdzenie online z {date}:
+	the certificate is not revoked or suspended.	certyfikat nie jest unieważniony ani zawieszony.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	certyfikat został UNIEWAŻNIONY lub ZAWIESZONY {date}, przed podpisem: podpis NIE jest ważny.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	certyfikat został unieważniony lub zawieszony {date}, po podpisie (znacznik czasu dowodzi, że podpis był wcześniej).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	certyfikat został unieważniony lub zawieszony {date}. Data podpisu pochodzi z komputera podpisującego: nie da się udowodnić, że podpis był wcześniej.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	nie udało się sprawdzić unieważnienia (brak odpowiedzi wystawcy lub brak połączenia z internetem).
+	The issuer is a qualified certification authority on the AgID list.	Wystawca jest kwalifikowanym urzędem certyfikacji z listy AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Wystawca jest na liście AgID, ale nie jest już kwalifikowanym urzędem certyfikacji.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Wystawcy nie ma na włoskiej liście AgID (może być na liście innego kraju UE).
+	The AgID list could not be checked.	Nie udało się sprawdzić listy AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Certyfikat wygasł: wystawcy mogą przestać publikować unieważnienia wygasłych certyfikatów, więc ta odpowiedź jest mniej pewna.
+	The key's software was found but could not be used: {problem}	Znaleziono oprogramowanie klucza, ale nie można go użyć: {problem}
+	Choose the key's file…	Wybierz plik klucza…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Plik oprogramowania klucza (.dll), na przykład bit4xpki.dll w C:\\Windows\\System32 lub w folderze, w którym zainstalowano oprogramowanie.
+	Key software (.dll)	Oprogramowanie klucza (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} to 32-bitowa wersja oprogramowania klucza (na przykład Firma4ng trzyma ją w swoim folderze), której PDF Simply nie może użyć. Zainstaluj sterownik klucza dla Windows, który dodaje też wersję 64-bitową, a potem naciśnij Szukaj ponownie.
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Podpis NIE jest ważny: certyfikat {who} w dniu podpisu wygasł (lub nie był jeszcze ważny).
+	Certificate valid from {from} to {to}	Certyfikat ważny od {from} do {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	WYGASŁ {date}: podpis złożony tym certyfikatem nie byłby ważny.

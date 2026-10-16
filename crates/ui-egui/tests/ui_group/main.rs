@@ -10,6 +10,7 @@ mod identity;
 mod layer_actions;
 mod links;
 mod marks;
+mod p7m;
 mod pageboxes;
 mod pdf_links;
 mod protect;

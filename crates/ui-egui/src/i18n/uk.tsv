@@ -2376,3 +2376,80 @@ animation effects	Off	Вимкнено
 	This document is trying to open a local file:	Цей документ намагається відкрити локальний файл:
 	Move tag earlier	Перемістити тег раніше
 	Move tag later	Перемістити тег пізніше
+	PDF Simply on GitHub	PDF Simply на GitHub
+	Based on PdfCraft	На основі PdfCraft
+	Built on PdfCraft by the ArtCraft team and the PdfCraft contributors.	Створено на основі PdfCraft від команди ArtCraft і учасників PdfCraft.
+	Careful: the key says only a few attempts are left before the PIN locks.	Увага: ключ повідомляє, що до блокування PIN-коду лишилося мало спроб.
+	Certificate issued by: {issuer}	Сертифікат видав: {issuer}
+	Certificate valid on the signing date: {v}	Сертифікат дійсний на дату підпису: {v}
+	Choose a certificate.	Виберіть сертифікат.
+	Digital ID file · {issuer}	Файл цифрового посвідчення · {issuer}
+	Document unchanged since signing: {v}	Документ не змінювався після підпису: {v}
+	Hide details	Сховати подробиці
+	Keychain · {issuer}	Зв’язка ключів · {issuer}
+	No certificate found. Plug in the key, wait a few seconds and press Search again.	Сертифікатів не знайдено. Вставте ключ, зачекайте кілька секунд і натисніть «Шукати знову».
+	PDF and signed files (.p7m)	PDF і підписані файли (.p7m)
+	Qualified certificate (legally valid digital signature): {v}	Кваліфікований сертифікат (юридично значущий підпис): {v}
+	Search again	Шукати знову
+	Sign as a .p7m file (Italian digital signature)	Підписати у файл .p7m (італійський цифровий підпис)
+	Signature NOT valid: the document was changed after it was signed.	Підпис НЕДІЙСНИЙ: документ змінено після підписання.
+	Signature PIN	PIN-код підпису
+	Signed by {who} with a qualified certificate: the signature is intact.	Підписав {who} кваліфікованим сертифікатом: підпис цілісний.
+	Signed by {who}: the signature is intact, but the certificate could not be confirmed.	Підписав {who}: підпис цілісний, але сертифікат підтвердити не вдалося.
+	Signed by {who}: the signature is valid.	Підписав {who}: підпис дійсний.
+	Signed file (.p7m)	Підписаний файл (.p7m)
+	Signed file: {file}	Підписаний файл: {file}
+	Signed on: {time} (the signer's computer clock)	Дата підпису: {time} (годинник комп’ютера підписувача)
+	Signing a .p7m is not available in the browser.	Підпис .p7m недоступний у браузері.
+	Sign…	Підписати…
+	Smart card or key "{token}" · {kind} · {issuer}	Смарт-карта або ключ «{token}» · {kind} · {issuer}
+	The PIN is locked: unlock it with the PUK (in the envelope that came with the key).	PIN-код заблоковано: розблокуйте його кодом PUK (у конверті, що надійшов із ключем).
+	The certificate store will ask for the PIN, if needed.	Сховище сертифікатів за потреби запитає PIN-код.
+	This is not a signed file that can be read: {e}	Це не читабельний підписаний файл: {e}
+	Type the PIN.	Введіть PIN-код.
+	Type the digital ID's password.	Введіть пароль цифрового посвідчення.
+	WARNING: this is the last attempt. If the PIN is wrong again, it locks and you will need the PUK.	УВАГА: це остання спроба. Якщо PIN-код знову неправильний, його буде заблоковано й знадобиться PUK.
+	Windows certificates · {issuer}	Сертифікати Windows · {issuer}
+	Wrong PIN	Неправильний PIN-код
+	authentication (not for signing)	автентифікація (не для підпису)
+	no	ні
+	yes	так
+	{what} ({n} wrong in this session). After a few wrong PINs the key locks.	{what} (неправильних у цьому сеансі: {n}). Після кількох неправильних PIN-кодів ключ блокується.
+	Sign as a .p7m file (CAdES)…	Підписати у файл .p7m (CAdES)…
+	The document is signed in CAdES format and saved as a new .p7m file, the format public administrations and the Agenzia delle Entrate accept. The document you have open does not change.	Документ підписується у форматі CAdES і зберігається в новий файл .p7m — формат, який приймають італійські державні органи та Agenzia delle Entrate. Відкритий документ не змінюється.
+	The key's software was not found either: install the software that came with the key (for Aruba and InfoCamere keys, the Bit4id driver), or look for it on the key itself.	Програмне забезпечення ключа теж не знайдено: установіть ПЗ, що постачається з ключем (для ключів Aruba та InfoCamere — драйвер Bit4id), або знайдіть його на самому ключі.
+	PDF Simply checks the signature and the certificate, not whether the certificate was revoked. For an official check, use an AgID-compliant verifier (ArubaSign, Firma4NG, or the online verifiers).	PDF Simply перевіряє підпис і сертифікат, але не його відкликання. Для офіційної перевірки скористайтеся перевіркою, що відповідає вимогам AgID (ArubaSign, Firma4NG або онлайн-сервіси).
+	The document was changed after it was signed.	Документ змінено після підписання.
+	The signer's certificate is not in the file.	Сертифіката підписувача немає у файлі.
+	The signature value does not match the signer's key.	Значення підпису не відповідає ключу підписувача.
+	The certificate was not valid at the signing time.	Сертифікат був недійсний на дату підпису.
+	The signature has no signing-certificate attribute: it is PKCS #7, not CAdES.	Підпис не має атрибута signing-certificate: це PKCS #7, а не CAdES.
+	The signer's certificate does not chain to a trusted certificate.	Сертифікат підписувача не веде до довіреного сертифіката.
+	WARNING: the certificate of {who} was REVOKED or SUSPENDED on {date}, before the signature. The signature is NOT valid.	УВАГА: сертифікат {who} було ВІДКЛИКАНО або ПРИЗУПИНЕНО {date}, до підпису. Підпис НЕДІЙСНИЙ.
+	Careful: the certificate of {who} was revoked or suspended on {date}. The signature date comes from the signer's computer, so it cannot be proved it came first.	Обережно: сертифікат {who} було відкликано або призупинено {date}. Дата підпису взята з комп'ютера підписувача, тому не можна довести, що підпис був раніше.
+	Checked online: the certificate is not revoked.	Перевірено онлайн: сертифікат не відкликано.
+	Checking online…	Перевірка онлайн…
+	Check online	Перевірити онлайн
+	Ask the certificate's issuer whether it was revoked or suspended, and check the AgID list of qualified issuers. The document is not sent.	Запитує в видавця сертифіката, чи його відкликано або призупинено, і перевіряє список кваліфікованих видавців AgID. Документ не надсилається.
+	Role stated in the certificate: {role}	Роль, зазначена в сертифікаті: {role}
+	Timestamp (marca temporale) from an authority: {time}	Позначка часу (marca temporale) від служби: {time}
+	Check online asks the certificate's issuer whether it was revoked or suspended, and checks the AgID list of qualified issuers. Only the certificate is checked: the document is not sent anywhere.	Перевірка онлайн запитує в видавця сертифіката, чи його відкликано або призупинено, і перевіряє список кваліфікованих видавців AgID. Перевіряється лише сертифікат: документ нікуди не надсилається.
+	Online check of {date}:	Перевірка онлайн від {date}:
+	the certificate is not revoked or suspended.	сертифікат не відкликано і не призупинено.
+	the certificate was REVOKED or SUSPENDED on {date}, before the signature: the signature is NOT valid.	сертифікат було ВІДКЛИКАНО або ПРИЗУПИНЕНО {date}, до підпису: підпис НЕДІЙСНИЙ.
+	the certificate was revoked or suspended on {date}, after the signature (the timestamp proves the signature came first).	сертифікат було відкликано або призупинено {date}, після підпису (позначка часу доводить, що підпис був раніше).
+	the certificate was revoked or suspended on {date}. The signature date comes from the signer's computer: it cannot be proved the signature came first.	сертифікат було відкликано або призупинено {date}. Дата підпису взята з комп'ютера підписувача: не можна довести, що підпис був раніше.
+	the revocation could not be checked (no answer from the issuer, or no internet connection).	не вдалося перевірити відкликання (видавець не відповів або немає підключення до інтернету).
+	The issuer is a qualified certification authority on the AgID list.	Видавець — кваліфікований центр сертифікації зі списку AgID.
+	The issuer is on the AgID list, but it is no longer a qualified certification authority.	Видавець є в списку AgID, але більше не є кваліфікованим центром сертифікації.
+	The issuer is not on the Italian AgID list (it may be on another EU country's list).	Видавця немає в італійському списку AgID (він може бути в списку іншої країни ЄС).
+	The AgID list could not be checked.	Не вдалося перевірити список AgID.
+	The certificate has expired: issuers may stop publishing revocations of expired certificates, so this answer is less certain.	Термін дії сертифіката минув: видавці можуть перестати публікувати відкликання прострочених сертифікатів, тому ця відповідь менш надійна.
+	The key's software was found but could not be used: {problem}	ПЗ ключа знайдено, але його не можна використати: {problem}
+	Choose the key's file…	Вибрати файл ключа…
+	The key's software file (.dll), for example bit4xpki.dll in C:\\Windows\\System32 or in the folder where the key's software was installed.	Файл ПЗ ключа (.dll), наприклад bit4xpki.dll у C:\\Windows\\System32 або в теці, куди встановлено ПЗ ключа.
+	Key software (.dll)	ПЗ ключа (.dll)
+	{file} is the 32-bit version of the key's software (Firma4ng, for example, keeps one in its folder), which PDF Simply can't use. Install the key's driver for Windows, which also adds the 64-bit version, then press Search again.	{file} — 32-бітна версія ПЗ ключа (наприклад, Firma4ng зберігає її у своїй теці), яку PDF Simply не може використати. Встановіть драйвер ключа для Windows, який додасть і 64-бітну версію, потім натисніть «Шукати знову».
+	Signature NOT valid: the certificate of {who} had expired (or was not yet valid) on the signing date.	Підпис НЕДІЙСНИЙ: на дату підпису строк сертифіката {who} минув (або ще не почався).
+	Certificate valid from {from} to {to}	Сертифікат дійсний з {from} до {to}
+	EXPIRED on {date}: a signature made with this certificate would not be valid.	ЗАКІНЧИВСЯ {date}: підпис цим сертифікатом буде недійсним.
